@@ -1,0 +1,74 @@
+<section class="bg-greylight text-dark sectionshape-7" data-scroll-section>
+	<div class="container">
+		<div class="prevnext">
+			<div class="row">
+				<div class="col-md-4 offset-md-2 d-none d-md-block">
+					{% if post.prev %}
+						<div>
+							<h5> Vorig project</h5> 	
+						</div>
+						<div class="clearfix"></div>
+						<div class="anime-fadein">
+							{% include 'tease.twig' with {'item': post.prev} %}
+						</div>
+					{% else %}
+						{% set last = firstlast|last %}
+						{% if last %}
+							<a href="{{ last.link }}" data-mh class="noline prev"> 
+								<div class="row">
+									<div class="col-auto d-flex align-items-center">
+										<i class="fal fa-chevron-left"></i>
+									</div>
+									<div class="col">
+										<h5 style="margin: 0">{{ last.title }} </h5> 
+									</div>
+								</div>
+							</a>
+							<br>
+							<div class="clearfix"></div>
+							<a href="{{ last.link }}" class="noline tease rectangle card h-auto">
+								<div class="img-container">
+									<div class="card-img-top" style="background-image: url({{ Image(last.thumbnail).src|resize('768') }})">
+									</div>
+								</div>
+							</a>
+						{% endif %}
+					{% endif %}
+				</div>
+				<div class="col-md-4">
+					{% if post.next %}
+						<div>
+							<h5> Volgende project</h5> 	
+						</div>
+						<div class="clearfix"></div>
+						<div class="anime-fadein">
+							{% include 'tease.twig' with {'item': post.next} %}
+						</div>
+					{% else %}
+						{% set first = firstlast|first %}
+						{% if first %}
+							<a href="{{ first.link }}" data-mh class="noline next text-right"> 
+								<div class="row">
+									<div class="col">
+										<h5 style="margin: 0">{{ first.title }} </h5> 
+									</div>
+									<div class="col-auto d-flex align-items-center">
+										<i class="fal fa-chevron-right"></i>
+									</div>
+								</div>
+							</a>
+							<br>
+							<div class="clearfix"></div>
+							<a href="{{ first.link }}" class="noline tease rectangle card h-auto">
+								<div class="img-container">
+									<div class="card-img-top" style="background-image: url({{ Image(first.thumbnail).src|resize('768') }})">
+									</div>
+								</div>
+							</a>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

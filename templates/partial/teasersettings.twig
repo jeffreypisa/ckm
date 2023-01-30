@@ -1,0 +1,19 @@
+{% set toon_afbeelding = false %}
+{% set toon_titel = false %}
+{% set toon_datum = false %}
+{% set toon_tekst = false %}
+{% set toon_categorie = false %}
+{% set toon_lees_meer = false %}
+{% set lees_meer_tekst = '' %}
+
+{% for cpt in options.cpt %}
+  {% if cpt.slug == posttype %}
+	 {% set toon_afbeelding = cpt.toon_afbeelding %}
+	 {% set toon_titel = cpt.toon_titel %}
+	 {% set toon_datum = cpt.toon_datum %}
+	 {% set toon_tekst = cpt.toon_tekst %}
+	 {% set toon_categorie = cpt.toon_categorie %}
+	 {% set toon_lees_meer = cpt.toon_lees_meer %}
+	 {% set lees_meer_tekst = cpt.lees_meer_tekst %}
+  {% endif %}
+{% endfor %}

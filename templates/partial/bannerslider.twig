@@ -1,0 +1,33 @@
+<section id="banner" class="pb-banner toon_md text-white {{ post.banner_layout }} mb-20">
+	<div class="bannerslider js-slick-bannerslider">
+		{% for item in post.get_field('banner_artikelen') %}
+			<a href="{{ item.link }}" class="item">		
+				<div class="fill-space d-flex align-items-center justify-content-center">
+					{% if item.thumbnail_portret %}
+						<div class="d-flex d-md-none bg-cover align-items-center justify-content-center" style="background-image: url({{ Image(item.thumbnail_portret).src }})">
+						</div>
+						<div class="d-none d-md-flex bg-cover d-flex align-items-center justify-content-center" style="background-image: url({{ Image(item.thumbnail).src }})">
+						</div>
+					{% else %}
+						<div class="bg-cover d-flex align-items-center justify-content-center" style="background-image: url({{ Image(item.thumbnail).src }})">
+						</div>
+					{% endif %}
+					<div class="caption">{{ Image(item.thumbnail).caption }}</div>
+					<div class="itemtitle ">
+						<h2 class="h1 mb-0">
+							{{ item.title }}
+						</h2>
+						{% if item.subtitle %}
+							<div class="h3 mt-3 text-center">
+								{{ item.subtitle }} 
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+	{% if post.banner_formaat == 'toon_fullscreen' %}
+		<a href="#section1" class="arrowdown"> <i class="fa fa-chevron-down"></i> </a>
+	{% endif %}
+</section> 

@@ -1,0 +1,6 @@
+<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-{{ item.post_type }} mb-20 d-block">
+	<div class="afbeelding-wrapper ratio-16x9">
+		<div class="afbeelding bg-cover" style="background-image: url({{ Image(item.thumbnail)|resize(1024) }})"></div>
+		<h3 class="h5 blocklink mt-0 mb-0"> {{ item.title }} </h3>
+	</div>
+</a>

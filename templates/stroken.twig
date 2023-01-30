@@ -1,0 +1,24 @@
+{% set sectionno = '0' %}
+
+{% for item in post.get_field('stroken') %}
+
+	{% set sectionno = sectionno + '1' %}
+	
+	{% if item.acf_fc_layout == 'bannerslider' %}
+		{% include 'stroken/bannerslider.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'icons' %}
+		{% include 'stroken/icons.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'impact' %}
+		{% include 'stroken/impact.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'verhalen' %}
+		{% include 'stroken/verhalen.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'cijfers' %}
+		{% include 'stroken/cijfers.twig' %}
+	
+	{% endif %}
+  
+{% endfor %}

@@ -1,0 +1,52 @@
+
+
+.content-styling {
+	* + h3,
+	* + h4,
+	* + h5,
+	* + h6,
+	* + img {
+		@extend h4;
+		font-weight: 700;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+	}
+	h5,h6 {
+		margin-bottom: 8px;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding-left: 2rem;
+		li {
+			position: relative;
+			padding-left: 0;
+			margin-left: 0;
+			&:after {
+				position: absolute;
+				top: 10px;
+				left: -1.9rem;
+				width: 8px;
+				height: 8px;
+				content: '';
+				background: $primary;
+				border-radius: 30px;
+			}
+		}
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	img.size-full {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin: 0 0 10px 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.content-styling {
+	}
+}

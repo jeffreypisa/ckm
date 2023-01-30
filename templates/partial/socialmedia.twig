@@ -1,0 +1,14 @@
+<ul class="socialmedia">
+	{% if options.facebook %}
+		<li> <a href="{{ options.facebook }}" target="_blank" aria-label="facebook" class="facebook"> </a> </li>
+	{% endif %}
+	{% if options.twitter %}
+		<li> <a href="{{ options.twitter }}" target="_blank" aria-label="twitter" class="twitter"> </a> </li>
+	{% endif %}
+	{% if options.linkedin %}
+		<li> <a href="{{ options.linkedin }}" target="_blank" aria-label="linkedin" class="linkedin"> </a> </li>
+	{% endif %}
+	{% if options.youtube %}
+		<li> <a href="{{ options.youtube }}" target="_blank" aria-label="youtube" class="youtube"> </a> </li>
+	{% endif %}
+</ul>

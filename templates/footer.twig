@@ -1,0 +1,45 @@
+<footer class="mt-5">
+	<div class="footer bg-footer text-white text-center">
+		<div class="section_icon top"> <img src="{{ theme.link }}/assets/img/icon_section_samen.svg"> </div>
+		<div class="container-fluid">
+			<br>
+			<h2 class="font-script text-orange mb-5">  {{ options.footer_titel }}</h2>
+			<div class="row">
+				<div class="col-lg mb-4 mb-lg-0">
+					<h3 class="mb-5">{{ options.footer_kolom_1_titel }}</h3>
+					{% if options.footer_kolom_1_link %}
+						<a class="btn btn-primary mb-2" href="{{ options.footer_kolom_1_link.url }}" target="{{ options.footer_kolom_1_link.target }}">{{ options.footer_kolom_1_link.title }}</a>
+					{% endif %}
+					{{ options.footer_kolom_1_tekst }}
+				</div>
+				<div class="col-lg">
+					<h3 class="mb-5">{{ options.footer_kolom_2_titel }}</h3>
+					{{ options.footer_kolom_2_tekst }}
+					{% include 'partial/socialmedia.twig' %}
+				</div>
+				<div class="col-lg mb-4 mb-lg-0 order-first order-lg-last">
+					<h3 class="mb-5">{{ options.footer_kolom_3_titel }}</h3>
+					{{ options.footer_kolom_3_tekst }}
+				</div>
+			</div>
+		</div>
+		<div class="subfooter pt-5">
+			<div class="container-fluid d-flex justify-content-center">
+				<div>
+					© {{ 'now' | date('Y') }} {{ site.title }} {% include "footermenu.twig" with {'items': footermenu.get_items} %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="logos">
+		<div class="container-fluid">
+			<div class="row">
+				{% for logo in options.logos %}
+					<div class="col">
+						<div class="logo" style="background-image: url({{ Image(logo.logo).src }})"></div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</footer>

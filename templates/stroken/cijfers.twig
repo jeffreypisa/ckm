@@ -1,0 +1,17 @@
+<section id="{{ sectionno }}" class="section pb-cijfers">
+	<div class="section_icon top"> <img src="{{ theme.link }}/assets/img/icon_section_stats.svg"> </div>
+	<div class="container-fluid mt-5">
+		<div class="row g-5">
+			<div class="col-md-8">
+				<img src="{{ Image(item.afbeelding).src }}" src="{{ Image(item.afbeelding).alt }}" class="w-100 h-auto">
+			</div>
+			<div class="col-md-4 text-center d-flex align-items-center">
+				<div class="w-100">
+					<h2 class="h3"> {{ item.titel }} </h2>
+					{{ item.tekst }}
+					<a class="btn-link mt-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 

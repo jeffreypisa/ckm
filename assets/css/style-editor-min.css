@@ -1,0 +1,13 @@
+.text_popover_global {
+	font-weight: bold;
+}
+.text_popover_global:hover {
+	cursor: pointer;
+	color: blue !important;
+}
+.text_popover_global:before {
+	content: '['
+}
+.text_popover_global:after {
+	content: ']'
+}

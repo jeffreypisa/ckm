@@ -1,0 +1,9 @@
+{% if menu %}
+<ul class="nav">
+	{% for item in items %}
+	<li class="nav-item {% if item.knop %}has-btn{% endif %} {{ item.classes | join(' ') }}">
+		<a class="nav-link {% if item.knop %}btn btn-primary{% endif %}" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,27 @@
+<header class="header d-flex align-items-center">
+	<div class="container-fluid"> 
+		<div class="row g-5">
+			<div class="col d-flex align-items-center">
+				<a class="header-brand" href="{{site.url}}" rel="home">
+					<img src="{{ Image(options.logo).src }})" alt="{{ Image(options.logo).alt }})">
+					<span class="d-none">{{ site.name }}</span>
+				</a>
+			</div>
+			<div class="col-auto">
+				<a href="" class="header-link">
+					<img src="{{ theme.link }}/assets/img/icon_search.svg">
+				</a>
+			</div>
+			<div class="col-auto">
+				<a href="" class="header-link">
+					Doneer <img src="{{ theme.link }}/assets/img/icon_donatie.svg">
+				</a>
+			</div>
+			<div class="col-auto">
+				<a id="mobilemenubtn" class="header-link btn-menu d-block js-menu">
+					<img src="{{ theme.link }}/assets/img/icon_hamburger.svg">
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

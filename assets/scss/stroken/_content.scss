@@ -1,0 +1,35 @@
+.pb-content {
+	
+	.wp-block-image figcaption {
+		@extend small;
+		font-style: italic;
+	}
+	
+	.wp-block-quote {
+		padding-left: 20px;
+		position: relative;
+		border-left: 4px solid $primary;	
+		cite {
+			@extend small;
+		}
+	}
+	
+	.usps {
+		img {
+			height: auto;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.pb-content {
+
+	}
+}
+	
+
+@include media-breakpoint-up(md) {
+	.pb-content {
+
+	}
+}

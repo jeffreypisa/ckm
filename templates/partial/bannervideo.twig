@@ -1,0 +1,10 @@
+<section id="banner" class="pb-banner text-white {{ post.banner_layout }} mb-20">
+	<div class="vimeo-wrapper">
+		{% if post.vimeo %}
+		  {% set videoSrc = post.get_field('vimeo', FALSE, FALSE)|split("src=") %}
+		  {% set videoUrl = videoSrc[1]|split('"') %}
+		  
+		  <iframe id="video1" src="{{ videoUrl[1] }}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+		{% endif %}
+	</div>
+</section> 

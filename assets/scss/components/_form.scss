@@ -1,0 +1,68 @@
+.form-control {
+	height: 26px;
+	background: black;
+	border-width: 3px;
+	padding: 0 6px;
+	font-weight: 700;
+	color: white;
+	&:focus {
+		border-color: #fff;
+		color: black;
+	}
+}
+
+.mc4wp-response {
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+body .fluentform {
+
+	form .ff-btn-submit {
+		@extend .btn;
+		@extend .btn-primary;	
+	}
+	
+	form label {
+		font-weight: 400 !important;
+		font-size: 16px !important;	
+	}
+	
+	.form-select {
+		@extend .btn;
+		@extend .btn-primary;
+		padding-right: 50px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-image: url('../img/arrow.svg');
+		background-size: 18px 18px;
+		background-position: right 20px center;
+		&:hover, &:focus {
+			background-repeat: no-repeat;
+			background-image: url('../img/arrow.svg');
+			background-size: 18px 18px;
+			background-position: right 20px center;
+		}
+	}
+	
+	.ff-el-form-control {
+		border: 0;
+		border-radius: 0;	
+		padding: 8px 15px;
+		min-height: 48px;
+	}
+	
+	.ff-message-success {
+		padding: 0;
+		border: 0;
+		box-shadow: none;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	body .fluentform {
+		.form-select {
+			width: auto;
+		}
+	}
+}

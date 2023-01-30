@@ -1,0 +1,41 @@
+.dropdown {
+	.dropdown-menu {
+		background: #fff;
+		padding: 8px 0;
+		border: 0;
+		opacity: 0;
+		transition: opacity 0.3s $ease;
+		border-radius: 4px;
+		box-shadow: 0px 3px 9px rgba(0,0,0,.6);
+		display: block;
+		visibility: hidden;
+		top: 39px;
+		left: -16px;
+		min-width: auto;
+		.nav-item {
+			opacity: 0;
+			transform: translateX(0);
+			transition: 0.2s ease-in;
+			a {
+				img {
+					max-width: 20px;
+					margin-top: -2px;
+				}
+				span {
+					display: inline-block;
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+	a:hover + .dropdown-menu,
+	.dropdown-menu:hover {
+		opacity: 1;
+		display: block;
+		visibility: visible;
+		.nav-item {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}

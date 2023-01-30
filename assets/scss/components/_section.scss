@@ -1,0 +1,55 @@
+section {
+	padding: 60px 0;
+	position: relative;
+}
+
+.rafelrand {
+	position: relative;
+	&:after {
+		background-image: url(../img/rafelrand_white.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 30px;
+	}
+	&.dark:after {
+		background-image: url(../img/rafelrand_dark.svg);
+	}
+	&.bottom:after {
+		background-position: bottom center;
+		bottom: -10px;
+	}
+	&.top:after {
+		background-position: top center;
+		transform: rotate(180deg);
+		top: -10px;
+	}
+}
+
+.section_icon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 150px;
+	width: 150px;
+	z-index: 2;
+	&.top {
+		top: -75px;
+	}
+	&.bottom {
+		bottom: -75px;
+	}
+}
+
+section.bg-transparent:not(.full-size) + section.bg-transparent:not(.full-size),
+section.bg-white:not(.full-size) + section.bg-white:not(.full-size),
+section.bg-dark:not(.full-size) + section.bg-dark:not(.full-size),
+section.bg-brand:not(.full-size) + section.bg-brand:not(.full-size),
+section.bg-action:not(.full-size) + section.bg-action:not(.full-size),
+section.bg-greylight:not(.full-size) + section.bg-greylight:not(.full-size) {
+	padding-top: 0 !important;
+}
+

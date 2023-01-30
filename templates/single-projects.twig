@@ -1,0 +1,95 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="content-wrapper">
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		<div class="container-fluid">
+			<h2 class="h1"> {{ post.title }} </h2>
+			<div class="line mb-20"></div>
+		</div>
+		<section id="banner" class="pb-banner text-white mb-20">
+			<div class="bannerslider js-slick-bannerslider">
+				{% for item in post.get_field('slider') %}
+					{% if item.acf_fc_layout == 'afbeelding' %}
+						<div class="item">
+							<div class="fill-space d-flex align-items-center justify-content-center">
+								<div class="bg-cover d-flex align-items-center justify-content-center" style="background-image: url({{ Image(item.afbeelding).src|resize(1920) }})">
+								</div>
+								<div class="caption">{{ Image(item.thumbnail).caption }}</div>
+							</div>
+						</div>
+					{% elseif item.acf_fc_layout == 'video' %}
+						{% if item.vimeo %}
+							{% set video = fn('extractOembedUrl', item.vimeo) %}
+							<a class="item" href="{{ video }}" data-lity>
+								<div class="vimeo-wrapper">
+									<i class="fas fa-play"></i>
+									<iframe id="video1" src="{{ video }}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen "></iframe>
+								</div>
+							</a>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+			{% if post.banner_formaat == 'toon_fullscreen' %}
+				<a href="#section1" class="arrowdown"> <i class="fa fa-chevron-down"></i> </a>
+			{% endif %}
+		</section>
+		<section class="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="line"></div>
+						{{ post.get_field('kolom_1') }}
+					</div>
+					<div class="col-md-6 order-first order-md-last">
+						{% if upcoming|length > 0 %}
+						<div id="theposts" class="upcoming">
+							{% for item in upcoming %}
+								{% if Post(item.project).title == post.title %}
+									{% include ['tease-agenda-project.twig'] %}
+								{% endif %}
+							{% endfor %}
+						</div>
+						{% else %}
+							<div class="line"></div>
+							{{ options.geen_agenda_items_voor_project }}
+						{% endif %}
+						{% if post.words %}
+							<div class="words">
+								<div class="line"></div>
+								{% for item in post.get_field('words') %}
+									<div class="word pb-3">
+										"{{ item.title }}" <br>
+										- {{ item.source }} {% if item.the_link %}
+										<a href="{{ item.the_link.url }}" target="{{ item.the_link.target }}" class="blocklink">{{ item.the_link.title }}</a>
+										{% endif %}
+									</div>
+								{% endfor %}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+
+				{% if post.credits_kolom_1 or post.credits_kolom_2 %}
+					<div class="credits pt-3">
+						<div class="line"></div>
+						<div class="row mb-md-3">
+							{% if post.credits_kolom_1 %}
+							<div class="col-md">
+								{{ post.get_field('credits_kolom_1') }}
+							</div>
+							{% endif %}
+							{% if post.credits_kolom_2 %}
+							<div class="col-md">
+								{{ post.get_field('credits_kolom_2') }}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</section>
+	</article>
+</div><!-- /content-wrapper -->
+{% endblock %}

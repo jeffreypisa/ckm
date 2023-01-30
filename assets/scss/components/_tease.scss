@@ -1,0 +1,42 @@
+.tease, .tease[href] {
+	height: auto;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	h3 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-width: 100%;
+		letter-spacing: 1px;
+	}
+	.afbeelding-wrapper {
+		overflow: hidden;
+		position: relative;
+		.afbeelding {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(1);
+			transition: 10s $ease;
+		}
+	}
+	&[href]:hover {
+		.afbeelding-wrapper {
+			.afbeelding {
+				transform: scale(1.06);
+				transition: 2s $ease;
+			}
+		}
+	}
+	&.tease-agenda {
+		padding-bottom: .78rem;
+		margin-bottom: -3px;
+		border-bottom: 3px solid #000;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}

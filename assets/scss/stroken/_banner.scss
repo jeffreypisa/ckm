@@ -1,0 +1,151 @@
+@keyframes blur {
+	0% {
+		-webkit-filter: blur(30px);
+		-moz-filter: blur(30px);
+		-o-filter: blur(30px);
+		-ms-filter: blur(30px);
+	}
+
+	100% {
+		-webkit-filter: blur(0);
+		-moz-filter: blur(0);
+		-o-filter: blur(0);
+		-ms-filter: blur(0);
+	}
+}
+
+.loaded {
+	.pb-banner {
+		#thevideo {
+			opacity: 0.3;
+		}
+
+		.bg {
+			filter: blur(0);
+		}
+
+		.vimeo-wrapper {
+			opacity: 1;
+			&.faded {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.loaded .mod-banner {
+	img {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.pb-banner {
+	position: relative;
+	min-height: 500px;
+	.bannerslider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		.fill-space .bg-cover {
+			transition: 5s $ease;
+		}
+		.item {
+			position: relative;
+			min-height: 500px;
+			padding: 60px 0;
+			color: #fff;
+			&:hover {
+				.fill-space .bg-cover {
+					transform: scale(1.1);
+					transition: 20s $ease;
+				}
+			}
+		}
+	}
+	
+	
+	.vimeo-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		pointer-events: none;
+		overflow: hidden;
+		opacity: 0;
+		transition: .6s opacity cubic-bezier(.19, 1, .22, 1);
+
+		iframe {
+			width: 100vw;
+			height: 56.25vw;
+			/* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+			min-height: 100vh;
+			min-width: 177.77vh;
+			/* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.fill-space {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		background-size: cover;
+		background-position: center center;
+		&.faded {
+			opacity: .5;
+		}
+	}
+	
+	.container, .container-fluid {
+		z-index: 1;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+
+@include media-breakpoint-up(md) {
+	.pb-banner {
+		min-height: 600px;
+		.bannerslider {
+			.item {
+				min-height: 600px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-banner {
+		min-height: 700px;
+		.bannerslider {
+			.item {
+				min-height: 700px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.pb-banner {
+		min-height: 830px;
+		.bannerslider {
+			.item {
+				min-height: 830px;
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<div class="tease tease-agenda">
+	<div class="line"></div>
+	<div class="row">
+		<div class="col">
+			{{ item.datum|date('j-m-Y') }} 
+		</div>
+		<div class="col-auto">
+			<a href="{{ item.ticketlink }}" target="_blank" class="blocklink">Tickets</a>
+		</div>
+	</div>
+	{{ item.title }}
+</div>

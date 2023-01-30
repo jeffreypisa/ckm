@@ -1,0 +1,27 @@
+.pb-video {
+	.afbeelding {
+		position: relative;
+		transition: 0.2s $ease;
+		i {
+			position: absolute;
+			font-size: 32px;
+			color: #fff;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&:hover {
+			filter: brightness(120%);
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-video {
+		.afbeelding {
+			i {
+				font-size: 50px;
+			}
+		}
+	}
+}

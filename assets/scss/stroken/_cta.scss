@@ -1,0 +1,65 @@
+.pb-cta {
+	position: relative;
+	overflow: hidden;
+	.card {
+		border: 0;
+		overflow: hidden;
+		.card-body {
+			padding: 30px;
+		}
+	}
+	.fill-space {
+		z-index: 0;
+		opacity: .7;
+	}
+	.container, .card-body {
+		z-index: 1;
+		position: relative;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-cta {
+		.card {
+			.card-body {
+				padding: 40px;
+			}
+		}
+		&.card_xl {
+			.card .card-body {
+				padding: 60px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-cta {
+		.card {
+			.card-body {
+				padding: 50px;
+			}
+		}
+		&.card_xl {
+			.card .card-body {
+				padding: 80px;
+			}
+		}
+	}
+}
+
+
+@include media-breakpoint-up(xl) {
+	.pb-cta {
+		.card {
+			.card-body {
+				padding: 60px;
+			}
+		}
+		&.card_xl {
+			.card .card-body {
+				padding: 100px;
+			}
+		}
+	}
+}

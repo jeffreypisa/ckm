@@ -1,0 +1,89 @@
+.last-element-mb-0 > *:last-child {
+	margin-bottom: 0 !important;
+}
+
+@include media-breakpoint-up(md) {
+	.last-element-mb-0-md > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.last-element-mb-0-lg > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+.mb-30 {
+	margin-bottom: 30px !important;
+}
+
+.mb-20 {
+	margin-bottom: 20px !important;
+}
+
+.bg-cover {
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-contain {
+	background-size: contain;
+	background-position: center center;
+}
+
+.muted {
+	opacity: .3;
+	a[href] {
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+.fill-space {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	.bg-cover, .bg-contain {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+	}
+}
+
+.ratio-1x1 {
+	padding-top: 100%;
+}
+
+.ratio-3x2 {
+	padding-top: 66.66%;
+}
+
+.ratio-2x3 {
+	padding-top: 133%;
+}
+
+.ratio-4x3 {
+	padding-top: 75%;
+}
+
+.ratio-16x9 {
+	padding-top: 57%;
+}
+
+.text-end {
+	p {
+		margin: 0;
+	}
+}
+
+.last-element-no-mb {
+	>*:last-child {
+		margin-bottom: 0;
+	}
+}

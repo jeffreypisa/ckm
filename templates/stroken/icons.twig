@@ -1,0 +1,20 @@
+<section id="{{ sectionno }}" class="section pb-icons bg-white">
+	<div class="container-fluid mb-5 mt-5">
+		<div class="row">
+			{% for item in item.iconen %}
+				<div class="col text-center">
+					<img src="{{ Image(item.icoon).src }}" alt="{{ Image(item.icon).alt }}" >
+					<h3>{{ item.titel }}</h3>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-10 offset-1">
+				{{ item.tekst }}
+				<a class="btn-link mt-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			</div>
+		</div>
+	</div>
+</section> 

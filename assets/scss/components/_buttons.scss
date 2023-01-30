@@ -1,0 +1,42 @@
+.btn-link {
+	font-family: $font-family-script;
+	font-size: 30px;
+	line-height: 34px;
+	display: inline-block;
+	background: url('../img/icon_arrow_orange.svg');
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 70px;
+	color: $dark;
+	&:hover {
+		color: $orange;
+	}
+}
+
+.btn {
+	height: 74px;
+	min-width: 300px;
+	line-height: 88px;
+	font-weight: 400;
+	font-family: $font-family-script;
+	font-size: 34px;
+	padding: 0 100px 0 20px;
+	background: url('../img/button_orange.svg');
+	background-size: contain;
+	transform: scale(1);
+	transition: .2s $ease;
+	color: $dark;
+	&:hover {
+		transform: scale(1.1);
+		color: $dark;
+	}
+	&.btn-light {
+		background: url('../img/button_white.svg');
+		background-size: contain;
+		color: $dark;
+	}
+	&.btn-primary {
+		background: url('../img/button_orange.svg');
+		background-size: contain;
+	}
+}

@@ -1,0 +1,11 @@
+{% if menu %}
+	<ul class="nav d-flex align-content-stretch flex-wrap">
+		{% for item in items %}
+			<li class="nav-item m-0 {{ item.classes | join(' ') }}">
+				<a class="nav-link h1xl w-100 h-100 d-flex align-items-center justify-content-center text-center" target="{{ item.target }}" href="{{ item.link }}">
+					<div>{{ item.title }}</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}

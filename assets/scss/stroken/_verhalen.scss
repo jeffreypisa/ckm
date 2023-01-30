@@ -1,0 +1,10 @@
+.pb-verhalen {
+	.verhaal {
+		color: $dark;
+		transition: 0.2s $ease;
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
