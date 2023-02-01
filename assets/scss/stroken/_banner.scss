@@ -42,7 +42,7 @@
 
 .pb-banner {
 	position: relative;
-	min-height: 500px;
+	min-height: 440px;
 	.bannerslider {
 		position: absolute;
 		top: 0;
@@ -54,9 +54,13 @@
 		}
 		.item {
 			position: relative;
-			min-height: 500px;
+			min-height: 440px;
 			padding: 60px 0;
 			color: #fff;
+			h4 {
+				font-size: 30px;
+				line-height: 34px;
+			}
 			&:hover {
 				.fill-space .bg-cover {
 					transform: scale(1.1);
@@ -116,6 +120,13 @@
 	}
 }
 
+@include media-breakpoint-down(md) {
+	.pb-banner {
+		.slick-dots {
+			display: none;
+		}
+	}
+}
 
 @include media-breakpoint-up(md) {
 	.pb-banner {

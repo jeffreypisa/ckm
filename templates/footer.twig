@@ -26,12 +26,12 @@
 		<div class="subfooter pt-5">
 			<div class="container-fluid d-flex justify-content-center">
 				<div>
-					© {{ 'now' | date('Y') }} {{ site.title }} {% include "footermenu.twig" with {'items': footermenu.get_items} %}
+					© {{ 'now' | date('Y') }} {{ site.description}} {% include "footermenu.twig" with {'items': footermenu.get_items} %}
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="logos">
+	<div class="logos d-none d-md-block">
 		<div class="container-fluid">
 			<div class="row">
 				{% for logo in options.logos %}

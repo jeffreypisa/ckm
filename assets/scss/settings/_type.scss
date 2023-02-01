@@ -78,7 +78,7 @@ $font-family-script:		  'Hey October';
 } 
 
 .text-lg {
-	font-size: 20px;
+	font-size: 26px;
 }
 
 .text-sm {
@@ -106,21 +106,22 @@ h1,h2,h3,h4,h5,
 	font-family: $font-family-alt;
 	strong, b {
 		color: $orange;
+		font-weight: 400;
 	}
 }
 
 body {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 28px;
 	.font-xl {
 		&.font-script {
-			font-size: 130px;
-			line-height: 80px;
+			font-size: 100px;
+			line-height: 60px;
 		}
 	}
 	h1, .h1, h2, .h2 {
-		font-size: 56px;
-		line-height: 56px;
+		font-size: 37px;
+		line-height: 37px;
 		&.font-script {
 			font-family: $font-family-script;
 			font-size: 100px;
@@ -128,8 +129,8 @@ body {
 		}
 	}
 	h3, .h3 {
-		font-size: 37px;
-		line-height: 37px;
+		font-size: 29px;
+		line-height: 29px;
 		letter-spacing: -5%;
 		&.font-script {
 			font-size: 40px;

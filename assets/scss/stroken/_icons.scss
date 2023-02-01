@@ -1,0 +1,19 @@
+.pb-icons {
+	img {
+		height: 120px;
+		width: auto;
+		margin-bottom: 20px;
+	}
+	h3 {
+		margin-top: 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-icons {
+		img {
+			height: 150px;
+			width: auto;
+		}
+	}
+}

@@ -7,6 +7,12 @@
 	{% if item.acf_fc_layout == 'bannerslider' %}
 		{% include 'stroken/bannerslider.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'lead' %}
+		{% include 'stroken/lead.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'content' %}
+		{% include 'stroken/content.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'icons' %}
 		{% include 'stroken/icons.twig' %}
 	
@@ -18,6 +24,9 @@
 	
 	{% elseif item.acf_fc_layout == 'cijfers' %}
 		{% include 'stroken/cijfers.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'geel_vlak' %}
+		{% include 'stroken/geel_vlak.twig' %}
 	
 	{% endif %}
   

@@ -1,18 +1,48 @@
-
+.content-columns {
+	margin: 0 auto;
+	column-width: 20em;
+	max-width: 1000px;
+	column-gap: 30px;
+	figure {
+		width: 100% !important;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		break-inside: avoid-column;
+		img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+	}
+	li {
+		break-inside: avoid-column;
+	}
+	figcaption {
+		font-weight: 700;
+		font-style: italic;
+		color: $orange;
+		margin-bottom: 30px;
+	}
+}
 
 .content-styling {
+	* + h2,
 	* + h3,
 	* + h4,
 	* + h5,
 	* + h6,
 	* + img {
 		@extend h4;
-		font-weight: 700;
 		margin-top: 3rem;
 		margin-bottom: 1rem;
 	}
 	h5,h6 {
 		margin-bottom: 8px;
+	}
+	h2,h3,h4,h5,h6 {
+		font-size: 25px;
+		line-height: 28px;
+		font-weight: 400;
 	}
 	
 	ul {
@@ -47,6 +77,15 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.content-styling {
+	.content-columns {
+		max-width: 1400px;
+		column-gap: 40px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.content-columns {
+		max-width: 1800px;
+		column-gap: 60px;
 	}
 }

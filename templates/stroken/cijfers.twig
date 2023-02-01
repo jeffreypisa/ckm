@@ -1,15 +1,16 @@
 <section id="{{ sectionno }}" class="section pb-cijfers">
 	<div class="section_icon top"> <img src="{{ theme.link }}/assets/img/icon_section_stats.svg"> </div>
-	<div class="container-fluid mt-5">
+	<div class="container-fluid mt-4 mt-md-5">
 		<div class="row g-5">
-			<div class="col-md-8">
-				<img src="{{ Image(item.afbeelding).src }}" src="{{ Image(item.afbeelding).alt }}" class="w-100 h-auto">
+			<div class="col-lg-6 col-xl-8">
+				<img src="{{ Image(item.afbeelding_mobiel).src }}" src="{{ Image(item.afbeelding_mobiel).alt }}" class="w-100 h-auto mb-5 d-md-none d-lg-block d-xl-none">
+				<img src="{{ Image(item.afbeelding).src }}" src="{{ Image(item.afbeelding).alt }}" class="w-100 h-auto d-none d-md-block d-lg-none d-xl-block mb-5 mb-lg-0">
 			</div>
-			<div class="col-md-4 text-center d-flex align-items-center">
+			<div class="col-lg-6 col-xl-4 text-center d-flex align-items-center">
 				<div class="w-100">
 					<h2 class="h3"> {{ item.titel }} </h2>
 					{{ item.tekst }}
-					<a class="btn-link mt-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					<a class="btn-link mt-3 mt-md-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
 				</div>
 			</div>
 		</div>

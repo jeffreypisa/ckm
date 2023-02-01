@@ -1,0 +1,30 @@
+<section id="{{ sectionno }}" class="section pb-verhalen bg-transparent">
+	<div class="container-fluid">
+		<div class="card bg-frame-verhalen pt-5 pb-5">
+			<a href="#section2" class="section_icon bottom"> <img src="{{ theme.link }}/assets/img/icon_section_verhalen.svg"> </a>
+			<div class="card-body mb-5">
+				<div class="row">
+					<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+						<div class="text-center">
+							<h2 class="mt-5 mb-5 font-script text-white"> {{ item.titel }} </h2>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="content mb-5 text-center">
+					<div class="row">
+						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							{% if item.lead %}
+								<span class="h4">{{ item.lead }}</span>
+							{% endif %}
+							<br>
+							{% if item.tekst %}
+								{{ item.tekst }}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 

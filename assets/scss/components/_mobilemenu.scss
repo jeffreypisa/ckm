@@ -44,67 +44,27 @@ body {
 	overflow-y: scroll;
 	overflow: auto;
 	padding: 30px 0;
-	background: #000;
+	background: $orange;
 	overflow-x: hidden;
-	.taalcontent {
-		position: fixed;
-		bottom: 0;
-		z-index: 2;
-		ul li a {
-			height: 30px;
-			line-height: 30px;
-			letter-spacing: 1.5px;
-			margin: 0;
-			padding: 0;
-			white-space: nowrap;
-			color: #fff;
-			text-indent: -20px;
-			font-size: 13px;
-			text-transform: uppercase;
-		}
-	}
-	.menucontent {
-		position: fixed;
-		top: 30px;
-		bottom: 30px;
-		margin: auto 0;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-		ul {
-			padding: 0;
-			margin: 0;
-			height: calc(100vh - 60px);
-			border-bottom: 5px solid #fff;
-			li {
+
+	ul {
+		padding: 120px 0 0 0;
+		margin: 0;
+		height: calc(100vh - 60px);
+		li {
+			display: block;
+			width: 100%;
+			a:not(.btn) {
+				padding: 0;
+				margin: 0 !important;
+				position: relative;
 				display: block;
-				width: 100%;
-				margin-bottom: -5px !important;
-				border-top: 5px solid #fff;
-				border-bottom: 5px solid #fff;
-				a:not(.btn) {
-					padding: 0;
-					margin: 0 !important;
-					position: relative;
-					display: block;
-					transition: 0.4s $ease;
+				transition: 0.4s $ease;
+				color: #fff;
+				height: auto;
+				@extend h2;
+				&:hover, &:focus {
 					color: #fff;
-					font-size: 28px;
-					line-height: 68px;
-					line-height: 50px;
-					height: auto;
-					text-transform: uppercase;
-					img {
-						max-width: 20px;
-						margin-top: -3px;
-					}
-					&:hover, &:focus {
-						color: #fff;
-					}
-				}
-				&.current-lang {
-					a {
-						color: $dark;
-					}
 				}
 			}
 		}
@@ -128,42 +88,9 @@ body.opensidemenu {
 }
 
 @include media-breakpoint-up(md) {
-	.mod-mobilemenu {
-		.taalcontent {
-			ul li a {
-				font-size: 16px;
-				height: 50px;
-				line-height: 50px;
-			}
-		}
-		.menucontent {
-			top: 50px;
-			bottom: 50px;
-			ul {
-				height: calc(100vh - 100px);
-				li {
-					a:not(.btn) {
-						font-size: 40px;
-						line-height: 60px;
-					}
-				}
-			}
-		}
-	}
+
 }
 
 @include media-breakpoint-up(lg) {
-	.mod-mobilemenu {
-		.menucontent {
-			ul {
-				height: calc(100vh - 100px);
-				li {
-					a:not(.btn) {
-						font-size: 60px;
-						line-height: 80px;
-					}
-				}
-			}
-		}
-	}
+
 }

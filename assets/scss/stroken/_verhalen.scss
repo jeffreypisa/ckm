@@ -1,4 +1,9 @@
 .pb-verhalen {
+	h2 {
+		strong {
+			color: #fff;
+		}
+	}
 	.verhaal {
 		color: $dark;
 		transition: 0.2s $ease;
