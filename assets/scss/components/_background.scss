@@ -1,6 +1,21 @@
 .bg-frame-label {
 	background: url(../img/frame_label.svg);
 	background-size: cover;
+	padding: 0 20px;
+	color: #fff;
+	font-family: $font-family-alt;
+	min-width: 200px;
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+	transition: 0.2s $ease;
+	&[href]:hover {
+		color: #fff;
+		transform: scale(1.1);
+	}
+	+ .bg-frame-label {
+		margin-left: 20px;
+	}
 }
 
 .bg-frame-verhalen {
@@ -11,6 +26,14 @@
 .bg-frame-year {
 	background: url(../img/frame_year.svg);
 	background-size: cover;
+	color: #fff;
+	display: inline-block;
+	font-family: $font-family-script;
+	line-height: 66px;
+	height: 60px;
+	padding: 0 20px;
+	font-size: 40px;
+	margin: 0 auto 10px;
 }
 
 .bg-square-dark {

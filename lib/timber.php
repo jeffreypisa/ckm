@@ -81,47 +81,14 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['menu']  = new TimberMenu('menu');
-		$context['taalmenu']  = new TimberMenu('taalmenu');
+		$context['menu_1']  = new TimberMenu('menu_1');
+		$context['menu_2']  = new TimberMenu('menu_2');
+		$context['menu_3']  = new TimberMenu('menu_3');
+		$context['menu_4']  = new TimberMenu('menu_4');
 		$context['footermenu']  = new TimberMenu('footermenu');
 
 		$context['site']  = $this;
 		$context['lang'] = get_locale();
-		
-		// Get this url
-		
-		$context['currenturl'] = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-		
-		$currentID = get_the_ID();
-		
-		// Banner slider artikelen
-		
-		$post_type = get_field('banner_slider_posttype', 'options');
-		
-		$args = array(
-			'post_type'			  => $post_type,
-			'posts_per_page'      => 3,
-			'post__not_in'        => array($currentID),
-			'orderby'             => 'date',
-			'order'               => 'DESC',
-			'suppress_filters'    => true
-		);
-		
-		$context['banner_slider_artikelen'] = Timber::get_posts($args);
-			
-		// Recent nieuws
-				
-		$args_news = array(
-			'post_type'			  => 'news',
-			'posts_per_page'      => 2,
-			'post__not_in'        => array($currentID),
-			'orderby'             => 'date',
-			'order'               => 'DESC',
-			'suppress_filters'    => true
-		);
-		
-		$context['news'] = Timber::get_posts($args_news);
-		
 		
 		return $context;
 	}

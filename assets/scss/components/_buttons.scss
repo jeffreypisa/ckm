@@ -13,6 +13,38 @@
 	}
 }
 
+.btn-link-back-light {
+	font-family: $font-family-script;
+	font-size: 30px;
+	line-height: 34px;
+	display: inline-block;
+	background: url('../img/icon_arrow_left_white.svg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 70px;
+	color: $dark;
+	&:hover {
+		color: $dark;
+		transform: scale(1.1);
+	}
+}
+
+.btn-link-back-dark {
+	font-family: $font-family-script;
+	font-size: 30px;
+	line-height: 34px;
+	display: inline-block;
+	background: url('../img/icon_arrow_left_orange.svg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 70px;
+	color: $dark;
+	&:hover {
+		color: $dark;
+		transform: scale(1.1);
+	}
+}
+
 .btn {
 	height: 74px;
 	min-width: 300px;

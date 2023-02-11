@@ -14,17 +14,21 @@
  * @since   Timber 0.2
  */
 
+$context = Timber::get_context();
+ 
+$context['term'] = new TimberTerm();
 
-$context = Timber::context();
+$args = array(
+'post_type' => 'dossiers',
+'tax_query' => array(
+    array(
+        'taxonomy' => 'dossier_categorie',
+        'field'    => 'slug',
+        'terms'    => $context['term']->slug,
+    ),
+),
+);
 
-$currentPostType = get_post_type();
+$context['posts'] = new Timber\PostQuery( $args );
 
-$context['title'] = $currentPostType;
-$context['posttype'] = $currentPostType;
-
-$templates = array( 'archive-' . $currentPostType . '.twig', 'archive.twig', 'index.twig' );
-
-
-$context['posts'] = new Timber\PostQuery();
-
-Timber::render( $templates, $context );
+Timber::render( 'taxonomy-dossier_categorie.twig', $context );

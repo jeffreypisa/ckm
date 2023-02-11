@@ -6,23 +6,25 @@ function create_posttype() {
 	// CPT Options
 		array(
 			'labels' => array(
-				'name'                  => __( 'Dossiers' ),
-				'singular_name'         => __( 'Dossier' ),
-				'all_items'             => __( 'Alle dossiers' ),
-				'add_new_item'          => __( 'Nieuw dossier toevoegen' ),
-				'new_item'              => __( 'Nieuw dossier' ),
-				'add_new'               => __( 'Nieuw dossier' ),
-				'edit_item'             => __( 'Bewerk dossier' ),
-				'update_item'           => __( 'Update dossier' ),
-				'view_item'             => __( 'Bekijk dossier' ),
-				'search_items'          => __( 'Zoek dossier' ),
+				'name'                  => __( 'Artikelen' ),
+				'menu_name'             => __( 'Dossiers' ),
+				'singular_name'         => __( 'Artikel' ),
+				'all_items'             => __( 'Alle artikelen' ),
+				'add_new_item'          => __( 'Nieuw artikel toevoegen' ),
+				'new_item'              => __( 'Nieuw artikel' ),
+				'add_new'               => __( 'Nieuw artikel' ),
+				'edit_item'             => __( 'Bewerk artikel' ),
+				'update_item'           => __( 'Update artikel' ),
+				'view_item'             => __( 'Bekijk artikel' ),
+				'search_items'          => __( 'Zoek artikel' ),
 			),
 			'menu_icon'           		=> 'dashicons-portfolio',
 			'public' 					=> true,
 			'show_in_rest' 				=> true,
-			'has_archive'             	=> true,
+			'has_archive'             	=> false,
 			'supports'                	=> array( 'title', 'editor', 'thumbnail' ),
-			'rewrite' 					=> array( 'slug' => 'dossiers')
+			'rewrite' 					=> array( 	'slug' 			=> 'dossiers/%dossier_categorie%', 
+			'with_front' 	=> false ),
 		)
 	);
 	
@@ -47,6 +49,30 @@ function create_posttype() {
 			'has_archive'             	=> true,
 			'supports'                	=> array( 'title', 'editor', 'thumbnail' ),
 			'rewrite' 					=> array( 'slug' => 'verhalen')
+		)
+	);
+	
+	register_post_type( 'auteurs',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name'                  => __( 'Auteurs' ),
+				'singular_name'         => __( 'Auteur' ),
+				'all_items'             => __( 'Alle auteurs' ),
+				'add_new_item'          => __( 'Nieuwe auteur toevoegen' ),
+				'new_item'              => __( 'Nieuwe auteur' ),
+				'add_new'               => __( 'Nieuwe auteur' ),
+				'edit_item'             => __( 'Bewerk auteur' ),
+				'update_item'           => __( 'Update auteur' ),
+				'view_item'             => __( 'Bekijk auteur' ),
+				'search_items'          => __( 'Zoek auteur' ),
+			),
+			'menu_icon'           		=> 'dashicons-megaphone',
+			'public' 					=> true,
+			'show_in_rest' 				=> true,
+			'has_archive'             	=> true,
+			'supports'                	=> array( 'title', 'editor', 'thumbnail' ),
+			'rewrite' 					=> array( 'slug' => 'auteurs')
 		)
 	);
 

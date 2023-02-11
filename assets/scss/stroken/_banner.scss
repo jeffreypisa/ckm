@@ -130,10 +130,14 @@
 
 @include media-breakpoint-up(md) {
 	.pb-banner {
-		min-height: 600px;
+		height: 600px;
+		min-height: 560px;
+		max-height: calc(100vh - 200px);
 		.bannerslider {
 			.item {
-				min-height: 600px;
+				height: 600px;
+				min-height: 560px;
+				max-height: calc(100vh - 200px);
 			}
 		}
 	}
@@ -141,10 +145,10 @@
 
 @include media-breakpoint-up(lg) {
 	.pb-banner {
-		min-height: 700px;
+		height: 700px;
 		.bannerslider {
 			.item {
-				min-height: 700px;
+				height: 700px;
 			}
 		}
 	}
@@ -152,10 +156,10 @@
 
 @include media-breakpoint-up(xl) {
 	.pb-banner {
-		min-height: 830px;
+		height: 830px;
 		.bannerslider {
 			.item {
-				min-height: 830px;
+				height: 830px;
 			}
 		}
 	}

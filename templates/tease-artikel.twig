@@ -1,0 +1,17 @@
+<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-artikel mb-30 d-block">
+	<div class="row g-5">
+		<div class="col-md-6 d-flex flex-column">
+			<div class="bg-frame-label">
+				{{ item.label }}
+			</div>
+			<h3 class="h4 mt-4 mb-2"> {{ item.title }} </h3>
+			<div class="font-alt text-orange mt-auto">{{ item.date|date('d-m-Y') }}</div>
+		</div>
+		<div class="col-md-6">
+			<div class="afbeelding-wrapper ratio-4x3">
+				<div class="afbeelding bg-cover" style="background-image: url({{ Image(item.thumbnail)|resize(1024) }})"></div>
+			</div>
+		</div>
+	</div>
+	<img class="dots" src="{{ theme.link }}/assets/img/threeblackdots.svg" alt="dots">
+</a>

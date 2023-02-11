@@ -1,6 +1,6 @@
 .content-columns {
 	margin: 0 auto;
-	column-width: 20em;
+	column-width: 16em;
 	max-width: 1000px;
 	column-gap: 30px;
 	figure {
@@ -22,6 +22,12 @@
 		font-style: italic;
 		color: $orange;
 		margin-bottom: 30px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.content-columns {
+		column-width: 20em;
 	}
 }
 

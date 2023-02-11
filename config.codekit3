@@ -7,7 +7,7 @@
       "uuidString" : "DAB3A1D1-B069-47CF-B5B7-C2F91B29D8B3"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34448",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -41,6 +41,22 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/acf-json\/group_63e503d3a2375.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63e503d3a2375-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63e5032859d20.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63e5032859d20-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/acf-json\/group_6399b5f573f7a.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -64,14 +80,6 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
-    },
-    "\/archive-words.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/archive-words.php",
-      "oF" : 0
     },
     "\/archive.php" : {
       "cB" : 0,
@@ -576,6 +584,36 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/icon_arrow_left_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_arrow_left_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_arrow_left_orange.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_arrow_left_orange.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_arrow_left_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_arrow_left_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/icon_arrow_orange.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -846,6 +884,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/line_title.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/line_title.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/mask_round.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -891,6 +939,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/square_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/threeblackdots.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/threeblackdots.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -1887,6 +1945,14 @@
       "oAP" : "\/lib\/cpt.php",
       "oF" : 0
     },
+    "\/lib\/ctax.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/ctax.php",
+      "oF" : 0
+    },
     "\/lib\/filetypes.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2029,20 +2095,12 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/page-agenda.php" : {
+    "\/page-dossiers.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/page-agenda.php",
-      "oF" : 0
-    },
-    "\/page-words.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/page-words.php",
+      "oAP" : "\/page-dossiers.php",
       "oF" : 0
     },
     "\/page.php" : {
@@ -4831,12 +4889,36 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/taxonomy-dossier_categorie.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/taxonomy-dossier_categorie.php",
+      "oF" : 0
+    },
     "\/templates\/404.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/404.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-dossiers.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-dossiers.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-verhalen.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-verhalen.twig",
       "oF" : 0
     },
     "\/templates\/archive.twig" : {
@@ -5039,20 +5121,20 @@
       "oAP" : "\/templates\/sidebar.twig",
       "oF" : 0
     },
+    "\/templates\/single-dossier.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-dossier.twig",
+      "oF" : 0
+    },
     "\/templates\/single-password.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/single-password.twig",
-      "oF" : 0
-    },
-    "\/templates\/single-projects.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/single-projects.twig",
       "oF" : 0
     },
     "\/templates\/single.twig" : {
@@ -5135,12 +5217,28 @@
       "oAP" : "\/templates\/stroken\/verhalen.twig",
       "oF" : 0
     },
-    "\/templates\/tease-agenda.twig" : {
+    "\/templates\/taxonomy-dossier_categorie.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/tease-agenda.twig",
+      "oAP" : "\/templates\/taxonomy-dossier_categorie.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-artikel.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-artikel.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-dossiers.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-dossiers.twig",
       "oF" : 0
     },
     "\/templates\/tease.twig" : {
@@ -5679,6 +5777,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "1"
@@ -5839,6 +5941,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -5977,6 +6082,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -6793,7 +6901,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

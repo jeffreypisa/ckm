@@ -75,6 +75,7 @@ $font-family-script:		  'Hey October';
 .font-script {
 	font-family: $font-family-script !important;
 	font-weight: 400;
+	letter-spacing: 0;
 } 
 
 .text-lg {
@@ -107,6 +108,26 @@ h1,h2,h3,h4,h5,
 	strong, b {
 		color: $orange;
 		font-weight: 400;
+	}
+}
+
+h1,h2,h3,
+.h1,.h2,.h3 {
+	letter-spacing: -3px;
+}
+
+h4, h5,
+.h4, .h5 {
+	letter-spacing: -1.5px;
+}
+
+
+.bg-orange {
+	h1,h2,h3,h4,h5,
+	.h1,.h2,.h3,.h4,.h5 {
+		strong, b {
+			color: #fff;
+		}
 	}
 }
 

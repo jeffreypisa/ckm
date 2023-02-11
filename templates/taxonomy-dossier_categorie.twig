@@ -1,0 +1,57 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+    <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+       <section id="{{ sectionno }}" class="section rafelrand bottom orange pb-lead bg-orange text-dark mb-5">
+          {% if options.dossiers_archief_icoon %}
+             <div class="section_icon bottom"> <img src="{{ Image(options.dossiers_archief_icoon).src }}" alt="{{ Image(options.dossiers_archief_icoon).src }}"> </div>
+          {% endif %}
+          <div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
+             {% if term.titel %}
+                <div class="row">
+                   <div class="col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
+                      <div class="text-center">
+                         <h2 class="mb-5"> {{ term.titel }} </h2>
+                      </div>
+                   </div>
+                </div>
+             {% endif %}
+             <div class="row">
+                <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                   <div class="text-center">
+                      {{ term.description }} 
+                   </div>
+                </div>
+             </div>
+             
+              <a href="/dossiers" class="btn-link-back-light"> Overzicht </a>
+          </div>
+       </section> 
+        <section class="mod-archive">
+            <div class="container-fluid">
+               <div id="theposts" class=" pt-2 g-5">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                        {% set year = '' %}
+                        
+                        {% for item in posts %}
+                           {% if year == item.date|date('Y') %}
+                           {% else %}
+                              {% set year = item.date|date('Y') %}
+                              <div class="text-center">
+                                 <div class="bg-frame-year"> {{ year }} </div>
+                                 <img class="dots" src="{{ theme.link }}/assets/img/threeblackdots.svg" alt="dots">
+                              </div>
+                           {% endif %}
+                          {% include ['tease-artikel.twig'] %}
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>  
+            </div>
+        </section>
+    </article>
+{% endblock %}

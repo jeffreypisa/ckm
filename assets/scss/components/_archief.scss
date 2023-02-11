@@ -1,5 +1,8 @@
-.mod-archive {
-
+body.archive {
+	.dots {
+		display: block;
+ 		margin: 10px auto;
+	}
 }
 
 @include media-breakpoint-up(md) {
