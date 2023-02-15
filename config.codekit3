@@ -654,6 +654,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/icon_close.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_close.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/icon_donatie.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -879,6 +889,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/icon_verhalen.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/line_blockquote.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/line_blockquote.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -5121,14 +5141,6 @@
       "oAP" : "\/templates\/sidebar.twig",
       "oF" : 0
     },
-    "\/templates\/single-dossier.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/single-dossier.twig",
-      "oF" : 0
-    },
     "\/templates\/single-password.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5151,6 +5163,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/stroken.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/banner.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/banner.twig",
       "oF" : 0
     },
     "\/templates\/stroken\/bannerslider.twig" : {

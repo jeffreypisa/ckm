@@ -46,7 +46,7 @@ body {
 	top: 80px;
 	left: 0;
 	overflow: hidden;
-	transition: 1s $ease;
+	transition: .4s $ease;
 	overflow-y: scroll;
 	overflow: auto;
 	padding: 80px 0 20px;
@@ -94,7 +94,7 @@ body.opensidemenu {
 	}
 	.mod-mobilemenu {
 		z-index: 99;
-		transition: .8s $ease;
+		transition: 1s $ease;
 		transform: translateY(0%);
 		pointer-events: all;
 		.menucontent {

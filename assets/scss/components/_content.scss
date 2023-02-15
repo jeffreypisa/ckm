@@ -25,13 +25,22 @@
 	}
 }
 
-@include media-breakpoint-up(xl) {
-	.content-columns {
-		column-width: 20em;
-	}
-}
+
 
 .content-styling {
+	.auteur {
+		color: $orange;
+		font-family: $font-family-alt;
+		font-size: 25px;
+		line-height: 28px;
+		.afbeelding {
+			width: 60px;
+			height: 60px;
+			background-size: cover;
+			border-radius: 199px;
+			margin-right: 15px;
+		}
+	}
 	* + h2,
 	* + h3,
 	* + h4,
@@ -80,6 +89,21 @@
 		height: auto;
 		margin: 0 0 10px 0;
 	}
+	
+	blockquote {
+		background: url(../img/line_blockquote.svg);
+		background-repeat: repeat-y;
+		break-inside: avoid-column;
+		@extend h3;
+		font-size: 37px !important;
+		line-height: 37px !important;
+		padding-left: 30px;
+		color: $orange;
+		strong, b {
+			color: $dark;
+		}
+		margin-bottom: 3rem;
+	}
 }
 
 @include media-breakpoint-up(lg) {
@@ -91,7 +115,7 @@
 
 @include media-breakpoint-up(xl) {
 	.content-columns {
-		max-width: 1800px;
+		max-width: 1500px;
 		column-gap: 60px;
 	}
 }

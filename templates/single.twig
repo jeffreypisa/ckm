@@ -3,6 +3,7 @@
 {% block content %}
 	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 		<div class="pb-banner d-flex align-items-center text-white rafelrand bottom inverse white">		
+			<div class="section_icon bottom"> <img src="{{ theme.link }}/assets/img/icon_section_dossier.svg"> </div>
 			<div class="fill-space">
 				<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail).src|resize(1920) }})">
 				</div>
@@ -14,12 +15,33 @@
 						<h2 class="h1 mb-5">
 							{{ post.title }}
 						</h2>
+						{% if post.label %}
+							<div class="bg-frame-label">
+								{{ post.label }}
+							</div>
+						{% endif %}
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
-			<div class="content-columns content-styling mb-5">
+			<div class="content-columns content-styling mb-5 pt-5">
+				{% set auteur = Post(post.auteur) %}
+				{% if auteur %}
+					<div class="auteur mb-4">
+						<div class="row">
+							<div class="col-auto">
+								<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+							</div>
+							<div class="col d-flex flex-column align-items-dropdown-center">
+								{{ auteur.title  }}
+								<div class="clearfix"></div>
+								{{ post.date|date('d-m-Y') }}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+				
 				{{ post.content }}
 			</div>
 			{% set terms = post.terms('dossier_tags') %}
@@ -32,9 +54,11 @@
 	
 			{% endif %}
 			
-			<br>
+			<br><br><br>
 			
 			<a href="/dossiers" class="btn-link-back-dark"> Dossiers </a>
+			
+			<br><br><br>
 		</div>
 	</article>
 {% endblock %}

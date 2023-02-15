@@ -50,6 +50,61 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_63ed020dccd93": {
+                    "key": "layout_63ed020dccd93",
+                    "name": "banner",
+                    "label": "Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63ed021eccd95",
+                            "label": "Toon donatie formulier",
+                            "name": "toon_donatie_formulier",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_63ed0232ccd96",
+                            "label": "Icoon",
+                            "name": "icoon",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_63da5e283724c": {
                     "key": "layout_63da5e283724c",
                     "name": "lead",
@@ -787,5 +842,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675266865
+    "modified": 1676476989
 }

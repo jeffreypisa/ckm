@@ -7,6 +7,9 @@
 	{% if item.acf_fc_layout == 'bannerslider' %}
 		{% include 'stroken/bannerslider.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'banner' %}
+		{% include 'stroken/banner.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'lead' %}
 		{% include 'stroken/lead.twig' %}
 		

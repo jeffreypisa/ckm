@@ -31,15 +31,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="logos d-none d-md-block">
-		<div class="container-fluid">
-			<div class="row">
-				{% for logo in options.logos %}
-					<div class="col">
-						<div class="logo" style="background-image: url({{ Image(logo.logo).src }})"></div>
-					</div>
-				{% endfor %}
+	{% if fn('is_front_page') %}
+		<div class="logos d-none d-md-block">
+			<div class="container-fluid">
+				<div class="row">
+					{% for logo in options.logos %}
+						<div class="col">
+							<div class="logo" style="background-image: url({{ Image(logo.logo).src }})"></div>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 </footer>
