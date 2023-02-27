@@ -1,31 +1,11 @@
 {
-    "key": "group_63d27c04c728c",
-    "title": "Verhalen",
+    "key": "group_63ee34e635fe9",
+    "title": "Team",
     "fields": [
         {
-            "key": "field_63d27c04962b5",
-            "label": "Quote",
-            "name": "quote",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Vetgedrukte tekst = oranje",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_63d27c12962b6",
-            "label": "Link tekst in slider",
-            "name": "link_tekst",
+            "key": "field_63ee34e63f56e",
+            "label": "Functie",
+            "name": "functie",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -41,6 +21,42 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_63ee350b67931",
+            "label": "Linkedin",
+            "name": "linkedin",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_63ee351667932",
+            "label": "Email",
+            "name": "email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -48,7 +64,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "verhalen"
+                "value": "team"
             }
         ]
     ],
@@ -61,5 +77,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674739314
+    "modified": 1676555584
 }

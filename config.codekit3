@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34448",
   "files" : {
+    "\/.nova\/Publishing\/Emonks.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.nova\/Publishing\/Emonks-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -33,14 +41,6 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/acf-json\/group_63d27c04c728c.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/acf-json\/group_63d27c04c728c-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
     "\/acf-json\/group_63e503d3a2375.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -53,6 +53,78 @@
       "ft" : 524288,
       "oA" : 1,
       "oAP" : "\/acf-json\/group_63e5032859d20-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63ee10f134efb.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63ee10f134efb-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63ee11fbdd0f7.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63ee11fbdd0f7-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63ee34e635fe9.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63ee34e635fe9-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63f8cde45eb90.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63f8cde45eb90-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63f73a7fe8f4c.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63f73a7fe8f4c-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63f38577b24ac.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63f38577b24ac-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63fcbcf1eb526.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63fcbcf1eb526-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63fcbd7497dc6.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63fcbd7497dc6-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/group_63fccc80cf7e6.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_63fccc80cf7e6-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -80,6 +152,14 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/archive-verhalen.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/archive-verhalen.php",
+      "oF" : 0
     },
     "\/archive.php" : {
       "cB" : 0,
@@ -504,6 +584,76 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/form_checked.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_checked.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_notchecked.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_notchecked.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_roundtab_selected.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_roundtab_selected.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_roundtab.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_roundtab.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_tab_check.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_tab_check.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_tab_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_tab_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/form_tab_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/form_tab_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/frame_footer.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -514,11 +664,91 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/frame_form.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_form.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_formfield_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_formfield_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_formfield_select_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_formfield_select_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_formfield_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_formfield_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/frame_label.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/frame_label.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_language_orange.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_language_orange.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_language_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_language_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_lijst.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_lijst.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/frame_rondefoto.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_rondefoto.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -549,6 +779,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/header_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/header_search.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/header_search.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -834,11 +1074,41 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/icon_section_up.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_section_up.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/icon_section_verhalen.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/icon_section_verhalen.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_social_email.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_social_email.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_social_facebook_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_social_facebook_white.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -854,11 +1124,41 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/icon_social_instagram.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_social_instagram.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_social_linkedin_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_social_linkedin_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/icon_social_linkedin.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/icon_social_linkedin.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_social_twitter_white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_social_twitter_white.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -879,16 +1179,6 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/icon_social_youtube.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/img\/icon_verhalen.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/img\/icon_verhalen.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -1211,6 +1501,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/components\/_donatie.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/components\/_donatie.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/components\/_dropdown.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1361,6 +1666,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/components\/_search.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/components\/_search.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/components\/_section.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1401,6 +1721,21 @@
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/components\/_socialmedia.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/components\/_taalswitcher.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/components\/_taalswitcher.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1796,6 +2131,51 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/stroken\/_donatie.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/stroken\/_donatie.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/stroken\/_downloads.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/stroken\/_downloads.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/stroken\/_formulier.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/stroken\/_formulier.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/stroken\/_icons.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1821,6 +2201,21 @@
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/stroken\/_impact.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/stroken\/_lead.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/stroken\/_lead.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1971,6 +2366,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/ctax.php",
+      "oF" : 0
+    },
+    "\/lib\/custom-twig-extensions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/custom-twig-extensions.php",
       "oF" : 0
     },
     "\/lib\/filetypes.php" : {
@@ -4933,6 +5336,14 @@
       "oAP" : "\/templates\/archive-dossiers.twig",
       "oF" : 0
     },
+    "\/templates\/archive-onderzoeken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-onderzoeken.twig",
+      "oF" : 0
+    },
     "\/templates\/archive-verhalen.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5029,6 +5440,14 @@
       "oAP" : "\/templates\/menu-mobilemenu.twig",
       "oF" : 0
     },
+    "\/templates\/menu-taal.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/menu-taal.twig",
+      "oF" : 0
+    },
     "\/templates\/menu.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5043,14 +5462,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/mobilemenu.twig",
-      "oF" : 0
-    },
-    "\/templates\/page-agenda.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/templates\/page-agenda.twig",
       "oF" : 0
     },
     "\/templates\/page-plugin.twig" : {
@@ -5109,6 +5520,14 @@
       "oAP" : "\/templates\/partial\/pagination.twig",
       "oF" : 0
     },
+    "\/templates\/partial\/share.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/share.twig",
+      "oF" : 0
+    },
     "\/templates\/partial\/socialmedia.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5133,6 +5552,14 @@
       "oAP" : "\/templates\/search.twig",
       "oF" : 0
     },
+    "\/templates\/searchform.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/searchform.twig",
+      "oF" : 0
+    },
     "\/templates\/sidebar.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5141,12 +5568,44 @@
       "oAP" : "\/templates\/sidebar.twig",
       "oF" : 0
     },
+    "\/templates\/single-dossiers.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-dossiers.twig",
+      "oF" : 0
+    },
+    "\/templates\/single-onderzoeken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-onderzoeken.twig",
+      "oF" : 0
+    },
     "\/templates\/single-password.twig" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/single-password.twig",
+      "oF" : 0
+    },
+    "\/templates\/single-team.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-team.twig",
+      "oF" : 0
+    },
+    "\/templates\/single-verhalen.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/single-verhalen.twig",
       "oF" : 0
     },
     "\/templates\/single.twig" : {
@@ -5197,6 +5656,38 @@
       "oAP" : "\/templates\/stroken\/content.twig",
       "oF" : 0
     },
+    "\/templates\/stroken\/donatie_module.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/donatie_module.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/dossiers.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/dossiers.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/downloads.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/downloads.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/formulier.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/formulier.twig",
+      "oF" : 0
+    },
     "\/templates\/stroken\/geel_vlak.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5229,6 +5720,38 @@
       "oAP" : "\/templates\/stroken\/lead.twig",
       "oF" : 0
     },
+    "\/templates\/stroken\/logos.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/logos.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/quotes.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/quotes.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/team.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/team.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/vacatures.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/vacatures.twig",
+      "oF" : 0
+    },
     "\/templates\/stroken\/verhalen.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5259,6 +5782,54 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/tease-dossiers.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-onderzoeken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-onderzoeken.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-quote.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-quote.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-search.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-search.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-team.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-team.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-vacature.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-vacature.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-verhalen.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-verhalen.twig",
       "oF" : 0
     },
     "\/templates\/tease.twig" : {

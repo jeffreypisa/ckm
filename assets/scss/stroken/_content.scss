@@ -1,35 +1,22 @@
 .pb-content {
-	
-	.wp-block-image figcaption {
-		@extend small;
-		font-style: italic;
-	}
-	
-	.wp-block-quote {
-		padding-left: 20px;
-		position: relative;
-		border-left: 4px solid $primary;	
-		cite {
-			@extend small;
-		}
-	}
-	
-	.usps {
-		img {
-			height: auto;
-		}
-	}
+	padding: 80px 0;
 }
 
 @include media-breakpoint-down(md) {
 	.pb-content {
-
+		padding: 100px 0;
 	}
 }
 	
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 	.pb-content {
+		padding: 120px 0;
+	}
+}
 
+@include media-breakpoint-up(xl) {
+	.pb-content {
+		padding: 140px 0;
 	}
 }

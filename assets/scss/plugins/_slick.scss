@@ -84,10 +84,12 @@
 @include media-breakpoint-up(md) {
 	.slick-slider {
 		.slick-dots {
+			right: 50px;
+			bottom: 50px;
 			li {
 				button {
-					height: 28px;
-					width: 28px;
+					height: 22px;
+					width: 22px;
 				}
 			}
 		}

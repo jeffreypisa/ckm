@@ -42,19 +42,20 @@ body {
 .mod-mobilemenu {
 	width: 100vw;
 	position: absolute;
-	z-index: -1;
+	z-index: -2;
 	top: 80px;
 	left: 0;
 	overflow: hidden;
 	transition: .4s $ease;
 	overflow-y: scroll;
 	overflow: auto;
-	padding: 80px 0 20px;
+	padding: 80px 0 100px;
 	max-height: calc(100vh - 80px);
 	overflow: auto;
 	background: #fff;
 	overflow-x: hidden;
 	transform: translateY(-100%);
+	opacity: 0;
 	.menu-title {
 		
 	}
@@ -78,8 +79,21 @@ body {
 	}
 }
 
+header {
+	.close {
+		display: none;
+	}
+}
 body.opensidemenu {
 	overflow: hidden;
+	header {
+		.close {
+			display: block;
+		}
+		.hamburger {
+			display: none;
+		}
+	}
 	main {
 		filter: blur(2px);
 		pointer-events: none;
@@ -93,10 +107,11 @@ body.opensidemenu {
 		}
 	}
 	.mod-mobilemenu {
-		z-index: 99;
-		transition: 1s $ease;
+		z-index: -2;
+		transition: transform 1s $ease;
 		transform: translateY(0%);
 		pointer-events: all;
+		opacity: 1;
 		.menucontent {
 			opacity: 1;
 		}

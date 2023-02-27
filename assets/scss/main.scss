@@ -79,6 +79,7 @@ Theme by Emonks
 @import 'components/embed';
 @import 'components/colors';
 @import 'components/type';
+@import 'components/donatie';
 @import 'components/single';
 @import 'components/buttons';
 @import 'components/background';
@@ -94,14 +95,22 @@ Theme by Emonks
 @import 'components/content';
 @import 'components/tease';
 @import 'components/nav';
+@import 'components/search';
 @import 'components/categories';
+@import 'components/taalswitcher';
 
 // Stroken
 @import 'stroken/banner';
 @import 'stroken/impact';
+@import 'stroken/content';
 @import 'stroken/verhalen';
 @import 'stroken/cijfers';
 @import 'stroken/icons';
+@import 'stroken/downloads';
+@import 'stroken/logos';
+@import 'stroken/lead';
+@import 'stroken/formulier';
+@import 'stroken/donatie';
 
 // Plugins
 @import 'plugins/slick';

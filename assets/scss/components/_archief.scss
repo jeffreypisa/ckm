@@ -5,6 +5,10 @@ body.archive {
 	}
 }
 
+.mod-archive {
+	overflow: hidden;
+}
+
 @include media-breakpoint-up(md) {
 	.mod-archive {
 

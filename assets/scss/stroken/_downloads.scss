@@ -1,0 +1,14 @@
+.pb-downloads {
+	.download {
+		text-align: center;
+		transition: .3s $ease;
+		img {
+			margin: 10px 20px;
+		}
+		&[href]:hover {
+			img {
+				transform: scale(1.06);
+			}
+		}
+	}
+}

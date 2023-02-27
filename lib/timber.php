@@ -66,7 +66,20 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		parent::__construct();
+		
+		// Shuffle randomizer filter
+		add_filter( 'timber/twig', function ( $twig ) {
+			$twig->addFilter( new Timber\Twig_Filter( 'shuffle', function ( $array ) {
+				shuffle( $array );
+				return $array;
+			} ) );
+			return $twig;
+		} );
 	}
+
+	
+	
+	
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
 
@@ -85,6 +98,7 @@ class StarterSite extends Timber\Site {
 		$context['menu_2']  = new TimberMenu('menu_2');
 		$context['menu_3']  = new TimberMenu('menu_3');
 		$context['menu_4']  = new TimberMenu('menu_4');
+		$context['language_switcher']  = new TimberMenu('language_switcher');
 		$context['footermenu']  = new TimberMenu('footermenu');
 
 		$context['site']  = $this;

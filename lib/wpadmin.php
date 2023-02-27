@@ -17,6 +17,14 @@ function remove_h1_from_heading($args) {
 add_filter('tiny_mce_before_init', 'remove_h1_from_heading' );
 
 
+add_shortcode('my_blockquote', 'my_blockquote');
+function my_blockquote($atts, $content) {
+	return '<div class="span3 quote well">'.PHP_EOL
+		.'<i class="icon-quote-left icon-2x pull-left icon-muted"></i>'.PHP_EOL
+		.'<blockquote class="lead">'.$content.'</blockquote>'.PHP_EOL
+		.'</div>';
+}
+
 // hide comments
 
 // Removes from admin menu
@@ -38,83 +46,11 @@ function mytheme_admin_bar_render() {
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
-/*
-* Add columns to agenda post list
-*/
-function my_manage_agenda_columns( $columns )
-{
-	// save date to the variable
-	$date = $columns['date'];
-	// unset the 'date' column
-	unset( $columns['date'] ); 
-	// unset any column when necessary
-	// unset( $columns['comments'] );
-
-	// add your column as new array element and give it table header text
-	$columns['datum'] = __('Datum');
-
-	$columns['date'] = $date; // set the 'date' column again, after the custom column
-
-	return $columns;
-}
-
-function my_set_sortable_columns( $columns )
-{
-	$columns['datum'] = 'datum';
-	return $columns;
-}
-
-function my_populate_custom_columns( $column, $post_id )
-{
-	switch ( $column ) {
-		case 'datum':
-			$original_date = get_post_meta($post_id, 'datum', true);
-			$timestamp = strtotime($original_date);
-			$new_date = date("d M Y", $timestamp);
-			echo $new_date;
-			
-			break;
-		case 'MAYBE_ANOTHER_CUSTOM_COLUMN':
-			// additional code
-			break;
+add_filter( 'pll_admin_languages_filter', function ( $adminBarLanguages ) {
+	global $pagenow;
+	if ( $pagenow === 'admin.php' && isset( $_GET['page'] ) && $_GET['page'] === 'acf-options' ) {
+		unset( $adminBarLanguages[0] );
 	}
-}
 
-function my_sort_custom_column_query( $query )
-{
-	$orderby = $query->get( 'orderby' );
-
-	if ( 'datum' == $orderby ) {
-
-		$meta_query = array(
-			'relation' => 'OR',
-			array(
-				'key' => 'datum',
-				'compare' => 'NOT EXISTS', // see note above
-			),
-			array(
-				'key' => 'datum',
-			),
-		);
-
-		$query->set( 'meta_query', $meta_query );
-		$query->set( 'orderby', 'meta_value' );
-	}
-}
-
-global $pagenow;
-
-if ( is_admin() && 'edit.php' == $pagenow && 'agenda' == $_GET['post_type'] ) {
-
-	// manage colunms
-	add_filter( 'manage_agenda_posts_columns', 'my_manage_agenda_columns' );
-
-	// make columns sortable
-	add_filter( 'manage_edit-agenda_sortable_columns', 'my_set_sortable_columns' );
-
-	// populate column cells
-	add_action( 'manage_agenda_posts_custom_column', 'my_populate_custom_columns', 10, 2 );
-
-	// set query to sort
-	add_action( 'pre_get_posts', 'my_sort_custom_column_query' );
-}
+	return $adminBarLanguages;
+} );

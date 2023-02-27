@@ -1,0 +1,117 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		<div class="pb-banner d-flex align-items-center text-white rafelrand bottom inverse white">		
+			<div class="section_icon bottom inverse"> <img src="{{ Image(options.dossiers_archief_icoon).src }}" alt="{{ Image(options.dossiers_archief_icoon).src }}"></div>
+			<div class="fill-space">
+				<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail).src|resize(1920) }})">
+				</div>
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					{% if item.uitlijning == 'links' %}
+						<div class="col-10 col-sm-8 col-md-7 col-lg-6 col-xl-5">
+					{% else %}
+						<div class="text-end offset-2 col-10 col-sm-8 offset-sm-4 col-md-7 offset-md-5 col-lg-6 offset-lg-6 col-xl-5 offset-xl-7">
+					{% endif %}
+						<h2 class="h1 mb-5">
+							{% if post.titel %}{{ post.titel }}{% else %}{{ post.title }}{% endif %}
+						</h2>
+						{% if post.label %}
+							<div class="bg-frame-label text-start">
+								{{ post.label }}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid mt-3 mt-md-5">
+			<br>
+			<div class="{% if post.one_column %}content-onecolumn{% else %}content-columns{% endif %} content-styling mb-5 pt-5">
+				
+				{% if post.lead %}
+					<span class="lead h2">
+						{{ post.lead }}
+					</span>
+				{% endif %}
+				
+				{{ post.content }}
+				
+				{% if post.downloads %}
+					<div class="downloads">
+						<div class="row">
+							{% for download in post.get_field('downloads') %}
+								<div class="col-auto">
+									{% set file = download.bestand %}
+									{% if file %}
+										<a href="{{ file.url }}" class="download font-script text-dark mb-5"> 
+											<img src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
+											<div class="clearfix"></div>
+											{% if download.titel %}
+												{{ download.titel }}
+											{% else %}
+												{{ file.title }}
+											{% endif %}
+										</a>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+				
+				{% set auteur = Post(post.writer) %}
+				
+				{% if auteur %}
+					<div class="auteur mb-4">
+						<div class="row">
+							<div class="col-auto">
+								<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+							</div>
+							<div class="col d-flex flex-column align-items-dropdown-center">
+								{{ auteur.title  }}
+								<div class="clearfix"></div>
+								{{ post.post_date|date('d-m-Y') }}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			
+			<div class="{% if post.one_column %}content-onecolumn-width{% else %}content-columns-width{% endif %}">
+				{% set terms = post.terms('dossier_tags') %}
+				
+				{% if terms %}
+					
+						{% for term in terms %}
+							<a href="{{ site.url }}/?s={{ term.name|sanitize }}" class="bg-frame-label">{{ term.name }}</a>
+						{% endfor %}
+					
+				
+				{% endif %}
+				
+				<br><br><br><br>
+				
+				<div class="row">
+					<div class="col">
+						{% set terms = post.terms('dossier_categorie') %}
+						
+						{% if terms %}
+							
+							{% for term in terms %}
+								<a href="{{ term.link }}" class="btn-link-back-dark">{{ options.onderzoeken_archief_link.title }}</a>
+							{% endfor %}
+						
+						{% endif %}
+					</div>
+					<div class="col-auto">
+						{% include 'partial/share.twig' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+{% endblock %}

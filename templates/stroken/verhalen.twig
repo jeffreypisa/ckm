@@ -1,7 +1,7 @@
-<section id="{{ sectionno }}" class="section pb-verhalen pb-0">
+<section id="section{{ sectionno }}" class="section pb-verhalen pb-0">
 	<div class="container-fluid">
-		<div class="card bg-frame-verhalen pt-5 pb-5">
-			<a href="#section2" class="section_icon top"> <img src="{{ theme.link }}/assets/img/icon_section_verhalen.svg"> </a>
+		<div class="card bg-frame-verhalen">
+			<div class="section_icon top"> <img src="{{ Image(options.verhalen_archief_icoon).src }}" alt="{{ Image(options.verhalen_archief_icoon).src }}"> </div>
 			<div class="card-body mb-5">
 				<div class="row">
 					<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
@@ -10,24 +10,20 @@
 						</div>
 					</div>
 				</div>
-				<br>
-				<div class="row g-0 g-md-3 mb-2">
-					{% for item in item.verhalen %}
-						<div class="col-6 col-md mb-30 mb-md-0">
-							<a href="{{ item.link }}" class="verhaal">
-								<div class="row">
-									<div class="col-10 offset-1">
-										<div class="bg-cover bg-rounded ratio-1x1 mb-4 mb-md-3" style="background-image: url({{ Image(item.thumbnail).src }})"></div>
-										<h4 class="mt-0 mb-0 font-script text-center">{{ item.title }}</h4>
-									</div>
-								</div>
-							</a>
-						</div>
-					{% endfor %}
-				</div>
+				{% if item.verhalen %}
+					<br>
+					<div class="row justify-content-center g-5 mb-sm-2" style="max-width: 1500px; margin: 0 auto">
+						{% for item in item.verhalen|shuffle %}
+					  		<div class="col-6 col-lg mb-5 mb-lg-0">
+								{% include 'tease-verhalen.twig' %}
+								<br>
+					  		</div>
+						{% endfor %}
+					</div>
+				{% endif %}
 				{% if item.link %}
 					<div class="container text-center">
-						<a class="btn btn-light" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+						<a class="btn btn-light mt-sm-4" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
 					</div>
 				{% endif %}
 			</div>

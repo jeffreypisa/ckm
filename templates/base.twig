@@ -4,9 +4,7 @@
 	{% endblock %}
 {% endblock %}
 
-	<body class="{{ body_class }}" data-template="base.twig">	
-
-		{% include 'mobilemenu.twig' %}
+	<body class="{{ body_class }} {% if post.header_transparant %}pt-0{% endif %}" data-template="base.twig">	
 		
 		{% block header %}
 			{% include 'header.twig' %}
@@ -19,11 +17,12 @@
 			{% block content %}
 				Sorry, no content
 			{% endblock %}
-		</main>
+		
 		
 		{% block footer %}
 			{% include 'footer.twig' %}
 			{{ function('wp_footer') }}
 		{% endblock %}
+		</main>
 	</body>
 </html>

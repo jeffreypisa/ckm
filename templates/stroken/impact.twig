@@ -1,10 +1,10 @@
-<section id="{{ sectionno }}" class="section pb-impact bg-white">
+<section id="section{{ sectionno }}" class="section pb-impact bg-transparent">
 	<div class="container-fluid mt-5">
 		<div class="text-center">
 			<h2 class="mb-5 font-script text-orange"> {{ item.titel }} </h2>
 		</div>
 		<br>
-		<div class="row">
+		<div class="row justify-content-center" style="max-width: 1500px; margin: 0 auto">
 			{% for item in item.cijfers %}
 				<div class="col-md-6 col-lg-3 mb-30 mb-lg-0">
 					<div class="card bg-square-dark">

@@ -1,8 +1,17 @@
-<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-dossiers mb-30 d-block">
-	<div class="afbeelding-wrapper ratio-4x3">
-		<div class="afbeelding bg-cover" style="background-image: url({{ item.fields.afbeelding.url }})"></div>
+<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-dossiers d-block mb-5">
+	<div class="afbeelding-wrapper ratio-4x3 mb-30">
+		{% if item.fields.afbeelding %}
+			<div class="afbeelding bg-cover" style="background-image: url({{ item.fields.afbeelding.url }})"></div>
+		{% else %}
+			<div class="afbeelding bg-cover" style="background-image: url({{ item.afbeelding.url }})"></div>
+		{% endif %}
 	</div>
-	<h3 class="h4 mt-4 mb-2"> {{ item.name }} </h3>
-	{{ item.description }}
-	<div class="btn-link mt-3" href="{{ item.link.url }}" target="{{ item.link.target }}">Duik dieper</div>
+	<div data-mh>
+		<h3 class="h4 mt-4 mb-4"> {{ item.name }} </h3>
+		{{ item.description|truncate(30) }}
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="btn-link mt-3" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ options.dossiers_teaser_lees_verder }}</div>
 </a>
+<br>

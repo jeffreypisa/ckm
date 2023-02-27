@@ -1,0 +1,32 @@
+<a href="{{ item.link }}" target="_blank" class="tease tease-vacature text-start mb-30 d-block">
+	<div class="afbeelding-wrapper ratio-4x3">
+		<div class="afbeelding bg-cover" style="background-image: url({{ item.afbeelding.url }})"></div>
+	</div>
+	<div data-mh>
+		<h3 class="h4 mt-4 mb-3"> 
+			<strong>{{ item.periode }} </strong> <br>
+			{{ item.titel }} 
+		</h3>
+		
+		{% set auteur = Post(item.contact) %}
+		{% if auteur %}
+			<div class="auteur mb-4 font-alt text-sm text-orange">
+				<div class="row">
+					<div class="col-auto d-flex align-items-center">
+						<div class="afbeelding profile" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+					</div>
+					<div class="col d-flex align-items-center">
+						<div>
+							<div class="mb-2">contact: {{ auteur.title  }} </div>
+							reageren voor: {{ item.reageren_voor|date('d-m-Y') }}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	
+		{{ item.tekst }}
+	</div>
+	<div class="clearfix"></div>
+	<div class="btn-link mt-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ options.vacature_teaser_lees_verder }}</div>
+</a>

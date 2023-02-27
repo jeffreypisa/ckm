@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		<div class="pb-banner d-flex align-items-center text-white rafelrand bottom inverse white">		
+			<div class="section_icon bottom inverse"> <img src="{{ Image(options.team_icoon).src }}" alt="{{ Image(options.team_icoon).src }}"> </div>
+			<div class="fill-space">
+				<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail).src|resize(1920) }})">
+				</div>
+			</div>
+			
+			<div class="container-fluid text-end">
+				<div class="row">
+					{% if item.uitlijning == 'links' %}
+						<div class="col-10 col-sm-8 col-md-7 col-lg-6 col-xl-5">
+					{% else %}
+						<div class="text-end offset-2 col-10 col-sm-8 offset-sm-4 col-md-7 offset-md-5 col-lg-6 offset-lg-6 col-xl-5 offset-xl-7">
+					{% endif %}
+						<h2 class="h1 mb-5">
+							{% if post.titel %}{{ post.titel }}{% else %}{{ post.title }}{% endif %}
+							<div><strong>{{ post.functie }}</strong></div>
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid mt-3 mt-md-5">
+			<br>
+			<div class="{% if post.one_column %}content-onecolumn{% else %}content-columns{% endif %} content-styling mb-5 pt-5">
+				
+				
+				{% if post.lead %}
+					<span class="lead h2">
+						{{ post.lead }}
+					</span>
+				{% endif %}
+				
+				{{ post.content }}
+				
+				{% if post.linkedin %}
+					<a href="{{ post.linkedin.url }}" class="font-alt text-orange text-sm mb-2 d-block">
+						<img src="{{ theme.link }}/assets/img/icon_social_linkedin.svg" width="40" style="margin-right: 10px">
+						{{ post.title }}
+					</a>
+				{% endif %}
+				<div class="clearfix"></div>
+				{% if post.email %}
+					<a href="mailto:{{ post.email }}" class="font-alt text-orange text-sm">
+						<img src="{{ theme.link }}/assets/img/icon_social_email.svg" width="40" style="margin-right: 10px">
+						{{ post.email }}
+					</a>
+				{% endif %}
+			</div>
+			
+			<br>
+			
+			<div class="row">
+				<div class="col">
+					<a href="/team" class="btn-link-back-dark"> Team </a>
+				</div>
+				<div class="col-auto">
+					{% include 'partial/share.twig' %}
+				</div>
+			</div>
+		</div>
+	</article>
+{% endblock %}

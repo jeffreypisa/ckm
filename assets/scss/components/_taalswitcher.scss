@@ -1,0 +1,56 @@
+.taalswitcher {
+	color: #fff;
+	margin: 0 0 20px 0;
+	padding: 0;
+	li {
+		a {
+			padding-top: 0;
+			padding-bottom:0;
+			margin: 0 -1px;
+			@extend h3;
+			line-height: 78px !important;
+			color: $orange;
+			min-width: 130px;
+			height: 74px;
+			position: relative;
+			background: transparent;
+			z-index: 1;
+			transition: .2s $ease;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: url('../img/frame_language_white.svg');
+				background-size: cover;
+				z-index: -1;
+			}
+			&:hover {
+				transform: scale(1.1);
+				z-index: 2;
+			}
+		}
+		&.current-lang {
+			a {
+				color: #fff;
+				&:after {
+					background: url('../img/frame_language_orange.svg');
+				}
+				&:hover {
+					transform: scale(1);
+					z-index: 1;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+	li:first-child {
+		a {
+			&:after {
+				transform:scaleX(-1); 
+			}
+		}
+	}
+}

@@ -83,7 +83,8 @@ $font-family-script:		  'Hey October';
 }
 
 .text-sm {
-	font-size: 16px;
+	font-size: 15px;
+	line-height: 14px;
 }
 
 body {
@@ -132,8 +133,8 @@ h4, h5,
 }
 
 body {
-	font-size: 22px;
-	line-height: 28px;
+	font-size: 20px;
+	line-height: 26px;
 	.font-xl {
 		&.font-script {
 			font-size: 100px;
@@ -171,8 +172,8 @@ body {
 
 @include media-breakpoint-up(lg) {
 	body {
-		font-size: 22px;
-		line-height: 28px;
+		font-size: 20px;
+		line-height: 26px;
 		.font-xl {
 			&.font-script {
 				font-size: 130px;

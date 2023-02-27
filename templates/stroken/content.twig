@@ -1,14 +1,27 @@
-<section id="{{ sectionno }}" class="section pb-content bg-transparent">
-	<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
-		<div class="row">
-			<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-				<div class="text-center">
-					<h2 class="mt-5 mb-5"> {{ item.titel }} </h2>
+<section id="section{{ sectionno }}" class="section pb-content bg-transparent">
+	<div class="container-fluid">
+		<div class="row" style="max-width:1500px; margin: 0 auto">
+			<div class="col-md-10 offset-md-1">
+				<div class="text-center mb-5">
+					<h2 class="mt-5 mb-0"> {{ item.titel }} </h2>
+					{% if item.link %}
+						<a class="btn-link mt-0" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					{% endif %}
 				</div>
 			</div>
 		</div>
-		<div class="content-columns content-styling">
-			{{ item.tekst }}
-		</div>
+		{% if item.content_in_kolommen %}
+			<div class="content-columns content-styling">
+				{{ item.tekst }}
+			</div>
+		{% else %}
+			<div class="row" style="max-width:1024px; margin: 0 auto">
+				<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
+					<div class="content-styling">
+						{{ item.tekst }}
+					</div>
+				</div>
+			</div>
+		{% endif %}
 	</div>
 </section> 

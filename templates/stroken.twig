@@ -10,8 +10,14 @@
 	{% elseif item.acf_fc_layout == 'banner' %}
 		{% include 'stroken/banner.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'donatie_module' %}
+		{% include 'stroken/donatie_module.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'lead' %}
 		{% include 'stroken/lead.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'logos' %}
+		{% include 'stroken/logos.twig' %}
 		
 	{% elseif item.acf_fc_layout == 'content' %}
 		{% include 'stroken/content.twig' %}
@@ -22,8 +28,26 @@
 	{% elseif item.acf_fc_layout == 'impact' %}
 		{% include 'stroken/impact.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'formulier' %}
+		{% include 'stroken/formulier.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'downloads' %}
+		{% include 'stroken/downloads.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'quotes' %}
+		{% include 'stroken/quotes.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'vacatures' %}
+		{% include 'stroken/vacatures.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'verhalen' %}
 		{% include 'stroken/verhalen.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'dossiers' %}
+		{% include 'stroken/dossiers.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'team' %}
+		{% include 'stroken/team.twig' %}
 	
 	{% elseif item.acf_fc_layout == 'cijfers' %}
 		{% include 'stroken/cijfers.twig' %}

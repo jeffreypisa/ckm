@@ -13,7 +13,8 @@ export function slick_init() {
 		dots: true,
 		centerMode: true,
 		swipeToSlide: true,
-		speed: 2000,
+		autoplaySpeed: 2000,
+		speed: 400,
 		cssEase: 'cubic-bezier(.19,1,.22,1)'
 	});
 	
@@ -25,7 +26,8 @@ export function slick_init() {
 		arrows: true,
 		centerMode: true,
 		swipeToSlide: true,
-		speed: 2000,
+		autoplaySpeed: 2000,
+		speed: 400,
 		mobileFirst: true,
 		cssEase: 'cubic-bezier(.19,1,.22,1)',
 		responsive: [

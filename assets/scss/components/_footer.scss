@@ -1,9 +1,70 @@
+body:not(.home) {
+	footer {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 20px;
+			background: $dark;
+			z-index: 2;
+		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	body.home {
+		footer {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 30px;
+				background: $dark;
+				z-index: 2;
+			}
+		}
+	}
+}
 footer {
+	overflow: hidden;
 	.footer {
+		margin-top: 120px;
 		padding: 20px;
 		position: relative;
+		.taalswitcher {
+			display: inline-flex;
+		}
+		.logowit {
+			width: 70px;
+			height: 70px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			display: inline-block;
+			margin: 0 10px;
+		}
+	}
+	.footeralt {
+		padding: 20px;
+		margin-top: -20px;
+		position: relative;
+		.logowit {
+			width: 150px;
+			height: 120px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			display: inline-block;
+			margin: 30px 20px 20px 0;
+		}
 	}
 	.subfooter {
+		padding-bottom: 20px;
 		ul {
 			display: inline;
 			li {
@@ -21,8 +82,14 @@ footer {
 				a {
 					color: $orange;
 					padding: 0 0 0 20px;
+					font-size: 22px;
 					&:hover {
 						color: #fff;
+					}
+				}
+				&:first-child {
+					a {
+						padding: 0 0 0 10px;
 					}
 				}
 				&:last-child:after {
@@ -47,6 +114,13 @@ footer {
 	footer {
 		.footer {
 			padding: 30px;
+			.logowit {
+				width: 105px;
+				height: 105px;
+			}
+			.taalswitcher {
+				margin: 0 auto;
+			}
 		}
 	}
 }
@@ -55,6 +129,7 @@ footer {
 	footer {
 		.footer {
 			padding: 50px;
+			margin-top: 160px;
 		}
 	}
 }

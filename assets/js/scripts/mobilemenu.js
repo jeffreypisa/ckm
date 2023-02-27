@@ -11,10 +11,5 @@ export function mobilemenu() {
 		$("body").removeClass("opensidemenu");
 		$(".js-mobilemenu").removeClass("open");
 	});
-	$( ".taalcontent .nav .nav-item" ).each(function() {
-	  var language = $(this).find('div').text();
-	  var newlanguage = language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ' + language + ' ';
-	  $(this).find('div').text(newlanguage);
-	});
-	
+
 }

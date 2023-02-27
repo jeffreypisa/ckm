@@ -37,8 +37,8 @@
     ));
     
     acf_add_options_sub_page(array(
-        'page_title'    => 'Teksten',
-        'menu_title'    => 'Teksten',
+        'page_title'    => 'Header',
+        'menu_title'    => 'Header',
         'parent_slug'   => 'acf-options-thema-opties',
     ));
     
@@ -51,6 +51,30 @@
     acf_add_options_sub_page(array(
         'page_title'    => 'Sociale Media',
         'menu_title'    => 'Sociale Media',
+        'parent_slug'   => 'acf-options-thema-opties',
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Donatie',
+        'menu_title'    => 'Donatie',
+        'parent_slug'   => 'acf-options-thema-opties',
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Navigatie',
+        'menu_title'    => 'Navigatie',
+        'parent_slug'   => 'acf-options-thema-opties',
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Zoeken',
+        'menu_title'    => 'Zoeken',
+        'parent_slug'   => 'acf-options-thema-opties',
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Berichttype',
+        'menu_title'    => 'Berichttype',
         'parent_slug'   => 'acf-options-thema-opties',
     ));
 

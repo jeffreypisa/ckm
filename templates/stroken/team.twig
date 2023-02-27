@@ -1,0 +1,16 @@
+<section id="section{{ sectionno }}" class="section pb-team bg-transparent">
+	<div class="container-fluid" style="max-width:1500px">
+		<div class="row g-0 g-md-3 mb-2">
+			{% for item in item.team %}
+				<div class="col-sm-6 col-lg-4 mb-30 mb-md-0">
+					{% include 'tease-team.twig' %}
+				</div>
+			{% endfor %}
+		</div>
+		{% if item.link %}
+			<div class="container text-center">
+				<a class="btn btn-primary" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			</div>
+		{% endif %}
+	</div>
+</section> 

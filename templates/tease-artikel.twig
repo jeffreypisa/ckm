@@ -1,14 +1,24 @@
-<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-artikel mb-30 d-block">
-	<div class="row g-5">
+<a href="{% if item.link_extern %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.link_extern %}_blank{% else %}{{ item.link.target}}{% endif %}" class="tease tease-artikel mb-30 d-block">
+	<div class="row g-5 mb-4">
 		<div class="col-md-6 d-flex flex-column">
-			<div class="bg-frame-label">
-				{{ item.label }}
+			<div class="row g-0">
+				<div class="col-auto">
+					<div class="bg-frame-label">
+						{{ item.label }}
+					</div>
+				</div>
+				<div class="col-auto">
+					{% set auteur = Post(item.writer) %}
+					{% if auteur %}
+						<div class="auteur" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+					{% endif %}
+				</div>
 			</div>
 			<h3 class="h4 mt-4 mb-2"> {{ item.title }} </h3>
-			<div class="font-alt text-orange mt-auto">{{ item.date|date('d-m-Y') }}</div>
+			<div class="h5 mb-0 font-alt text-orange mt-auto">{{ item.post_date|date('d-m-Y') }}{% if item.link_extern %} - {{ options.dossiers_externe_publicatie }}{% endif %}</div>
 		</div>
 		<div class="col-md-6">
-			<div class="afbeelding-wrapper ratio-4x3">
+			<div class="afbeelding-wrapper ratio-16x9">
 				<div class="afbeelding bg-cover" style="background-image: url({{ Image(item.thumbnail)|resize(1024) }})"></div>
 			</div>
 		</div>

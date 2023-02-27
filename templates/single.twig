@@ -3,7 +3,7 @@
 {% block content %}
 	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 		<div class="pb-banner d-flex align-items-center text-white rafelrand bottom inverse white">		
-			<div class="section_icon bottom"> <img src="{{ theme.link }}/assets/img/icon_section_dossier.svg"> </div>
+			<div class="section_icon bottom inverse"> <img src="{{ theme.link }}/assets/img/icon_section_dossier.svg"> </div>
 			<div class="fill-space">
 				<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail).src|resize(1920) }})">
 				</div>
@@ -25,7 +25,8 @@
 			</div>
 		</div>
 		<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
-			<div class="content-columns content-styling mb-5 pt-5">
+			<br>
+			<div class="{% if post.one_column %}content-onecolumn{% else %}content-columns{% endif %} content-styling mb-5 pt-5">
 				{% set auteur = Post(post.auteur) %}
 				{% if auteur %}
 					<div class="auteur mb-4">
@@ -42,6 +43,12 @@
 					</div>
 				{% endif %}
 				
+				{% if post.lead %}
+					<span class="lead h2">
+						{{ post.lead }}
+					</span>
+				{% endif %}
+				
 				{{ post.content }}
 			</div>
 			{% set terms = post.terms('dossier_tags') %}
@@ -49,14 +56,24 @@
 			{% if terms %}
 				
 				{% for term in terms %}
-					<a href="{{ term.link }}" class="bg-frame-label">{{ term.name }}</a>
+					<a href="{{ site.url }}/?s={{ term.name|sanitize }}" class="bg-frame-label">{{ term.name }}</a>
 				{% endfor %}
 	
 			{% endif %}
 			
-			<br><br><br>
+			<br><br><br><br>
 			
-			<a href="/dossiers" class="btn-link-back-dark"> Dossiers </a>
+			{% set terms = post.terms('dossier_categorie') %}
+			
+			{% if terms %}
+				
+				{% for term in terms %}
+					<a href="{{ term.link }}" class="btn-link-back-dark">dossier</a>
+				{% endfor %}
+			
+			{% endif %}
+			
+			
 			
 			<br><br><br>
 		</div>

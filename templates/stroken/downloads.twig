@@ -1,0 +1,27 @@
+<section id="section{{ sectionno }}" class="section pb-downloads bg-transparent">
+	<div class="container-fluid mt-5">
+		<div class="text-center">
+			<h2 class="mb-5 font-script text-orange"> {{ item.titel }} </h2>
+		</div>
+		<div class="downloads">
+			<div class="row justify-content-center">
+				{% for download in item.downloads %}
+					<div class="col-auto">
+						{% set file = download.bestand %}
+						{% if file %}
+							<a href="{{ file.url }}" class="download font-script text-dark mb-5"> 
+								<img src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
+								<div class="clearfix"></div>
+								{% if download.titel %}
+									{{ download.titel }}
+								{% else %}
+									{{ file.title }}
+								{% endif %}
+							</a>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section> 

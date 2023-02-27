@@ -1,5 +1,9 @@
+body {
+  visibility: hidden;
+}
+
 section {
-	padding: 60px 0;
+	padding: 80px 0;
 	position: relative;
 }
 
@@ -51,6 +55,7 @@ section {
 	height: 100px;
 	width: 100px;
 	z-index: 2;
+	transition: .2s $ease;
 	img {
 		height: 100px;
 		width: 100px;
@@ -61,15 +66,19 @@ section {
 	&.bottom {
 		bottom: -50px;
 	}
+	&[href]:hover {
+		transform: translateX(-50%) scale(1.05);
+	}
 }
 
-section.bg-transparent:not(.full-size) + section.bg-transparent:not(.full-size),
+section.bg-transparent:not(.pb-verhalen) + section.bg-transparent:not(.full-size),
 section.bg-white:not(.full-size) + section.bg-white:not(.full-size),
 section.bg-dark:not(.full-size) + section.bg-dark:not(.full-size),
 section.bg-brand:not(.full-size) + section.bg-brand:not(.full-size),
 section.bg-action:not(.full-size) + section.bg-action:not(.full-size),
 section.bg-greylight:not(.full-size) + section.bg-greylight:not(.full-size) {
 	padding-top: 0 !important;
+	margin-top: -40px;
 }
 
 @include media-breakpoint-up(lg) {
@@ -84,7 +93,29 @@ section.bg-greylight:not(.full-size) + section.bg-greylight:not(.full-size) {
 			top: -75px;
 		}
 		&.bottom {
-			bottom: -75px;
+			bottom: -90px;
+			&.inverse {
+				bottom: -70px;	
+			}
 		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	section {
+		padding: 100px 0;
+	}
+}
+	
+
+@include media-breakpoint-up(lg) {
+	section {
+		padding: 110px 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	section {
+		padding: 120px 0;
 	}
 }

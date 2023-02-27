@@ -25,27 +25,6 @@ $context = Timber::context();
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-        
-$currentID = get_the_ID();
-    
-$today = date('Ymd');
-    
-$args_upcoming = array(
-    'post_type'			  => 'agenda',
-    'posts_per_page'      => -1,
-    'order'               => 'ASC',
-    'suppress_filters'    => true,
-    'orderby'       => 'meta_value_num',
-    'meta_key'      => 'datum', //ACF date field
-    'meta_query'    => array( array(
-        'key' => 'datum', 
-        'value' => $today, 
-        'compare' => '>=', 
-        'type' => 'DATE'
-    ))
-);
-
-$context['agenda'] = Timber::get_posts($args_upcoming);
 
 if (is_front_page()) {
     Timber::render( array( 'page-frontpage.twig', 'page.twig' ), $context );

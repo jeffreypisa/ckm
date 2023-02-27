@@ -1,104 +1,19 @@
 .pb-logos {
-	padding: 55px 0 10px 0 !important;
-	height: 180px;
-	overflow: hidden;
-
-	.logocontainer {
-		position: relative;
-	}
-
 	.logos {
-		&.animate {
-			position: absolute;
-			top: 0;
-			padding: 0 15px;
-			width: 100%;
-		}
-
-		&.animate1 {
-			animation: animate1 40s infinite;
-			animation-timing-function: linear;
-
-			@keyframes animate1 {
-				0% {
-					left: -100%;
-				}
-
-				100% {
-					left: 0;
-				}
-			}
-		}
-
-		&.animate2 {
-			animation: animate2 40s infinite;
-			animation-timing-function: linear;
-
-			@keyframes animate2 {
-				0% {
-					left: 0%;
-				}
-
-				100% {
-					left: 100%;
-				}
-			}
-		}
-
-		&.animate3 {
-			animation: animate3 40s infinite;
-			animation-timing-function: linear;
-
-			@keyframes animate3 {
-				0% {
-					left: 100%;
-				}
-
-				49% {
-					left: 148%;
-					opacity: 1;
-				}
-
-				50% {
-					left: 150%;
-					opacity: 0;
-				}
-
-				51% {
-					left: -148%;
-					opacity: 0;
-				}
-
-				52% {
-					left: -146%;
-					opacity: 1;
-				}
-
-				100% {
-					left: -100%;
-				}
-			}
-		}
-
 		.logo {
-			max-width: 160px;
-			height: 60px;
-			margin: 0 auto;
+			height: 120px;
+			width: 100%;
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center center;
 		}
+	}
+}
 
-		&.grayscale {
-			.logo {
-				filter: grayscale(100%)
-			}
-		}
-
-		&.dimmed {
-			.logo {
-				opacity: .5;
-			}
+@include media-breakpoint-up(md) {
+	.pb-logos {
+		.logos {
+			padding: 30px 0;
 		}
 	}
 }

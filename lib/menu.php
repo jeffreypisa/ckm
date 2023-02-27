@@ -7,5 +7,6 @@
 		register_nav_menu('menu_2', __('menu 2'));
 		register_nav_menu('menu_3', __('menu 3'));
 		register_nav_menu('menu_4', __('menu 4'));
+		register_nav_menu('language_switcher', __('Taal switcher'));
 		register_nav_menu('footermenu', __('Footermenu'));
 	}

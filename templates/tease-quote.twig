@@ -1,0 +1,11 @@
+<a href="{{ item.link }}" class="tease tease-team">
+	<div class="row">
+		<div class="col-10 offset-1 text-center">
+			<div class="bg-cover bg-rounded mb-4" style="background-image: url({{ Image(item.thumbnail).src }})"></div>
+			<div data-mh class="mb-4">
+				<h4 class="mt-0 mb-0 font-alt text-center">'{{ item.quote }}'</h4>
+			</div>
+			<div class="h4 mt-0 font-script">{{ item.title }}</div>	
+		</div>
+	</div>
+</a>

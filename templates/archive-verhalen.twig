@@ -6,39 +6,53 @@
 {% block content %}
     <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
        <section id="{{ sectionno }}" class="section rafelrand bottom orange pb-lead bg-orange text-dark mb-5">
-          {% if options.dossiers_archief_icoon %}
-             <div class="section_icon bottom"> <img src="{{ Image(options.dossiers_archief_icoon).src }}" alt="{{ Image(options.dossiers_archief_icoon).src }}"> </div>
+          {% if options.verhalen_archief_icoon %}
+             <div class="section_icon bottom"> <img src="{{ Image(options.verhalen_archief_icoon).src }}" alt="{{ Image(options.verhalen_archief_icoon).src }}"> </div>
           {% endif %}
-          <div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
+          <div class="container-fluid mb-3 mb-md-5" style="max-width: 1500px">
              {% if title %}
                 <div class="row">
-                   <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                   <div class="col-md-10 offset-md-1">
                       <div class="text-center">
-                         <h2 class="mt-5 mb-5 text-white"> {{ options.dossiers_archief_titel }} </h2>
+                         <h2 class="mb-5">{{ options.verhalen_archief_titel }}</h2>
                       </div>
                    </div>
                 </div>
              {% endif %}
-             <div class="row">
+             <div class="row" style="max-width: 1024px; margin: 0 auto">
                 <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
                    <div class="text-center">
-                      {{ options.dossiers_archief_tekst }} 
+                      {{ options.verhalen_archief_tekst }} 
                    </div>
                 </div>
              </div>
           </div>
        </section> 
-        <section class="mod-archive">
-            <div class="container-fluid">
-               <div class="line"></div>     
-               <div id="theposts" class="row pt-2 g-5">
-                  {% for item in posts %}
-                      <div class="col-md-6 col-lg-4 col-xl-3">
-                          {% include ['tease.twig'] %}
-                      </div>
-                  {% endfor %}
-               </div>  
-            </div>
+        <section class="mod-archive pb-0">
+          <div class="container-fluid" style="max-width: 1500px">
+           <br><br>
+           <div id="theposts" class="row pt-2 g-5 justify-content-center">
+             {% for item in posts %}
+               {% if loop.index <= 3 %}
+                 <div class="col-md-6 col-lg-4 mb-5">
+                   {% include ['tease-quote.twig'] %}
+                 </div>
+               {% else %}
+                 <div class="col-md-6 col-lg-4 collapse morequotes">
+                   {% include ['tease-quote.twig'] %}
+                 </div>
+               {% endif %}
+             {% endfor %}
+           </div>
+           
+           {% if posts|length > 3 %}
+             <div class="d-flex justify-content-center">
+               <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".morequotes" onclick="this.style.display = 'none'">
+                 Load More
+               </button>
+             </div>
+           {% endif %}
+          </div>
         </section>
     </article>
 {% endblock %}

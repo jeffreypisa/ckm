@@ -28,3 +28,7 @@ $(window).on('load', function() {
 	sticky_header();
 	site_is_loaded();
 });
+
+document.fonts.ready.then(function() {
+  document.body.style.visibility = 'visible';
+});

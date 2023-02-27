@@ -1,0 +1,24 @@
+<section id="section{{ sectionno }}" class="section pb-vacatures bg-transparent mt-5">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+				<div class="text-center">
+					<h2 class="font-script text-orange mt-5 mb-5"> {{ item.titel }} </h2>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row g-0 g-md-5 mb-2 justify-content-center">
+			{% for item in item.vacature %}
+				<div class="col-sm-6 col-lg-4 mb-30 mb-md-0">
+					{% include 'tease-vacature.twig' %}
+				</div>
+			{% endfor %}
+		</div>
+		{% if item.link %}
+			<div class="container text-center">
+				<a class="btn btn-primary" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			</div>
+		{% endif %}
+	</div>
+</section> 

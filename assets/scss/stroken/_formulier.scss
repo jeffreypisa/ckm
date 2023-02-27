@@ -1,0 +1,49 @@
+.pb-formulier {
+	background-size: cover;
+	padding-top: 80px;
+	h2 {
+		color: #fff;
+		strong {
+			color: $orange;
+		}
+	}
+	.card {
+		border-radius: 0;
+		.card-body {
+			padding: 25px 15px;
+		}
+		h2,h3,h4, h5 {
+			@extend h4;
+			color: $dark;
+			strong, b {
+				color: $orange
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-formulier {
+		.card {
+			.card-body {
+				padding: 30px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-formulier {
+		padding-top: 200px;
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.pb-formulier {
+		.card {
+			.card-body {
+				padding: 50px;
+			}
+		}
+	}
+}

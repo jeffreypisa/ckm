@@ -1,5 +1,10 @@
 a[href] {
 	text-decoration: none;
+	color: $orange;
+}
+
+.bg-orange a[href] {
+	color: #fff;	
 }
 
 .thema-title {

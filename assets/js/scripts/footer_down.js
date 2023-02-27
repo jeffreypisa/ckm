@@ -4,7 +4,7 @@ export function footer_down() {
 	function footerdown() {
     var footer = $('footer').outerHeight();
     var windowheight = $(window).height();
-    var contentminheight = windowheight - footer;
+    var contentminheight = windowheight;
     $('main').css('min-height', contentminheight);
   }
 

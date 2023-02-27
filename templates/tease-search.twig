@@ -1,0 +1,5 @@
+<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-{{ item.post_type }} mb-30 d-block">
+	<h3 class="h4 mt-4 mb-4"> {{ item.title }} <img src="{{ theme.link }}/assets/img/icon_arrow_orange.svg" alt="arrow"></h3>
+	{{ item.preview.length(28).read_more('') }}
+	<br><br>
+</a>

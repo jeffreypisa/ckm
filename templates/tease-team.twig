@@ -1,0 +1,12 @@
+<a href="{{ item.link }}" class="tease tease-team">
+	<div class="row">
+		<div class="col-10 offset-1 text-center">
+			<div class="bg-cover bg-rounded mb-4" style="background-image: url({{ Image(item.thumbnail).src }})"></div>
+			<div data-mh class="mb-4">
+				<h4 class="mt-0 mb-2 font-script text-center">{{ item.title }}</h4>
+				<div class="font-alt text-sm">{{ item.functie }}</div>
+			</div>
+			<img src="{{ theme.link }}/assets/img/icon_arrow_orange.svg" alt="next">
+		</div>
+	</div>
+</a>

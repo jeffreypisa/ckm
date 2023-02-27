@@ -3,19 +3,57 @@
 	column-width: 16em;
 	max-width: 1000px;
 	column-gap: 30px;
+	figure, li {
+		break-inside: avoid-column;
+	}
+}
+
+.content-onecolumn {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.content-columns-width {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.content-onecolumn-width {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.content-styling {
+	.lead {
+		display: block;
+		margin-bottom: 60px;
+	}
+	.downloads {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
 	figure {
 		width: 100% !important;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		break-inside: avoid-column;
+		margin-top: 60px;
+		margin-bottom: 60px;
 		img {
 			width: 100%;
 			height: auto;
 			margin-bottom: 10px;
+			overflow: hidden;
+			position: relative;
+			
+			&:after {
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				right: -1px;
+				bottom: -1px;
+				content: '';
+				background: url(../img/frame_lijst.svg);
+				background-size: cover;
+			}
 		}
-	}
-	li {
-		break-inside: avoid-column;
 	}
 	figcaption {
 		font-weight: 700;
@@ -23,22 +61,26 @@
 		color: $orange;
 		margin-bottom: 30px;
 	}
-}
-
-
-
-.content-styling {
+	p {
+		> strong, > b {
+			font-weight: 400;
+			color: $orange;
+			font-family: $font-family-alt;
+		}
+	}
 	.auteur {
 		color: $orange;
 		font-family: $font-family-alt;
-		font-size: 25px;
-		line-height: 28px;
+		font-size: 18px;
+		line-height: 26px;
+		margin-top: 60px;
 		.afbeelding {
 			width: 60px;
 			height: 60px;
 			background-size: cover;
 			border-radius: 199px;
-			margin-right: 15px;
+			margin-right: 5px;
+			transform: translateY(-4px);
 		}
 	}
 	* + h2,
@@ -48,8 +90,8 @@
 	* + h6,
 	* + img {
 		@extend h4;
-		margin-top: 3rem;
-		margin-bottom: 1rem;
+		margin-top: 60px;
+		margin-bottom: 60px;
 	}
 	h5,h6 {
 		margin-bottom: 8px;
@@ -58,6 +100,7 @@
 		font-size: 25px;
 		line-height: 28px;
 		font-weight: 400;
+		margin-bottom: 60px;
 	}
 	
 	ul {
@@ -99,23 +142,40 @@
 		line-height: 37px !important;
 		padding-left: 30px;
 		color: $orange;
+		margin-top: 60px;
+		margin-bottom: 60px;
 		strong, b {
 			color: $dark;
+			font-weight: normal;
 		}
-		margin-bottom: 3rem;
+		+ p em {
+			font-family: $font-family-alt;
+			color: $orange;
+			margin-bottom: 60px;
+			margin-top: -50px;
+			display: block;
+		}
 	}
 }
 
 @include media-breakpoint-up(lg) {
 	.content-columns {
-		max-width: 1400px;
+		max-width: 1300px;
 		column-gap: 40px;
+	}
+	
+	.content-columns-width {
+		max-width: 1300px;
 	}
 }
 
 @include media-breakpoint-up(xl) {
 	.content-columns {
-		max-width: 1500px;
+		max-width: 1450px;
 		column-gap: 60px;
+	}
+	
+	.content-columns-width {
+		max-width: 1450px;
 	}
 }

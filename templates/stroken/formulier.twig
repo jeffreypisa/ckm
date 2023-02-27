@@ -1,0 +1,22 @@
+<section id="section{{ sectionno }}" class="section pb-formulier" style="background-image: url({{ item.afbeelding.url }})">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-lg-5 col-xl-4">
+				<h2 class="mb-5"> {{ item.titel }} </h2>
+				<img src="{{ Image(item.icoon).src }}" src="{{ Image(item.icoon).alt }}" class="d-none d-md-block" width="150">
+			</div>
+			<div class="col-md-6 col-lg-5 offset-lg-2 col-xl-4 offset-xl-4">
+				<div class="card bg-white">
+					<div class="card-body">
+						{% if item.formulier_titel %}
+							<h2> {{ item.formulier_titel }}</h2>
+						{% endif %}
+						<div class="content-styling">
+							{{ item.formulier }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 

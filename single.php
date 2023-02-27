@@ -13,24 +13,17 @@ $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 
-$today = date('Ymd');
-    
-$args_upcoming = array(
-    'post_type'			  => 'agenda',
-    'posts_per_page'      => -1,
-    'order'               => 'ASC',
-    'suppress_filters'    => true,
-    'orderby'       => 'meta_value_num',
-    'meta_key'      => 'datum', //ACF date field
-    'meta_query'    => array( array(
-        'key' => 'datum', 
-        'value' => $today, 
-        'compare' => '>=', 
-        'type' => 'DATE'
-    ))
+$currentID = get_the_ID();
+
+$quotes = array(
+    'post_type'			  => 'verhalen',
+    'posts_per_page'      => 3,
+    'post__not_in'        => array( $currentID ),
+    'orderby'             => 'rand',
+    'suppress_filters'    => true
 );
 
-$context['upcoming'] = Timber::get_posts($args_upcoming);    
+$context['quotes'] = Timber::get_posts($quotes);
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );

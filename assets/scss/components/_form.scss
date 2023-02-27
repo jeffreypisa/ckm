@@ -1,13 +1,18 @@
 .form-control {
-	height: 26px;
-	background: black;
-	border-width: 3px;
-	padding: 0 6px;
+	height: 74px;
+	background: url(../img/frame_formfield_dark.svg);
+	background-size: cover;
+	padding: 0 10px;
 	font-weight: 700;
+	font-family: $font-family-alt;
 	color: white;
+	border: 0;
+	&.form-white {
+		background: url(../img/frame_formfield_white.svg);
+		color: $dark;
+	}
 	&:focus {
-		border-color: #fff;
-		color: black;
+		
 	}
 }
 
@@ -17,7 +22,14 @@
 }
 
 body .fluentform {
-
+	
+	.ff-name-address-wrapper > .ff-el-input--label {
+		font-family: $font-family-alt;
+		display: block;
+		margin-bottom: 10px;
+		margin-top: 30px;
+	}
+	
 	form .ff-btn-submit {
 		@extend .btn;
 		@extend .btn-primary;	
@@ -27,29 +39,34 @@ body .fluentform {
 		font-weight: 400 !important;
 		font-size: 16px !important;	
 	}
-	
-	.form-select {
-		@extend .btn;
-		@extend .btn-primary;
-		padding-right: 50px;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-image: url('../img/arrow.svg');
-		background-size: 18px 18px;
-		background-position: right 20px center;
-		&:hover, &:focus {
-			background-repeat: no-repeat;
-			background-image: url('../img/arrow.svg');
-			background-size: 18px 18px;
-			background-position: right 20px center;
+		
+	.ff-el-input--label {
+		display: none;
+	}
+	.ff-el-form-control {
+		height: 77px !important;
+		background: url(../img/frame_formfield_dark.svg);
+		background-size: cover;
+		padding: 25px 20px;
+		font-weight: 700;
+		font-family: $font-family-alt;
+		color: white;
+		border: 0;
+		&:focus {
+			color: #fff;
+			opacity: 1;
 		}
 	}
 	
-	.ff-el-form-control {
-		border: 0;
-		border-radius: 0;	
-		padding: 8px 15px;
-		min-height: 48px;
+	textarea.ff-el-form-control {
+		height: auto !important;
+	}
+	select.ff-el-form-control {
+		padding-right: 60px;
+		background: url(../img/frame_formfield_select_dark.svg);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 	
 	.ff-message-success {
@@ -57,12 +74,47 @@ body .fluentform {
 		border: 0;
 		box-shadow: none;
 	}
+	
+	.ff_btn_style {
+		// width: 100%;
+	}
+	
+	.ff_btn_style:focus, 
+	.ff_btn_style:hover {
+		opacity: 1;
+	}
+	
+	// RADIO
+	/* Style the label element */
+	.ff-el-form-check-label {
+	  color: $dark;
+	}
+	
+	/* Style the checkbox input */
+	.ff-el-form-check-input[type="checkbox"] {
+	  margin-right: 10px;
+	  width: 20px;
+	  height: 20px;
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  outline: none;
+	  transition: border-color 0.3s ease-in-out;
+	}
+	
+	/* Style the checkbox when it is checked */
+	.ff-el-form-check-input[type="checkbox"]:checked {
+	  border-color: $orange;
+	  background-color: $orange;
+	}
+	
+	/* Style the checkbox label text */
+	.ff-el-form-check-label span {
+	  margin-left: 0px;
+	}
+	
 }
 
 @include media-breakpoint-up(md) {
-	body .fluentform {
-		.form-select {
-			width: auto;
-		}
-	}
+
 }

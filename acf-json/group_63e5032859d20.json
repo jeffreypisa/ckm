@@ -23,6 +23,27 @@
             "delay": 0
         },
         {
+            "key": "field_63f8dbc0bd080",
+            "label": "Lead",
+            "name": "lead",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_63e503949d245",
             "label": "Afbeelding",
             "name": "afbeelding",
@@ -66,5 +87,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675953522
+    "modified": 1677253579
 }

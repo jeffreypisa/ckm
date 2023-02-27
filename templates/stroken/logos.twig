@@ -1,0 +1,15 @@
+<section id="section{{ sectionno }}" class="section pb-logos bg-transparent">
+	<div class="container-fluid">
+		<div class="logos">
+			<div class="container-fluid">
+				<div class="row">
+					{% for logo in item.logos %}
+						<div class="col">
+							<a class="logo d-block" {% if logo.link %}href="{{ logo.link }}" target="_blank"{% endif %} style="background-image: url({{ Image(logo.image).src }})"></a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 

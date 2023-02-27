@@ -1,0 +1,76 @@
+<section id="banner" class="pb-donatie text-white rafelrand bottom inverse white d-flex align-items-center">
+	<a href="#section2" class="section_icon bottom inverse"> <img src="{{ Image(item.icoon).src }}"> </a>
+	<div class="fill-space">
+		<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail).src|resize(1920) }})">
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-10 col-sm-8 col-md-6 d-flex align-items-center">
+				<h2 class="h1">
+					{% if item.titel %}{{ item.titel }}{% else %}{{ post.titel }}{% endif %}
+				</h2>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="card donatie bg-frame-form text-center">
+					<div class="card-body">
+						<ul class="nav nav-tabs nav-bigtab justify-content-center" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="doneer-maandelijks-tab" data-bs-toggle="tab" data-bs-target="#doneer-maandelijks" type="button" role="tab" aria-controls="doneer-maandelijks" aria-selected="true">{{ options.doneer_maandelijks_titel }} </button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="doneer-eenmalig-tab" data-bs-toggle="tab" data-bs-target="#doneer-eenmalig" type="button" role="tab" aria-controls="doneer-eenmalig" aria-selected="false">{{ options.doneer_eenmalig_titel }} </button>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade show active" id="doneer-maandelijks" role="tabpanel" aria-labelledby="doneer-maandelijks-tab">
+
+								<ul class="nav nav-tabs nav-roundtab justify-content-center" role="tablist">
+									{% for row in options.donatie_maandelijks_tabs %}
+									<li class="nav-item" role="presentation">
+										<button class="nav-link{% if loop.first %} active{% endif %}" id="{{ row.tab_titel|sanitize }}-tab" data-bs-toggle="tab" data-bs-target="#{{ row.tab_titel|sanitize }}" type="button" role="tab" aria-controls="{{ row.tab_titel|sanitize }}" aria-selected="{{ loop.first }}">{{ row.bedrag }}</button>
+									</li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+									{% for row in options.donatie_maandelijks_tabs %}
+									<div class="tab-pane fade{% if loop.first %} show active{% endif %}" id="{{ row.tab_titel|sanitize }}" role="tabpanel" aria-labelledby="{{ row.tab_titel|sanitize }}-tab">
+										<span class="h5">{{ row.tab_content }} </span>
+										<div class="clearfix"></div>
+										{% if row.link %}
+										<a class="btn btn-light mb-2" href="{{ row.link.url }}" target="{{ row.link.target }}">{{ row.link.title }}</a>
+										{% endif %}
+									</div>
+									{% endfor %}
+								</div>
+
+							</div>
+							<div class="tab-pane fade text-center" id="doneer-eenmalig" role="tabpanel" aria-labelledby="doneer-eenmalig-tab">
+
+								<ul class="nav nav-tabs nav-roundtab justify-content-center" role="tablist">
+									{% for row in options.donatie_eenmalig_tabs %}
+									<li class="nav-item" role="presentation">
+										<button class="nav-link{% if loop.first %} active{% endif %}" id="{{ row.tab_titel|sanitize }}-tab" data-bs-toggle="tab" data-bs-target="#{{ row.tab_titel|sanitize }}" type="button" role="tab" aria-controls="{{ row.tab_titel|sanitize }}" aria-selected="{{ loop.first }}">{{ row.bedrag }}</button>
+									</li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+									{% for row in options.donatie_eenmalig_tabs %}
+									<div class="tab-pane fade{% if loop.first %} show active{% endif %}" id="{{ row.tab_titel|sanitize }}" role="tabpanel" aria-labelledby="{{ row.tab_titel|sanitize }}-tab">
+										<span class="h5">{{ row.tab_content }} </span>
+										<div class="clearfix"></div>
+										{% if row.link %}
+										<a class="btn btn-light mb-2" href="{{ row.link.url }}" target="{{ row.link.target }}">{{ row.link.title }}</a>
+										{% endif %}
+									</div>
+									{% endfor %}
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>

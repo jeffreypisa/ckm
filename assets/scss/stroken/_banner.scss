@@ -40,9 +40,26 @@
 	}
 }
 
+header.header-transparent {
+	+ main {
+		.pb-banner {
+			padding-top: 200px;
+		}
+	}
+}
 .pb-banner {
 	position: relative;
 	min-height: 440px;
+	.card {
+		border-radius: 0;
+		
+		h2,h3,h4 {
+			color: $dark;
+			strong, b {
+				color: $orange
+			}
+		}
+	}
 	.bannerslider {
 		position: absolute;
 		top: 0;
@@ -131,13 +148,13 @@
 
 @include media-breakpoint-up(md) {
 	.pb-banner {
-		height: 600px;
-		min-height: 560px;
+		height: 560px;
+		min-height: 520px;
 		max-height: calc(100vh - 200px);
 		.bannerslider {
 			.item {
-				height: 600px;
-				min-height: 560px;
+				height: 560px;
+				min-height: 520px;
 				max-height: calc(100vh - 200px);
 			}
 		}

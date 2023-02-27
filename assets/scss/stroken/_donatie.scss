@@ -1,0 +1,109 @@
+@keyframes blur {
+	0% {
+		-webkit-filter: blur(30px);
+		-moz-filter: blur(30px);
+		-o-filter: blur(30px);
+		-ms-filter: blur(30px);
+	}
+
+	100% {
+		-webkit-filter: blur(0);
+		-moz-filter: blur(0);
+		-o-filter: blur(0);
+		-ms-filter: blur(0);
+	}
+}
+
+.loaded {
+	.pb-donatie {
+		#thevideo {
+			opacity: 0.3;
+		}
+
+		.bg {
+			filter: blur(0);
+		}
+
+		.vimeo-wrapper {
+			opacity: 1;
+			&.faded {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.loaded .mod-banner {
+	img {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+header.header-transparent {
+	+ main {
+		.pb-donatie {
+			padding-top: 140px;
+		}
+	}
+}
+.pb-donatie {
+	position: relative;
+	min-height: 440px;
+	.card {
+		border-radius: 0;
+		
+		h2,h3,h4 {
+			color: $dark;
+			strong, b {
+				color: $orange
+			}
+		}
+	}
+
+	.fill-space {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		background-size: cover;
+		background-position: center center;
+		&.faded {
+			opacity: .5;
+		}
+	}
+	
+	.container, .container-fluid {
+		position: relative;
+		z-index: 1;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.pb-donatie {
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-donatie {
+
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-donatie {
+		height: 700px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.pb-donatie {
+		height: 830px;
+	}
+}

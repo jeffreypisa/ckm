@@ -3,6 +3,8 @@
 		<div class="afbeelding bg-cover" style="background-image: url({{ Image(item.thumbnail)|resize(1024) }})"></div>
 	</div>
 	<h3 class="h4 mt-4 mb-2"> {{ item.title }} </h3>
-	{{ item.preview.length(40).read_more('') }}
-	<div class="btn-link mt-3" href="{{ item.link.url }}" target="{{ item.link.target }}">Duik dieper</div>
+	<div data-mh>
+		{{ item.preview.length(40).read_more('') }}
+	</div>
+	<div class="btn-link mt-3" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ options.dossiers_teaser_lees_verder }}</div>
 </a>

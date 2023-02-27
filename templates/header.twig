@@ -1,28 +1,62 @@
-<header class="header d-flex align-items-center">
-	<div class="container-fluid"> 
-		<div class="row g-3 g-md-5">
-			<div class="col d-flex align-items-center">
-				<a class="header-brand" href="{{site.url}}" rel="home">
-					<img src="{{ Image(options.logo).src }})" alt="{{ Image(options.logo).alt }})" class="logo">
-					<img src="{{ Image(options.logo_mobile).src }})" alt="{{ Image(options.logo_mobile).alt }})" class="logo-mobile">
-					<span class="d-none">{{ site.name }}</span>
-				</a>
-			</div>
-			<div class="col-auto">
-				<a href="" class="header-link">
-					<img src="{{ theme.link }}/assets/img/icon_search.svg">
-				</a>
-			</div>
-			<div class="col-auto">
-				<a href="" class="header-link">
-					<span class="d-none d-sm-inline">Doneer</span> <img src="{{ theme.link }}/assets/img/icon_donatie.svg">
-				</a>
-			</div>
-			<div class="col-auto">
-				<a id="mobilemenubtn" class="header-link btn-menu d-block js-menu">
-					<img src="{{ theme.link }}/assets/img/icon_hamburger.svg">
-				</a>
+{% if post.header_transparant %}
+	<header class="header header-transparent d-flex align-items-center">
+		{% if post.header_transparant %} {% else %}
+			{% include 'mobilemenu.twig' %}
+		{% endif %}
+		<div class="container-fluid">
+			<div class="row g-3 g-md-5">
+				<div class="col d-flex align-items-center">
+					<a class="header-brand" href="{{site.url}}" rel="home">
+						<img src="{{ Image(options.logo_inverted).src }})" alt="{{ Image(options.logo_inverted).alt }})" class="logo">
+						<img src="{{ Image(options.logo_mobile).src }})" alt="{{ Image(options.logo_mobile).alt }})" class="logo-mobile">
+						<span class="d-none">{{ site.name }}</span>
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</header>
+	</header>
+{% else %}
+	<header class="header header-regular header-dynamic d-flex align-items-center">
+		{% if post.header_transparant %} {% else %}
+			{% include 'mobilemenu.twig' %}
+		{% endif %}
+		<div class="container-fluid">
+			<div class="row g-3 g-md-5">
+				<div class="col d-flex align-items-center">
+					<a class="header-brand" href="{{site.url}}" rel="home">
+						<img src="{{ Image(options.logo).src }})" alt="{{ Image(options.logo).alt }})" class="logo">
+						<img src="{{ Image(options.logo_mobile).src }})" alt="{{ Image(options.logo_mobile).alt }})" class="logo-mobile">
+						<span class="d-none">{{ site.name }}</span>
+					</a>
+				</div>
+				<div class="col-auto">
+					<div class="search-container">
+						<a class="header-link" data-bs-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false" aria-controls="searchCollapse">
+							<img class="search" src="{{ theme.link }}/assets/img/icon_search.svg">
+							<img class="close" src="{{ theme.link }}/assets/img/icon_close.svg" alt="close">
+						</a>
+						
+						<div class="collapse" id="searchCollapse">
+							<form class="d-flex" role="search" method="get" action="/">
+								<input class="form-control form-white" type="search" placeholder="{{ options.search_header_placeholder }}" aria-label="Search" name="s">
+								<button class="" type="submit"></button>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-auto">
+					<a href="{{ options.donatie_pagina.url }}" class="header-link">
+						<span class="d-none d-sm-inline">{{ options.donatie_pagina.title }}</span> <img src="{{ theme.link }}/assets/img/icon_donatie.svg" alt="donate">
+					</a>
+				</div>
+				<div class="col-auto d-flex align-items-center">
+					<a id="mobilemenubtn" class="header-link btn-menu d-block js-menu">
+						<img class="hamburger" src="{{ theme.link }}/assets/img/icon_hamburger.svg" alt="hamburger">
+						<img class="close" src="{{ theme.link }}/assets/img/icon_close.svg" alt="close">
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+{% endif %}

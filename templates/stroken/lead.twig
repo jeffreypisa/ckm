@@ -1,36 +1,25 @@
-<section id="{{ sectionno }}" class="section rafelrand bottom orange pb-lead bg-orange">
+<section id="section{{ sectionno }}" class="section rafelrand bottom orange pb-lead bg-orange">
 	{% if item.icoon %}
 		<div class="section_icon bottom"> <img src="{{ Image(item.icoon).src }}" alt="{{ Image(item.icoon).src }}"> </div>
 	{% endif %}
-	<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
+	<div class="container-fluid" style="max-width:1500px">
 		{% if item.titel %}
 			<div class="row">
-				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+				<div class="col-md-10 offset-md-1">
 					<div class="text-center">
-						<h2 class="mt-5 mb-5"> {{ item.titel }} </h2>
+						<h2 class="mb-5"> {{ item.titel }} </h2>
 					</div>
 				</div>
 			</div>
 		{% endif %}
-		{% if item.iconen %}
-			<div class="row mb-5">
-				{% for item in item.iconen %}
-					<div class="col-md-4 text-center mb-4 mb-md-0">
-						<img src="{{ Image(item.afbeelding).src }}" alt="{{ Image(item.afbeelding).alt }}" style="max-height: 150px;" >
-						<h3>{{ item.titel }}</h3>
-					</div>
-				{% endfor %}
-			</div>
-		{% endif %}
+	</div>
+	<div class="container-fluid" style="max-width:1024px">
 		<div class="row">
-			<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+			<div class="col-md-10 offset-md-1">
 				<div class="text-center">
 					{{ item.tekst }}
 				</div>
 			</div>
 		</div>
-		{% if item.icoon %}
-			<br>
-		{% endif %}
 	</div>
 </section> 
