@@ -1,4 +1,4 @@
-<a href="{% if item.type == 'url' %}{{ item.url }}{% else %}{{ item.bestand.src }}{% endif %}" target="_blank" class="tease tease-onderzoeken text-start mb-5 d-block">
+<a href="{% if item.type == 'url' %}{{ item.url }}{% else %}{% set file = item.get_field('bestand') %}{% if file %}{{ file.url }}{% endif %}{% endif %}" target="_blank" class="tease tease-onderzoeken text-start mb-5 d-block">
 	<div class="afbeelding-wrapper ratio-4x3">
 		<div class="afbeelding bg-cover" style="background-image: url({{ item.thumbnail.src }})"></div>
 	</div>
@@ -19,5 +19,5 @@
 	
 		{{ item.tekst }}
 	</div>
-	<div class="btn-link mt-4" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ options.onderzoeken_teaser_lees_verder }}</div>
+	<div href="" class="btn-link mt-4">{{ options.onderzoeken_teaser_lees_verder }}</div>
 </a>

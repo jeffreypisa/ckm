@@ -55,6 +55,15 @@
 	{% elseif item.acf_fc_layout == 'geel_vlak' %}
 		{% include 'stroken/geel_vlak.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'content_vlakken' %}
+		{% include 'stroken/content_vlakken.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'accordion' %}
+		{% include 'stroken/accordion.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'tegels' %}
+		{% include 'stroken/tegels.twig' %}
+	
 	{% endif %}
   
 {% endfor %}

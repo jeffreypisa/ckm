@@ -564,6 +564,16 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/img\/accordion_title.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/accordion_title.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/button_orange.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -754,6 +764,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/img\/frame_verhalen_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/frame_verhalen_dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/img\/frame_verhalen.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -869,6 +889,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/icon_arrow_white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/icon_chevron.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/icon_chevron.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -2096,6 +2126,21 @@
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/stroken\/_cijfers.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/stroken\/_content_vlakken.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/stroken\/_content_vlakken.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -5624,6 +5669,14 @@
       "oAP" : "\/templates\/stroken.twig",
       "oF" : 0
     },
+    "\/templates\/stroken\/accordion.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/accordion.twig",
+      "oF" : 0
+    },
     "\/templates\/stroken\/banner.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5646,6 +5699,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/stroken\/cijfers.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/content_vlakken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/content_vlakken.twig",
       "oF" : 0
     },
     "\/templates\/stroken\/content.twig" : {
@@ -5742,6 +5803,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/stroken\/team.twig",
+      "oF" : 0
+    },
+    "\/templates\/stroken\/tegels.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/stroken\/tegels.twig",
       "oF" : 0
     },
     "\/templates\/stroken\/vacatures.twig" : {

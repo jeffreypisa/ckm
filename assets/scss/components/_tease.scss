@@ -68,8 +68,7 @@
 	}
 	&.tease-team {
 		display: block;
-		margin: 0 0 60px;
-		.bg-cover {
+		.bg-cover, .bg-contain {
 			width: 270px;
 			height: 270px;
 			margin: 0 auto;

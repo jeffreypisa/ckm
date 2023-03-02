@@ -16,6 +16,27 @@
 	}
 }
 
+.mc4wp-form {
+	p {
+		position: relative;
+		display: inline-block;
+		input[type=submit] {
+			position: absolute;
+			right: 20px;
+			top: 23px;
+			z-index: 1;
+			width: 56px;
+			height: 28px;
+			border: 0;
+			background: url(../img/icon_arrow_orange.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			text-indent: -1000px;
+			overflow: hidden;
+		}
+	}
+}
+
 .mc4wp-response {
 	margin-top: 20px;
 	font-weight: bold;

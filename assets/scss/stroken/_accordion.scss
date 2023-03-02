@@ -1,42 +1,40 @@
 .mod-accordion {
 
-	&.bg-white {
-		.item {
-			.heading {
-				background: $greylight;
-			}
-		}
-	}
-
 	.item {
 		margin: 0 0 10px;
 
-		.heading {
-			display: block;
-			padding: 10px 15px;
-			border-radius: 2px;
-			background: #fff;
-			text-decoration: none;
-			font-weight: 600;
-			color: $dark;
-			i.fa-minus {
-				display: none;
-			}
-
-			&:hover {
-				box-shadow: none;
-				color: $primary;
-				cursor: pointer;
-			}
-
-			&[aria-expanded="true"] {
-				i.fa-minus {
-					display: block;
-					margin-top: 7px;
+		.accordion-header {
+			line-height: 0;
+			button {
+				display: block;
+				padding: 25px 15px;
+				background: url(../img/accordion_title.svg);
+				background-size: cover;
+				color: $dark;
+				text-decoration: none;
+				h5 {
+					margin: 0;
 				}
-
-				i.fa-plus {
-					display: none;
+				&:before {
+					position: absolute;
+					right: 20px;
+					top: 20px;
+					height: 30px;
+					width: 50px;
+					background-image: url(../img/icon_chevron.svg);
+					content: '';
+					z-index: 1;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+	
+				&:hover {
+					box-shadow: none;
+					color: $dark;
+					cursor: pointer;
+				}
+				&[aria-expanded="true"]:before {
+					transform: rotate(180deg);
 				}
 			}
 		}

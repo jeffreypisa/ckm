@@ -1,0 +1,37 @@
+.pb-content_vlakken {
+	.bg-orange {
+		background: url(../img/frame_verhalen.svg);
+		background-color: transparent !important;
+		background-size: cover;
+		h2 {
+			color: #fff;
+		}
+	}
+	.bg-dark {
+		background: url(../img/frame_verhalen_dark.svg);
+		background-color: transparent !important;
+		background-size: cover;
+		h2 {
+			color: $orange;
+		}
+	}
+	.card-body {
+		padding: 40px 20px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-content_vlakken {
+		.card-body {
+			padding: 40px 30px;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.pb-content_vlakken {
+		.card-body {
+			padding: 80px 60px;
+		}
+	}
+}

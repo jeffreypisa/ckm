@@ -1,0 +1,47 @@
+<section id="section{{ sectionno }}" class="section pb-tegels bg-transparent">
+	<div class="container-fluid" style="max-width: 1500px;">
+		{% if item.titel %}
+			<div class="row">
+				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+					<div class="text-center mb-5">
+						<h2 class="mt-5"> {{ item.titel }} </h2>
+						{% if item.link_onder_titel %}
+							<div class="container text-center">
+								<a class="btn-link mt-2" href="{{ item.link_onder_titel.url }}" target="{{ item.link_onder_titel.target }}">{{ item.link_onder_titel.title }}</a>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			<br>
+		{% endif %}
+		<div class="row g-0 g-md-3 mb-2 justify-content-center">
+			{% for item in item.onderdeel %}
+				<div class="col-sm-6 col-lg-4 mb-30 mb-md-0">
+					<a href="{{ item.link }}" class="tease tease-team">
+						<div class="row">
+							<div class="col-10 offset-1 text-center">
+								<div class="bg-contain bg-rounded mb-4" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
+								<div data-mh class="mb-4">
+									<h4 class="mt-0 mb-0 font-alt text-center">{{ item.titel }}</h4>
+								</div>
+								{{ item.tekst }}
+								{% if item.link %}
+									<div class="container text-center">
+										<a class="btn-link mt-2" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+		{% if item.link %}
+		<br>
+			<div class="container text-center">
+				<a class="btn btn-primary" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			</div>
+		{% endif %}
+	</div>
+</section> 

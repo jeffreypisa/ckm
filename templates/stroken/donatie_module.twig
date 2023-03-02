@@ -51,13 +51,13 @@
 								<ul class="nav nav-tabs nav-roundtab justify-content-center" role="tablist">
 									{% for row in options.donatie_eenmalig_tabs %}
 									<li class="nav-item" role="presentation">
-										<button class="nav-link{% if loop.first %} active{% endif %}" id="{{ row.tab_titel|sanitize }}-tab" data-bs-toggle="tab" data-bs-target="#{{ row.tab_titel|sanitize }}" type="button" role="tab" aria-controls="{{ row.tab_titel|sanitize }}" aria-selected="{{ loop.first }}">{{ row.bedrag }}</button>
+										<button class="nav-link{% if loop.first %} active{% endif %}" id="e_{{ row.tab_titel|sanitize }}-tab" data-bs-toggle="tab" data-bs-target="#e_{{ row.tab_titel|sanitize }}" type="button" role="tab" aria-controls="e_{{ row.tab_titel|sanitize }}" aria-selected="{{ loop.first }}">{{ row.bedrag }}</button>
 									</li>
 									{% endfor %}
 								</ul>
 								<div class="tab-content">
 									{% for row in options.donatie_eenmalig_tabs %}
-									<div class="tab-pane fade{% if loop.first %} show active{% endif %}" id="{{ row.tab_titel|sanitize }}" role="tabpanel" aria-labelledby="{{ row.tab_titel|sanitize }}-tab">
+									<div class="tab-pane fade{% if loop.first %} show active{% endif %}" id="e_{{ row.tab_titel|sanitize }}" role="tabpanel" aria-labelledby="e_{{ row.tab_titel|sanitize }}-tab">
 										<span class="h5">{{ row.tab_content }} </span>
 										<div class="clearfix"></div>
 										{% if row.link %}

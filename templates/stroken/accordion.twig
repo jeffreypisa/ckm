@@ -1,0 +1,45 @@
+<section id="section{{ sectionno }}" class="mod-accordion bg-transparent">
+	<div class="container-fluid" style="max-width: 1024px;">
+		{% if item.titel %}
+			<div class="row">
+				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+					<div class="text-center">
+						<h2 class="mt-5 mb-5"> {{ item.titel }} </h2>
+					</div>
+				</div>
+			</div>
+			<br>
+		{% endif %}
+		<div class="row">
+			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+				<div class="accordion" id="accordion{{ sectionno }}">
+					{% set delay = 0 %}
+					{% set onderdeelno = 0 %}
+					{% for onderdeel in item.onderdeel %}
+						<div class="item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ delay }}" data-aos-easing="ease-in-sine">
+							<h2 class="accordion-header" id="heading{{ onderdeelno }}">
+								<button class="accordion-button collapsed bg-lightblue" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ onderdeelno }}" aria-expanded="false" aria-controls="collapse{{ onderdeelno }}">
+									<div class="row">
+										<div class="col">
+											<h5>{{ onderdeel.titel }}</h5>
+										</div>
+										<div class="col-auto">
+											<i class="fal fa-chevron-down"></i>
+										</div>
+									</div>
+								</button>
+							</h2>
+							<div id="collapse{{ onderdeelno }}" class="accordion-collapse collapse" aria-labelledby="heading{{ onderdeelno }}" data-bs-parent="#accordion{{ sectionno }}">
+								<div class="accordion-body">
+									{{ onderdeel.tekst }}
+								</div>
+							</div>
+						</div>
+						{% set onderdeelno = onderdeelno + 1 %}
+						{% set delay = delay + 100 %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -83,6 +83,7 @@
 			background-size: cover;
 			@extend h4;
 			transition: .2s $ease;
+			padding: 0 8px;
 			&:hover {
 				transform: scale(1.1);
 			}
