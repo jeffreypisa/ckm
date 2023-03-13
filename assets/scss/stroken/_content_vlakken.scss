@@ -16,14 +16,17 @@
 		}
 	}
 	.card-body {
-		padding: 40px 20px;
+		padding: 50px 20px;
+	}
+	li {
+		margin-bottom: 20px;
 	}
 }
 
 @include media-breakpoint-up(md) {
 	.pb-content_vlakken {
 		.card-body {
-			padding: 40px 30px;
+			padding: 60px 30px;
 		}
 	}
 }

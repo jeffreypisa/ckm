@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="container-fluid mt-3 mt-md-5">
-			<br>
+			<br><br>
 			<div class="{% if post.one_column %}content-onecolumn{% else %}content-columns{% endif %} content-styling mb-5 pt-5">
 				
 				{% if post.lead %}
@@ -47,8 +47,8 @@
 								<div class="col-auto">
 									{% set file = download.bestand %}
 									{% if file %}
-										<a href="{{ file.url }}" class="download font-script text-dark mb-5"> 
-											<img src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
+										<a href="{{ file.url }}" class="d-inline-block download font-script text-dark mb-5 text-center" target="_blank"> 
+											<img class="mb-3" src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
 											<div class="clearfix"></div>
 											{% if download.titel %}
 												{{ download.titel }}
@@ -82,18 +82,19 @@
 			</div>
 			
 			<div class="{% if post.one_column %}content-onecolumn-width{% else %}content-columns-width{% endif %}">
+				<br><br>
 				{% set terms = post.terms('dossier_tags') %}
 				
 				{% if terms %}
 					
 						{% for term in terms %}
-							<a href="{{ site.url }}/?s={{ term.name|sanitize }}" class="bg-frame-label">{{ term.name }}</a>
+							<a href="{{ site.url }}/?s={{ term.name }}" class="bg-frame-label">{{ term.name }}</a>
 						{% endfor %}
 					
 				
 				{% endif %}
 				
-				<br><br><br><br>
+				<br><br><br>
 				
 				<div class="row">
 					<div class="col">
@@ -102,7 +103,7 @@
 						{% if terms %}
 							
 							{% for term in terms %}
-								<a href="{{ term.link }}" class="btn-link-back-dark">{{ options.onderzoeken_archief_link.title }}</a>
+								<a href="{{ term.link }}" class="btn-link-back-dark">{{ options.dossiers_archief_link }}</a>
 							{% endfor %}
 						
 						{% endif %}

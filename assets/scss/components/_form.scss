@@ -1,3 +1,26 @@
+/* Disable clear button in search input */
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Disable clear button in all input fields */
+::-webkit-clear-button {
+  display: none;
+}
+
+
+body #cookie-notice {
+	@extend p;
+	font-family: $font-family-alt;
+	.cn-button {
+		margin: 0 0 0 20px;
+		display: inline-block;
+	}
+	.cn-text-container {
+		max-width: 1000px;
+		padding: 30px 0;
+	}
+}
 .form-control {
 	height: 74px;
 	background: url(../img/frame_formfield_dark.svg);
@@ -12,7 +35,7 @@
 		color: $dark;
 	}
 	&:focus {
-		
+		box-shadow: none !important;
 	}
 }
 
@@ -20,7 +43,7 @@
 	p {
 		position: relative;
 		display: inline-block;
-		input[type=submit] {
+		dinput[type=submit] {
 			position: absolute;
 			right: 20px;
 			top: 23px;

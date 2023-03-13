@@ -50,6 +50,10 @@ header.header-transparent {
 .pb-banner {
 	position: relative;
 	min-height: 440px;
+	margin-bottom: 20px;
+	h2 {
+		word-break: break-word;
+	}
 	.card {
 		border-radius: 0;
 		
@@ -151,6 +155,7 @@ header.header-transparent {
 		height: 560px;
 		min-height: 520px;
 		max-height: calc(100vh - 200px);
+		margin-bottom: 30px;
 		.bannerslider {
 			.item {
 				height: 560px;

@@ -26,6 +26,7 @@ function create_dossier_tax() {
 		'show_admin_column' => true,
 		'show_in_rest' 			=> true,
 		'query_var'         => true,
+		'public' => true,
 		'rewrite' 			=> array('slug' => 'dossiers')
 	);
 
@@ -38,6 +39,7 @@ function register_dossier_tags() {
 	$args = array( 
 		'hierarchical' => true,
 		'label' => 'Tags',
+		'public' => true,
 		'rewrite' 					=> array('slug' => 'dossiers-tag', 'with_front' => false )
 	);
 	register_taxonomy( 'dossier_tags', array( 'dossiers' ), $args );

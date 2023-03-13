@@ -9,7 +9,7 @@
 		{% if options.dossiers_archief_icoon %}
 		<div class="section_icon bottom"> <img src="{{ Image(options.dossiers_archief_icoon).src }}" alt="{{ Image(options.dossiers_archief_icoon).src }}"> </div>
 		{% endif %}
-		<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
+		<div class="container-fluid mb-1 mb-md-2">
 			{% if term.titel %}
 			<div class="row">
 				<div class="col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 col-lg-6 offset-md-3 offset-lg-3 col-xl-4 offset-xl-4">
 					<div class="text-center mb-5">
-						<h3 class="mt-5 mb-5"> {{ options.tijdlijn_titel }} </h3>
+						<h3 class="mt-3 mb-5"> {{ options.tijdlijn_titel }} </h3>
 						{% if options.tijdlijn_link %}
 						<a class="btn-link mt-0" href="#footer">{{ options.tijdlijn_link }}</a>
 						{% endif %}
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="theposts" class=" pt-2 g-5">
+			<div id="theposts" class="g-5">
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
 						{% set year = '' %}

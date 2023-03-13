@@ -70,6 +70,7 @@ $font-family-script:		  'Hey October';
 .font-alt {
 	font-family: $font-family-alt;
 	font-weight: 400;
+	letter-spacing: -1px;
 } 
 
 .font-script {
@@ -168,12 +169,16 @@ body {
 			line-height: 20px;
 		}
 	}
+	.lead {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 @include media-breakpoint-up(lg) {
 	body {
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 22px;
+		line-height: 28px;
 		.font-xl {
 			&.font-script {
 				font-size: 130px;
@@ -205,6 +210,10 @@ body {
 				font-size: 30px;
 				line-height: 34px;
 			}
+		}
+		.lead {
+			font-size: 22px;
+			line-height: 28px;
 		}
 	}
 }

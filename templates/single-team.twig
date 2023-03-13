@@ -28,7 +28,6 @@
 			<br>
 			<div class="{% if post.one_column %}content-onecolumn{% else %}content-columns{% endif %} content-styling mb-5 pt-5">
 				
-				
 				{% if post.lead %}
 					<span class="lead h2">
 						{{ post.lead }}
@@ -44,7 +43,7 @@
 								<div class="col-auto">
 									{% set file = download.bestand %}
 									{% if file %}
-										<a href="{{ file.url }}" class="download font-script text-dark mb-5"> 
+										<a href="{{ file.url }}" class="download font-script text-dark mb-5" target="_blank"> 
 											<img src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
 											<div class="clearfix"></div>
 											{% if download.titel %}
@@ -62,14 +61,14 @@
 				
 				{% if post.linkedin %}
 					<a href="{{ post.linkedin.url }}" class="font-alt text-orange text-sm mb-2 d-block">
-						<img src="{{ theme.link }}/assets/img/icon_social_linkedin.svg" width="40" style="margin-right: 10px">
+						<img src="{{ theme.link }}/assets/img/icon_social_linkedin.svg" width="40" style="margin-right: 10px; margin-bottom: 0 !important">
 						{{ post.title }}
 					</a>
 				{% endif %}
 				<div class="clearfix"></div>
 				{% if post.email %}
 					<a href="mailto:{{ post.email }}" class="font-alt text-orange text-sm">
-						<img src="{{ theme.link }}/assets/img/icon_social_email.svg" width="40" style="margin-right: 10px">
+						<img src="{{ theme.link }}/assets/img/icon_social_email.svg" width="40" style="margin-right: 10px; margin-bottom: 0 !important">
 						{{ post.email }}
 					</a>
 				{% endif %}
@@ -79,7 +78,7 @@
 			
 			<div class="row">
 				<div class="col">
-					<a href="/team" class="btn-link-back-dark"> Team </a>
+					<a href="/team" class="btn-link-back-dark"> team </a>
 				</div>
 				<div class="col-auto">
 					{% include 'partial/share.twig' %}

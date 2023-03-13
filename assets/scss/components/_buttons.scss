@@ -58,7 +58,7 @@
 .btn {
 	height: 74px;
 	min-width: 250px;
-	line-height: 88px;
+	line-height: 82px;
 	font-weight: 400;
 	font-family: $font-family-script;
 	font-size: 34px;
@@ -76,7 +76,7 @@
 		transform: scale(1.1);
 		color: $orange;
 	}
-	&:hover, &:focus, &:active {
+	&:hover, &:focus, &:active, &:target {
 		background: url('../img/button_orange.svg');
 		background-size: contain;
 	}

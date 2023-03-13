@@ -2,6 +2,9 @@
 	padding-top: 50px;
 	padding-bottom: 30px;
 	overflow: hidden;
+	.section_icon.bottom {
+		bottom: -30px;
+	}
 	h2 {
 		strong {
 			color: #fff;
@@ -25,6 +28,9 @@
 @include media-breakpoint-up(lg) {
 	.pb-verhalen {
 		overflow: visible;
+		.section_icon.bottom {
+			bottom: -65px;
+		}
 		.card {
 			.card-body {
 				padding: 100px 80px 100px;

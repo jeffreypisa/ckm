@@ -17,13 +17,22 @@ function remove_h1_from_heading($args) {
 add_filter('tiny_mce_before_init', 'remove_h1_from_heading' );
 
 
-add_shortcode('my_blockquote', 'my_blockquote');
-function my_blockquote($atts, $content) {
-	return '<div class="span3 quote well">'.PHP_EOL
-		.'<i class="icon-quote-left icon-2x pull-left icon-muted"></i>'.PHP_EOL
-		.'<blockquote class="lead">'.$content.'</blockquote>'.PHP_EOL
-		.'</div>';
+// Blockquote style
+
+add_action('admin_head', 'admin_styles');
+
+function admin_styles() {
+	?>
+	<style>
+		.mce-edit-area blockquote{
+			border-left: 4px solid #000;
+		}
+	</style>
+	<?php
 }
+ 
+remove_filter( 'posts_request', 'relevanssi_prevent_default_request' ); 
+remove_filter( 'posts_pre_query', 'relevanssi_query', 99 );
 
 // hide comments
 
@@ -54,3 +63,7 @@ add_filter( 'pll_admin_languages_filter', function ( $adminBarLanguages ) {
 
 	return $adminBarLanguages;
 } );
+
+// Character fix
+remove_filter('the_content', 'wptexturize');
+remove_filter('the_excerpt', 'wptexturize');

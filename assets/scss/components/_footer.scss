@@ -1,4 +1,4 @@
-body:not(.home) {
+body {
 	footer {
 		position: relative;
 		&:after {
@@ -7,14 +7,14 @@ body:not(.home) {
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height: 20px;
+			height: 30px;
 			background: $dark;
 			z-index: 2;
 		}
 	}
 }
-@include media-breakpoint-down(lg) {
-	body.home {
+@include media-breakpoint-up(md) {
+	body {
 		footer {
 			position: relative;
 			&:after {
@@ -32,8 +32,8 @@ body:not(.home) {
 }
 footer {
 	.footer {
-		margin-top: 60px;
-		padding: 20px;
+		margin-top: 30px;
+		padding: 60px 20px 20px;
 		position: relative;
 		.taalswitcher {
 			display: inline-flex;
@@ -110,9 +110,24 @@ footer {
 }
 
 @include media-breakpoint-up(md) {
+	body {
+		footer {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 30px;
+				background: $dark;
+				z-index: 2;
+			}
+		}
+	}
 	footer {
 		.footer {
-			padding: 30px;
+			padding: 80px 30px 30px;
 			.logowit {
 				width: 105px;
 				height: 105px;
@@ -127,8 +142,8 @@ footer {
 @include media-breakpoint-up(lg) {
 	footer {
 		.footer {
-			padding: 50px;
-			margin-top: 80px;
+			padding: 100px 50px 50px;
+			margin-top: 50px;
 		}
 	}
 }

@@ -29,20 +29,23 @@
 				<br>
 				<div class="row mb-4 g-lg-5">
 					<div class="col-lg-6 col-xl-4 mb-5">
-						<h3 class="mb-5">{{ options.footer_kolom_1_titel }}</h3>
+						<h3 class="mb-4 mb-md-5">{{ options.footer_kolom_1_titel }}</h3>
 						{% if options.footer_kolom_1_link %}
 							<a class="btn btn-primary mb-2" href="{{ options.footer_kolom_1_link.url }}" target="{{ options.footer_kolom_1_link.target }}">{{ options.footer_kolom_1_link.title }}</a>
 						{% endif %}
 						{{ options.footer_kolom_1_tekst }}
 					</div>
 					<div class="col-lg-6 col-xl-4 mb-5">
-						<h3 class="mb-5">{{ options.footer_kolom_2_titel }}</h3>
+						<h3 class="mb-4 mb-md-5">{{ options.footer_kolom_2_titel }}</h3>
 						{{ options.footer_kolom_2_tekst }}
 						{% include 'partial/socialmedia.twig' %}
 					</div>
 					<div class="col-lg-6 col-xl-4 mb-5 mb-xl-0">
-						<h3 class="mb-5">{{ options.footer_kolom_3_titel }}</h3>
+						<h3 class="mb-4 mb-md-5">{{ options.footer_kolom_3_titel }}</h3>
 						{{ options.footer_kolom_3_tekst }}
+						{% if options.footer_kolom_3_link %}
+							<a class="btn btn-primary mb-2" href="{{ options.footer_kolom_3_link.url }}" target="{{ options.footer_kolom_3_link.target }}">{{ options.footer_kolom_3_link.title }}</a>
+						{% endif %}
 					</div>
 					<div class="col-lg-6 col-xl-12">
 						<div class="row">

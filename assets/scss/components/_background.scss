@@ -47,7 +47,7 @@
 
 .bg-footer {
 	background: url(../img/frame_footer.svg);
-	background-size: cover;
+	background-size: 2000px 2000px;
 }
 
 .bg-rounded {
@@ -61,6 +61,11 @@
 		right: -4px;
 		bottom: -4px;
 		background: url(../img/mask_round.svg);
+		background-size: cover;
+	}
+}
+@include media-breakpoint-up(md) {
+	.bg-footer {
 		background-size: cover;
 	}
 }

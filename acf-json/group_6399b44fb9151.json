@@ -177,6 +177,22 @@
             "delay": 0
         },
         {
+            "key": "field_640a0ada0cf2c",
+            "label": "Kolom 3 link",
+            "name": "footer_kolom_3_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_63f35a28abfca",
             "label": "Logos in het wit",
             "name": "logos_wit",
@@ -358,5 +374,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677234954
+    "modified": 1678379751
 }

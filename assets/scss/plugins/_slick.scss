@@ -52,7 +52,7 @@
 				background: #fff;
 				border-radius: 100px;
 				transition: 0.2s $ease;
-				&:hover, &:focus, &:active, &:target {
+				&:hover {
 					background: $orange;
 				}
 			}

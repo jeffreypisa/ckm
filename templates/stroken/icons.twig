@@ -1,8 +1,8 @@
-<section id="section{{ sectionno }}" class="section pb-icons {{ item.achtergrond }} {% if item.achtergrond == 'bg-orange' %}rafelrand bottom orange{% endif %}">
+<section id="section{{ sectionno }}" class="section pb-lead pb-icons {{ item.achtergrond }} {% if item.achtergrond == 'bg-orange' %}rafelrand bottom orange{% endif %}">
 	{% if item.icoon %}
 		<div class="section_icon bottom"> <img src="{{ Image(item.icoon).src }}" alt="{{ Image(item.icoon).src }}"> </div>
 	{% endif %}
-	<div class="container-fluid" style="max-width:1500px">
+	<div class="container-fluid mb-5" style="max-width:1500px">
 		<div class="row justify-content-center">
 			{% for item in item.iconen %}
 				<div class="col-md-4 text-center mb-4 mb-md-0">
@@ -15,7 +15,7 @@
 	<div class="container text-center" style="max-width:1024px">
 		<div class="row">
 			<div class="col-10 offset-1">
-				{{ item.tekst }}
+				<div class="lead">{{ item.tekst }}</div>
 				{% if item.link %}
 					<a class="btn-link mt-3 mt-md-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
 				{% endif %}

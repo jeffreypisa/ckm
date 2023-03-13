@@ -13,14 +13,16 @@
 		h3 {
 			font-size: 45px;
 			line-height: 45px;
-			
+		}
+		h5 {
+			margin: 0 !important;
 		}
 		.afbeelding {
 			width: 100px;
 			height: 100px;
 			background-size: cover;
 			border-radius: 999px;
-			overflow: hidden;
+			overflow: visible;
 			position: relative;
 			
 			&:after {

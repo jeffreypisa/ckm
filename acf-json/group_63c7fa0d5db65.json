@@ -364,6 +364,26 @@
             "delay": 0
         },
         {
+            "key": "field_6409b91c04f65",
+            "label": "Toon meer knop titel",
+            "name": "verhalen_toon_meer",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_63fcc7648c928",
             "label": "Onderzoeken",
             "name": "",
@@ -623,5 +643,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677512599
+    "modified": 1678358854
 }

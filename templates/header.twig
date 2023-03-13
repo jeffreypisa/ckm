@@ -1,3 +1,4 @@
+<div id="menuoverlay" class="menuoverlay"></div>
 {% if post.header_transparant %}
 	<header class="header header-transparent d-flex align-items-center">
 		{% if post.header_transparant %} {% else %}
@@ -37,8 +38,8 @@
 						</a>
 						
 						<div class="collapse" id="searchCollapse">
-							<form class="d-flex" role="search" method="get" action="/">
-								<input class="form-control form-white" type="search" placeholder="{{ options.search_header_placeholder }}" aria-label="Search" name="s">
+							<form class="d-flex" role="search" method="get" action="{{ site.url }}">
+								<input id="s" class="form-control form-white" type="search" placeholder="{{ options.search_header_placeholder }}" aria-label="Search" name="s">
 								<button class="" type="submit"></button>
 							</form>
 						</div>

@@ -109,14 +109,14 @@ header {
 		&:after {
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: 160px;
 			bottom: -10px;
-			width: calc(100vw - 160px);
+			width: calc(100% - 160px);
 			content: '';
 			background-image: url(../img/header_dark.svg);
 			background-position: left bottom;
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: 800px 100px;
 			height: 90px;
 			z-index: -1;
 		}
@@ -145,7 +145,7 @@ header {
 				width: 221px;
 			}
 			&:after {
-				width: calc(100vw - 220px);
+				left: 210px
 			}
 		}
 	}
@@ -197,7 +197,10 @@ header {
 			}
 			&:after {
 				height: 140px;
-				width: calc(100vw - 450px);
+				left: 450px;
+				right: 0;
+				width: calc(100vw - 220px);
+				background-size: cover;
 			}
 			.header-link {
 				font-size: 50px;

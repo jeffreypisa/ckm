@@ -1,5 +1,5 @@
 <section id="section{{ sectionno }}" class="section pb-content_vlakken bg-transparent">
-	<div class="container-fluid" style="max-width: 1500px;">
+	<div class="container-fluid" style="max-width: 2000px;">
 		{% if item.titel %}
 			<div class="row">
 				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
@@ -12,16 +12,19 @@
 		{% endif %}
 		{% if item.afbeelding %}
 			<img src="{{ Image(item.afbeelding).src }}" alt="{{ Image(item.afbeelding).alt }}" class="w-100 h-auto mb-5">
+			<br><br><br><br>
 		{% endif %}
 		<div class="row g-0 g-lg-5 mb-lg-5 justify-content-center">
 			{% for item in item.vlak %}
 				<div class="col-lg">
-					<div class="card {{ item.kleur }} {% if item.centreren %}text-center{% endif %} mb-5 mb-lg-0 d-flex align-items-center">
+					<div class="card {{ item.kleur }} {% if item.centreren %}text-center{% endif %} mb-5 d-flex align-items-center">
 						<div class="card-body" data-mh>
 							{% if item.titel %}
-								<h2>{{ item.titel }}</h2>
+								<h2 class="mb-5">{{ item.titel }}</h2>
 							{% endif %}
-							{{ item.tekst }}
+							<div class="font-alt">
+								{{ item.tekst }}
+							</div>
 						</div>
 					</div>
 				</div>

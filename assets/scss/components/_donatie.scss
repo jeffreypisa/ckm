@@ -104,6 +104,45 @@
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	.donatie {
+		.card-body {
+			padding: 60px 10px 10px;
+			h5 {
+				display: block;
+				font-family: $font-family-alt;
+				margin-bottom: 30px;
+			}
+		}
+		.nav-bigtab {
+			position: absolute;
+			top: -50px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 300px;
+			.nav-item:first-child {
+				.nav-link {
+					&:before {
+						transform:scaleX(-1); 
+					}
+				}
+			}
+			.nav-link {
+				position: relative;
+				width: 150px;
+				height: 90px;
+				background: transparent;
+				z-index: 1;
+				margin: -1px;
+				transition: .2s $ease;
+				font-size: 18px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
 
 @include media-breakpoint-up(xl) {
 	.donatie {

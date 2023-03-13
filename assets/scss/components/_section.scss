@@ -61,10 +61,13 @@ section {
 		width: 100px;
 	}
 	&.top {
-		top: -50px;
+		top: -30px;
 	}
 	&.bottom {
 		bottom: -50px;
+		&.inverse {
+			bottom: -40px;	
+		}
 	}
 	&[href]:hover {
 		transform: translateX(-50%) scale(1.05);
@@ -90,12 +93,12 @@ section.bg-greylight:not(.full-size) + section.bg-greylight:not(.full-size) {
 			width: 150px;
 		}
 		&.top {
-			top: -75px;
+			top: -60px;
 		}
 		&.bottom {
 			bottom: -90px;
 			&.inverse {
-				bottom: -70px;	
+				bottom: -60px;	
 			}
 		}
 	}
