@@ -5,7 +5,7 @@
 				<br><br>
 				<h2 class="font-script text-orange mb-5">  {{ options.footeralt_titel }}</h2>
 				{{ options.footeralt_tekst }}
-				{% for logo in options.logos_wit %}
+				{% for logo in options.footeralt_logos_wit %}
 					<div class="logowit" style="background-image: url({{ Image(logo.logo).src }})"></div>
 				{% endfor %}
 			</div>
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="subfooter pt-5">
+			<div class="subfooter mt-2">
 				<div class="container-fluid d-flex justify-content-center">
 					<div>
 						© {{ 'now' | date('Y') }} {{ site.description}} {% include "footermenu.twig" with {'items': footermenu.get_items} %}

@@ -4,4 +4,15 @@
 		color: #fff;
 		padding: 30px;
 	}
+	.section_icon.top {
+		top: -50px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pb-cijfers {
+		.section_icon.top {
+			top: -80px;
+		}
+	}
 }

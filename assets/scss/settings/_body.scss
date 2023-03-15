@@ -15,3 +15,10 @@ body {
 #cookie-notice {
 	position: sticky !important;
 }
+.cky-consent-container {
+	
+}
+.cky-consent-container .cky-consent-bar {
+	background: $dark !important;
+	font-family: $font-family-alt !important;
+}

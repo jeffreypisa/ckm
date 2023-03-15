@@ -8,6 +8,16 @@
 	}
 }
 
+.content-two-columns {
+	margin: 0 auto;
+	column-width: 22em;
+	max-width: 1000px;
+	column-gap: 30px;
+	figure, li {
+		break-inside: avoid-column;
+	}
+}
+
 .content-onecolumn {
 	max-width: 900px;
 	margin: 0 auto;
@@ -27,9 +37,9 @@
 	> *:last-child {
 		margin-bottom: 0;
 	}
-	.lead {
+	.lead, .lead.h2 {
 		display: block;
-		margin-bottom: 60px;
+		margin-bottom: 60px !important;
 	}
 	.downloads {
 		margin-top: 60px;
@@ -175,7 +185,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.content-columns {
+	.content-columns, .content-two-columns {
 		max-width: 1300px;
 		column-gap: 40px;
 	}
@@ -186,7 +196,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-	.content-columns {
+	.content-columns, .content-two-columns {
 		max-width: 1450px;
 		column-gap: 60px;
 	}

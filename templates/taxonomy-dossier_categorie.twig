@@ -29,7 +29,7 @@
 		</div>
 		<a href="{{ options.dossiers_overzicht.url }}" class="button-links btn-link-back-light"> <span class="d-none d-md-block">{{ options.dossiers_overzicht.title }} </span></a>
 
-		<div class="button-rechts"> {% include 'partial/share.twig' %} </div>
+		<div class="button-rechts d-flex align-items-center"> {% include 'partial/share.twig' %} </div>
 
 	</section>
 	<section id="section2" class="mod-archive">
@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 col-lg-6 offset-md-3 offset-lg-3 col-xl-4 offset-xl-4">
 					<div class="text-center mb-5">
-						<h3 class="mt-3 mb-5"> {{ options.tijdlijn_titel }} </h3>
+						<h3 class="mt-md-3 mb-md-5"> {{ options.tijdlijn_titel }} </h3>
 						{% if options.tijdlijn_link %}
 						<a class="btn-link mt-0" href="#footer">{{ options.tijdlijn_link }}</a>
 						{% endif %}
@@ -54,7 +54,7 @@
 							{% if year == item.post_date|date('Y') %}
 						{% else %}
 							{% set year = item.post_date|date('Y') %}
-							<div class="text-center">
+							<div class="text-center mb-30 mb-md-0">
 								<div class="bg-frame-year"> {{ year }} </div>
 								<img class="dots" src="{{ theme.link }}/assets/img/threeblackdots.svg" alt="dots">
 							</div>
@@ -67,7 +67,7 @@
 				<a href="#section1" class="section_icon"> <img src="{{ theme.link }}/assets/img/icon_section_up.svg"> </a>
 			</div>
 		</div>
-		<br><br><br><br><br><br>
+		<br><br><br><div class="d-none d-md-block"><br><br><br></div>
 	</section>
 </article>
 {% endblock %}

@@ -1,3 +1,10 @@
+@include media-breakpoint-down(sm) {
+	section.searchlead {
+		padding: 40px 0;
+		margin-bottom: 20px;
+	}
+}
+
 .searchforminput {
 	position: relative;
 	input[type=text] {

@@ -21,72 +21,74 @@
 		</div>
 		<div class="container-fluid mt-3 mt-md-5">
 			<br>
-			<div class="row g-5">
-				<div class="col-lg-6">
-					<div class="content-styling mb-5 pt-5">
-						<div class="verhaal">
-							<div class="row">
-								<div class="col-auto">
-									<div class="afbeelding" style="background-image: url('{{ Image(post.thumbnail).src }}')"></div>
-								</div>
-								<div class="col d-flex align-items-center">
-									<div>
-										<h3 class="text-black font-script mb-1">{{ post.title  }}</h3>
-										<h5 class="mt-0 mb-0 text-orange">{{ post.link_tekst  }}</h5>
-									</div>
-								</div>
-							</div>
+			<div class="content-styling content-two-columns mb-5 pt-5">
+				<div class="verhaal">
+					<div class="row">
+						<div class="col-auto">
+							<div class="afbeelding" style="background-image: url('{{ Image(post.thumbnail).src }}')"></div>
 						</div>
-						{% if post.lead %}
-							<div class="lead h2 mb-5">
-								{{ post.lead }}
-							</div>
-						{% endif %}
-						
-						{{ post.content }}
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="card bg-frame-verhalen mt-lg-5 pt-5 pb-5">
-						<div class="card-body mb-5">
-							<div class="row">
-								<div class="col-lg-10 offset-lg-1">
-									<div class="text-center">
-										<h2 class="mt-5 mb-5 font-script text-white"> {{ post.geel_vlak_titel }} </h2>
-										<div class="font-alt">{{ post.geel_vlak_tekst }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="content-styling mb-lg-5">
-						<div class="row">
-							<div class="col-sm-8">
-								<blockquote>{{ post.quote_2 }}</blockquote>
+						<div class="col d-flex align-items-center">
+							<div>
+								<h3 class="text-black font-script mb-1">{{ post.title  }}</h3>
+								<h5 class="mt-0 mb-0 text-orange">{{ post.link_tekst  }}</h5>
 							</div>
 						</div>
 					</div>
 				</div>
+				{% if post.lead %}
+					<div class="lead h2 mb-5">
+						{{ post.lead }}
+					</div>
+				{% endif %}
 				
+				{{ post.content }}
 			</div>
-			
+
+			<div class="content-styling" style="max-width: 1450px; margin: 0 auto">
+				<div class="row g-5">
+					<div class="col-lg-6">
+						<div class="card bg-frame-verhalen mt-lg-5 pt-5 pb-5">
+							<div class="card-body mb-md-5">
+								<div class="row">
+									<div class="col-lg-10 offset-lg-1">
+										<div class="text-center">
+											<h2 class="mt-md-5 mb-3 mb-md-5 font-script text-white"> {{ post.geel_vlak_titel }} </h2>
+											<div class="font-alt">{{ post.geel_vlak_tekst }}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="content-styling mb-lg-5">
+							<div class="row">
+								<div class="col-sm-8">
+									<blockquote>{{ post.quote_2 }}</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
 			<br>
 			
-			<div class="row">
+			<div class="row" style="max-width: 1450px; margin: 0 auto">
 				<div class="col">
 					<a href="{{ options.verhalen_archief_link.url }}" class="btn-link-back-dark"> {{ options.verhalen_archief_link.title }} </a>
 				</div>
-				<div class="col-auto">
+				<div class="col-auto d-flex align-items-center">
 					{% include 'partial/share.twig' %}
 				</div>
 			</div>
 			
-			<section id="quotes" class="section pb-quotes bg-transparent pb-0 pt-5">
-				<div class="container-fluid">
+			<section id="quotes" class="section pb-quotes bg-transparent pb-0 pt-5" >
+				<div class="container-fluid" style="max-width: 1450px; margin: 0 auto">
 					<div class="row">
 						<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
 							<div class="text-center">
-								<h2 class="mt-5 mb-5"> {{ options.verhalen_meer_titel }} </h2>
+								<h2 class="mt-5 mb-md-5"> {{ options.verhalen_meer_titel }} </h2>
 							</div>
 						</div>
 					</div>

@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
 					<div class="text-center">
-						<h2 class="mb-5"> {{ item.titel }} </h2>
+						<h2 class="mb-1 mb-md-5"> {{ item.titel }} </h2>
 					</div>
 				</div>
 			</div>
@@ -12,13 +12,13 @@
 		{% endif %}
 		<div class="row g-0 g-md-3 mb-2 justify-content-center">
 			{% for item in item.quotes %}
-				<div class="col-sm-6 col-lg-4 mb-30 mb-md-0">
+				<div class="col-sm-6 col-lg-4 {% if loop.index != loop.last %}mb-30{% endif %} mb-md-0">
 					{% include 'tease-quote.twig' %}
 				</div>
 			{% endfor %}
 		</div>
 		{% if item.link %}
-			<div class="container text-center">
+			<div class="container mt-5 text-center">
 				<a class="btn btn-primary" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
 			</div>
 		{% endif %}

@@ -52,7 +52,7 @@ header.header-transparent {
 	min-height: 440px;
 	margin-bottom: 20px;
 	h2 {
-		word-break: break-word;
+		// word-break: break-word;
 	}
 	.card {
 		border-radius: 0;
@@ -140,12 +140,15 @@ header.header-transparent {
 		max-width: 100%;
 		height: auto;
 	}
+	.bg-frame-label {
+		margin: 0 0 20px;
+	}
 }
 
 @include media-breakpoint-down(md) {
 	.pb-banner {
 		.slick-dots {
-			display: none;
+			display: none !important;
 		}
 	}
 }

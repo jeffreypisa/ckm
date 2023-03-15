@@ -1,8 +1,10 @@
 .pb-lead {
 	position: relative;
-	padding-top: 120px;
-	padding-bottom: 130px;
-	margin-bottom: 40px;
+	&.bg-orange {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin-bottom: 40px;
+	}
 	h2 {
 		p {
 			margin: 0;
@@ -33,9 +35,19 @@
 	}
 }
 
+@include media-breakpoint-down(md) {
+	.pb-banner + .pb-lead {
+		padding-top: 80px;
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.pb-lead {
 		margin-bottom: 70px;
+		&.bg-orange {
+			padding-top: 120px;
+			padding-bottom: 130px;
+		}
 		.button-links {
 			padding: 0 0 0 70px;
 			height: 30px;

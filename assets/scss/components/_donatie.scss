@@ -74,8 +74,8 @@
 	}
 	.nav-roundtab {
 		.nav-link {
-			height: 100px;
-			width: 100px;
+			height: 90px;
+			width: 90px;
 			display: block;
 			position: relative;
 			background: transparent;
@@ -106,12 +106,21 @@
 
 @include media-breakpoint-down(sm) {
 	.donatie {
+		margin-top: 70px;
+		margin-bottom: 40px;
 		.card-body {
-			padding: 60px 10px 10px;
+			padding: 60px 10px 30px;
 			h5 {
 				display: block;
 				font-family: $font-family-alt;
 				margin-bottom: 30px;
+			}
+		}
+		.nav-roundtab {
+			.nav-link {
+				height: 70px;
+				width: 70px;
+				font-size: 18px !important;
 			}
 		}
 		.nav-bigtab {

@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<section class="section bg-orange rafelrand bottom orange">
+<section class="section bg-orange rafelrand bottom orange searchlead">
 	<div class="section_icon bottom"> <img src="{{ theme.link }}/assets/img/icon_section_dossier.svg" alt="icoon"> </div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-center">
-				<h2 class="mt-5 mb-5"> {{ options.search_titel }} </h2>
+				<h2 class="mt-5 mb-4 mb-md-5"> {{ options.search_titel }} </h2>
 				<div class="mb-4">
 					{% include "searchform.twig" %}
 					<br>
@@ -17,7 +17,7 @@
 	</div>
 </section>
 <section class="section">
-	<div class="container mt-5">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-center">
 				{% if posts|length > 0 and searchquery != '' %}
@@ -27,7 +27,7 @@
 					
 					{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 				{% else %}
-					<div class='h4 mt-5'>{{ options.search_noresults }}</div>
+					<div class='h4 mt-2 mt-md-5 mb-0'>{{ options.search_noresults }}</div>
 				{% endif %}
 			</div>
 		</div>

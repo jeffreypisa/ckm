@@ -147,8 +147,8 @@ body {
 		line-height: 37px;
 		&.font-script {
 			font-family: $font-family-script;
-			font-size: 100px;
-			line-height: 60px;
+			font-size: 99px;
+			line-height: 75px;
 		}
 	}
 	h3, .h3 {
@@ -186,11 +186,11 @@ body {
 			}
 		}
 		h1, .h1, h2, .h2 {
-			font-size: 56px;
-			line-height: 56px;
+			font-size: 48px;
+			line-height: 48px;
 			&.font-script {
-				font-size: 100px;
-				line-height: 60px;
+				font-size: 99px;
+				line-height: 75px;
 			}
 		}
 		h3, .h3 {
@@ -217,6 +217,50 @@ body {
 		}
 	}
 }
+
+@include media-breakpoint-up(xl) {
+	body {
+		font-size: 22px;
+		line-height: 28px;
+		.font-xl {
+			&.font-script {
+				font-size: 130px;
+				line-height: 80px;
+			}
+		}
+		h1, .h1, h2, .h2 {
+			font-size: 56px;
+			line-height: 56px;
+			&.font-script {
+				font-size: 99px;
+				line-height: 75px;
+			}
+		}
+		h3, .h3 {
+			font-size: 37px;
+			line-height: 37px;
+			letter-spacing: -5%;
+			&.font-script {
+				font-size: 40px;
+				line-height: 20px;
+			}
+		}
+		h4, .h4 {
+			font-size: 25px;
+			line-height: 28px;
+			letter-spacing: -5%;
+			&.font-script {
+				font-size: 30px;
+				line-height: 34px;
+			}
+		}
+		.lead {
+			font-size: 22px;
+			line-height: 28px;
+		}
+	}
+}
+
 
 .altfont {
 	text-transform: none;

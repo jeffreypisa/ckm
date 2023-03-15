@@ -16,8 +16,16 @@ body {
 @include media-breakpoint-up(md) {
 	body {
 		footer {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	body:not(.home) {
+		footer {
 			position: relative;
 			&:after {
+				display: block;
 				content: '';
 				position: absolute;
 				bottom: 0;
@@ -143,7 +151,7 @@ footer {
 	footer {
 		.footer {
 			padding: 100px 50px 50px;
-			margin-top: 50px;
+			margin-top: 80px;
 		}
 	}
 }

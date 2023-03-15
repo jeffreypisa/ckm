@@ -47,7 +47,7 @@
 								<div class="col-auto">
 									{% set file = download.bestand %}
 									{% if file %}
-										<a href="{{ file.url }}" class="d-inline-block download font-script text-dark mb-5 text-center" target="_blank"> 
+										<a href="{{ file.url }}" class="d-inline-block download font-script text-dark mb-md-5 text-center" target="_blank"> 
 											<img class="mb-3" src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
 											<div class="clearfix"></div>
 											{% if download.titel %}
@@ -91,7 +91,6 @@
 							<a href="{{ site.url }}/?s={{ term.name }}" class="bg-frame-label">{{ term.name }}</a>
 						{% endfor %}
 					
-				
 				{% endif %}
 				
 				<br><br><br>
@@ -108,10 +107,12 @@
 						
 						{% endif %}
 					</div>
-					<div class="col-auto">
+					<div class="col-auto d-flex align-items-center">
 						{% include 'partial/share.twig' %}
 					</div>
 				</div>
+				
+				<br><br>
 			</div>
 		</div>
 	</article>
