@@ -597,6 +597,23 @@
                                     "prepend": "",
                                     "append": "",
                                     "parent_repeater": "field_63d281b7dbf5b"
+                                },
+                                {
+                                    "key": "field_6436db61f34d7",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_63d281b7dbf5b"
                                 }
                             ]
                         },
@@ -1397,6 +1414,32 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_6437bf9ae8e46",
+                            "label": "Tekst stijl",
+                            "name": "tekst_stijl",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "body": "body",
+                                "bold": "bold"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_63da892b4a752",
                             "label": "Tekst",
                             "name": "tekst",
@@ -1536,6 +1579,33 @@
                                     "ui_on_text": "",
                                     "ui_off_text": "",
                                     "ui": 1,
+                                    "parent_repeater": "field_6400999e158a7"
+                                },
+                                {
+                                    "key": "field_6437b36406b12",
+                                    "label": "Tekst stijl",
+                                    "name": "tekst_stijl",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "body": "body",
+                                        "bold": "bold"
+                                    },
+                                    "default_value": false,
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
                                     "parent_repeater": "field_6400999e158a7"
                                 },
                                 {
@@ -2222,5 +2292,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677768095
+    "modified": 1681375174
 }

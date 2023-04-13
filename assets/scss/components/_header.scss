@@ -1,5 +1,5 @@
 body {
-	padding-top: 80px;
+	padding-top: 62px;
 }
 header {
 	position: absolute;
@@ -8,18 +8,19 @@ header {
 	right: 0;
 	z-index: 100;
 	transition: 1s $ease;
-	height: 90px;
+	height: 70px;
 	background: transparent;
 	padding-top: 0;
 	.search-container {
 		position: relative;
 		.header-link {
-			min-height: 40px;
+			min-height: 36px;
 			.close, .search {
 				height: 34px;
 			}
 			.close {
 				display: none;
+				transform: translateY(-4px);
 			}	
 			&[aria-expanded=true] {
 				.close {
@@ -63,7 +64,7 @@ header {
 		position: relative;
 		z-index: 2;
 		img {
-			height: 40px;
+			height: 36px;
 			width: auto;
 		}
 		.logo {
@@ -103,7 +104,7 @@ header {
 			background-image: url(../img/header_white.svg);
 			background-position: right bottom;
 			background-repeat: no-repeat;
-			height: 90px;
+			height: 72px;
 			z-index: -1;
 		}
 		&:after {
@@ -117,19 +118,19 @@ header {
 			background-position: left bottom;
 			background-repeat: no-repeat;
 			background-size: 800px 100px;
-			height: 90px;
+			height: 72px;
 			z-index: -1;
 		}
 		.header-link {
 			color: #fff;
 			font-family: $font-family-script;
-			font-size: 40px;
-			line-height: 40px;
+			font-size: 36px;
+			line-height: 36px;
 			display: block;
 			transition: .2s $ease;
 			img {
 				height: auto;
-				width: 40px;
+				width: 36px;
 			}
 			&:hover {
 				transform: scale(1.1);
@@ -154,10 +155,10 @@ header {
 
 @include media-breakpoint-up(lg) {
 	body {
-		padding-top: 120px;
+		padding-top: 106px;
 	}
 	header {
-		height: 130px;
+		height: 110px;
 		.search-container {
 			.header-link {
 				.close, .search {
@@ -165,7 +166,7 @@ header {
 				}
 			}
 			#searchCollapse {
-				top: calc(100% + 30px);
+				top: calc(100% + 18px);
 				left: -160px;
 				input {
 					width: 300px;
@@ -178,10 +179,11 @@ header {
 		}
 		.header-brand {
 			img {
-				height: 60px;
+				height: 54px;
 			}
 			.logo {
 				display: block;
+				transform: translateY(-2px);
 			}
 			.logo-mobile {
 				display: none;
@@ -192,11 +194,11 @@ header {
 				transform: translateY(-140px);
 			}
 			&:before {
-				height: 140px;
+				height: 112px;
 				width: 451px;
 			}
 			&:after {
-				height: 140px;
+				height: 112px;
 				left: 450px;
 				right: 0;
 				width: calc(100vw - 450px);
@@ -207,7 +209,10 @@ header {
 				line-height: 50px;
 				img {
 					height: auto;
-					width: 70px;
+					width: 72px;
+					&.search {
+						transform: translateY(2px);
+					}
 				}
 			}
 		}

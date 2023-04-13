@@ -62,23 +62,6 @@
 						</div>
 					</div>
 				{% endif %}
-				
-				{% set auteur = Post(post.writer) %}
-				
-				{% if auteur %}
-					<div class="auteur mb-4">
-						<div class="row">
-							<div class="col-auto">
-								<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
-							</div>
-							<div class="col d-flex flex-column align-items-dropdown-center">
-								{{ auteur.title  }}
-								<div class="clearfix"></div>
-								{{ post.post_date|date('d-m-Y') }}
-							</div>
-						</div>
-					</div>
-				{% endif %}
 			</div>
 			
 			<div class="{% if post.one_column %}content-onecolumn-width{% else %}content-columns-width{% endif %}">

@@ -7,7 +7,7 @@
       "uuidString" : "DAB3A1D1-B069-47CF-B5B7-C2F91B29D8B3"
     }
   ],
-  "creatorBuild" : "34448",
+  "creatorBuild" : "34472",
   "files" : {
     "\/.nova\/Publishing\/Emonks.json" : {
       "ft" : 524288,
@@ -2348,6 +2348,113 @@
       "oA" : 0,
       "oAP" : "\/author.php",
       "oF" : 0
+    },
+    "\/email\/btn-doneer.jpg" : {
+      "ft" : 16384,
+      "iS" : 18832,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/btn-doneer.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/btn-nieuwsbrief.jpg" : {
+      "ft" : 16384,
+      "iS" : 20594,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/btn-nieuwsbrief.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/ckm_logo.jpg" : {
+      "ft" : 16384,
+      "iS" : 23397,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/ckm_logo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/emailtemplate_output.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/emailtemplate_output.html",
+      "oF" : 0
+    },
+    "\/email\/emailtemplate_source.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/emailtemplate_source.html",
+      "oF" : 0
+    },
+    "\/email\/facebook.jpg" : {
+      "ft" : 16384,
+      "iS" : 5760,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/facebook.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/instagram.jpg" : {
+      "ft" : 16384,
+      "iS" : 9248,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/instagram.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/line.jpg" : {
+      "ft" : 16384,
+      "iS" : 3806,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/line.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/email\/twitter.jpg" : {
+      "ft" : 16384,
+      "iS" : 9660,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/email\/twitter.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/favicon.ico" : {
       "cB" : 0,
@@ -7487,6 +7594,7 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,

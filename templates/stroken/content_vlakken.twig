@@ -22,7 +22,7 @@
 							{% if item.titel %}
 								<h2 class="mb-5">{{ item.titel }}</h2>
 							{% endif %}
-							<div class="font-alt">
+							<div class="{% if item.tekst_stijl == 'bold' %}font-alt{% endif %}">
 								{{ item.tekst }}
 							</div>
 						</div>

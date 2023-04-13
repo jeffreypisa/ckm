@@ -3,11 +3,11 @@
     "title": "Artikel",
     "fields": [
         {
-            "key": "field_63f771811f6a1",
-            "label": "Stuur door naar externe link",
-            "name": "link_extern",
+            "key": "field_6437ba41d19d2",
+            "label": "Mee bezig",
+            "name": "geen_link",
             "aria-label": "",
-            "type": "url",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,7 +16,34 @@
                 "class": "",
                 "id": ""
             },
-            "relevanssi_exclude": 0,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_63f771811f6a1",
+            "label": "Stuur door naar externe link",
+            "name": "link_extern",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": ""
         },
@@ -41,6 +68,26 @@
             "append": ""
         },
         {
+            "key": "field_6437ca8c1458f",
+            "label": "Titel auteurs",
+            "name": "titel_auteurs",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_63ecf92073120",
             "label": "Auteur",
             "name": "writer",
@@ -48,7 +95,15 @@
             "type": "post_object",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -58,9 +113,9 @@
                 "auteurs"
             ],
             "taxonomy": "",
-            "return_format": "id",
-            "multiple": 0,
-            "allow_null": 0,
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 1,
             "ui": 1
         }
     ],
@@ -82,5 +137,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677759068
+    "modified": 1681377958
 }

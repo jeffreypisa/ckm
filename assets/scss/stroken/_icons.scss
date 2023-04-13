@@ -6,6 +6,15 @@
 	h3 {
 		margin-top: 0;
 	}
+	a {
+		color: $dark;
+		transform: scale(1.0);
+		display: inline-block;
+		transition: .2s;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }
 
 @include media-breakpoint-up(lg) {

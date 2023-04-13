@@ -63,20 +63,25 @@
 					</div>
 				{% endif %}
 				
-				{% set auteur = Post(post.writer) %}
-				
-				{% if auteur %}
-					<div class="auteur mb-4">
-						<div class="row">
-							<div class="col-auto">
-								<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+				{% if post.writer %}
+					<div class="auteurs">
+						{% if post.titel_auteurs %}
+							<h3 class="mb-4"> {{ post.titel_auteurs }} </h3>
+						{% endif %}
+						{% for auteur in post.get_field('writer') %}
+							<div class="auteur mb-3 mt-0">
+								<div class="row">
+									<div class="col-auto">
+										<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
+									</div>
+									<div class="col d-flex flex-column align-items-dropdown-center">
+										{{ auteur.title  }}
+										<div class="clearfix"></div>
+										{{ post.post_date|date('d-m-Y') }}
+									</div>
+								</div>
 							</div>
-							<div class="col d-flex flex-column align-items-dropdown-center">
-								{{ auteur.title  }}
-								<div class="clearfix"></div>
-								{{ post.post_date|date('d-m-Y') }}
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				{% endif %}
 			</div>

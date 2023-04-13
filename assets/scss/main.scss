@@ -24,10 +24,10 @@ Theme by Emonks
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // Custom settings
+@import 'settings/colors';
 @import 'settings/type';
 @import 'settings/images';
 @import 'settings/options';
-@import 'settings/colors';
 @import 'settings/components';
 @import 'settings/body';
 @import 'settings/buttons';

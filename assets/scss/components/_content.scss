@@ -95,12 +95,14 @@
 			letter-spacing: -1px;
 		}
 	}
+	.auteurs {
+		margin-top: 60px;
+	}
 	.auteur {
 		color: $orange;
 		font-family: $font-family-alt;
 		font-size: 18px;
 		line-height: 26px;
-		margin-top: 60px;
 		.afbeelding {
 			width: 60px;
 			height: 60px;
