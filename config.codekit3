@@ -129,6 +129,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/acf-json\/group_643eb6eeb3235.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_643eb6eeb3235-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/acf-json\/group_6399b5f573f7a.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -5472,6 +5480,14 @@
       "oAP" : "\/taxonomy-dossier_categorie.php",
       "oF" : 0
     },
+    "\/taxonomy-dossier_tags.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/taxonomy-dossier_tags.php",
+      "oF" : 0
+    },
     "\/templates\/404.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5942,6 +5958,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/taxonomy-dossier_categorie.twig",
+      "oF" : 0
+    },
+    "\/templates\/taxonomy-dossier_tags.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/taxonomy-dossier_tags.twig",
       "oF" : 0
     },
     "\/templates\/tease-artikel.twig" : {

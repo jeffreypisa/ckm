@@ -4,7 +4,11 @@
 			<div class="row g-0">
 				<div class="col-auto">
 					<div class="bg-frame-label">
-						{{ item.label }}
+						{% if item.geen_link %}
+							Mee bezig
+						{% else %}
+							{{ item.label }}
+						{% endif %}
 					</div>
 				</div>
 				{% if not item.geen_link %}

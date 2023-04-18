@@ -69,7 +69,12 @@
 							<h3 class="mb-4"> {{ post.titel_auteurs }} </h3>
 						{% endif %}
 						{% for auteur in post.get_field('writer') %}
+						{% if auteur.link_teamlid %}
+							{% set teamlid = Post(auteur.link_teamlid) %}
+							<a href="{{ teamlid.link }}" class="d-block auteur mb-3 mt-0">
+						{% else %}
 							<div class="auteur mb-3 mt-0">
+						{% endif %}
 								<div class="row">
 									<div class="col-auto">
 										<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
@@ -80,7 +85,11 @@
 										{{ post.post_date|date('d-m-Y') }}
 									</div>
 								</div>
+						{% if auteur.link_teamlid %}
+							</a>
+						{% else %}
 							</div>
+						{% endif %}
 						{% endfor %}
 					</div>
 				{% endif %}
@@ -93,7 +102,7 @@
 				{% if terms %}
 					
 						{% for term in terms %}
-							<a href="{{ site.url }}/?s={{ term.name }}" class="bg-frame-label">{{ term.name }}</a>
+							<a href="{{ term.link }}" class="bg-frame-label">{{ term.name }}</a>
 						{% endfor %}
 					
 				{% endif %}

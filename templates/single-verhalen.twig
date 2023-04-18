@@ -50,14 +50,16 @@
 								<div class="col-auto">
 									{% set file = download.bestand %}
 									{% if file %}
-										<a href="{{ file.url }}" class="d-inline-block download font-script text-dark mb-md-5 text-center" target="_blank"> 
-											<img class="mb-3" src="{{ theme.link }}/assets/img/icon_download.svg" alt="download">
-											<div class="clearfix"></div>
+										<a href="{{ file.url }}" class="verhaal-download d-inline-block afbeelding-wrapper text-white mb-md-5" target="_blank"> 
+											<div class="afbeelding ratio-16x9 bg-cover" style="background-image: url({{ Image(download.afbeelding).src }});"> </div>
+											<h4>
 											{% if download.titel %}
 												{{ download.titel }}
 											{% else %}
 												{{ file.title }}
 											{% endif %}
+											<img src="{{ theme.link }}/assets/img/icon_arrow_orange.svg" alt="next">
+											</h4>
 										</a>
 									{% endif %}
 								</div>
@@ -66,37 +68,43 @@
 					</div>
 				{% endif %}
 			</div>
-
-			<div class="content-styling" style="max-width: 1450px; margin: 0 auto">
-				<div class="row g-5">
-					<div class="col-lg-6">
-						<div class="card bg-frame-verhalen mt-lg-5 pt-5 pb-5">
-							<div class="card-body mb-md-5">
-								<div class="row">
-									<div class="col-lg-10 offset-lg-1">
-										<div class="text-center">
-											<h2 class="mt-md-5 mb-3 mb-md-5 font-script text-white"> {{ post.geel_vlak_titel }} </h2>
-											<div class="font-alt">{{ post.geel_vlak_tekst }}</div>
+			
+			{% if post.geel_vlak_titel or post.geel_vlak_tekst or post.quote_2 %}
+				<div class="content-styling" style="max-width: 1450px; margin: 0 auto">
+					<div class="row g-5">
+						{% if post.geel_vlak_titel or post.geel_vlak_tekst %}
+							<div class="col-lg-6">
+								<div class="card bg-frame-verhalen mt-lg-5 pt-5 pb-5">
+									<div class="card-body mb-md-5">
+										<div class="row">
+											<div class="col-lg-10 offset-lg-1">
+												<div class="text-center">
+													<h2 class="mt-md-5 mb-3 mb-md-5 font-script text-white"> {{ post.geel_vlak_titel }} </h2>
+													<div class="{% if post.geel_vlak_tekst_stijl == 'bold' %}font-alt{% else %}font-regular{% endif %}">{{ post.geel_vlak_tekst }}</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="content-styling mb-lg-5">
-							<div class="row">
-								<div class="col-sm-8">
-									<blockquote>{{ post.quote_2 }}</blockquote>
+						{% endif %}
+						{% if post.quote_2 %}
+							<div class="col-lg-6">
+								<div class="content-styling mb-lg-5">
+									<div class="row">
+										<div class="col-sm-8">
+											<blockquote>{{ post.quote_2 }}</blockquote>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						{% endif %}
 					</div>
 				</div>
-			</div>
-				
-			<br>
-			
+					
+				<br>
+			{% endif %}
+			 
 			<div class="row" style="max-width: 1450px; margin: 0 auto">
 				<div class="col">
 					<a href="{{ options.verhalen_archief_link.url }}" class="btn-link-back-dark"> {{ options.verhalen_archief_link.title }} </a>

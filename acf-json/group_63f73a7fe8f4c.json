@@ -106,7 +106,6 @@
                 "class": "",
                 "id": ""
             },
-            "relevanssi_exclude": 0,
             "layout": "table",
             "pagination": 0,
             "min": 0,
@@ -160,72 +159,6 @@
                     "parent_repeater": "field_63f8e5e329885"
                 }
             ]
-        },
-        {
-            "key": "field_64185acad7842",
-            "label": "Downloads",
-            "name": "downloads",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_64185acad7843",
-                    "label": "Bestand",
-                    "name": "bestand",
-                    "aria-label": "",
-                    "type": "file",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_size": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "parent_repeater": "field_64185acad7842"
-                },
-                {
-                    "key": "field_64185acad7844",
-                    "label": "Titel",
-                    "name": "titel",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64185acad7842"
-                }
-            ]
         }
     ],
     "location": [
@@ -253,5 +186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679317717
+    "modified": 1681823876
 }

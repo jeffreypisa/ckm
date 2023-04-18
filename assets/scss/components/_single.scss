@@ -37,6 +37,24 @@
 			}
 		}
 	}
+	.verhaal-download {
+		width: 500px; 
+		max-width: 100%;
+		.afbeelding {
+			position: relative;
+		}
+		h4 {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			right: 15px;
+			margin: 0 !important;
+			z-index: 1;
+		}
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }
 
 @include media-breakpoint-up(md) {
@@ -49,6 +67,13 @@
 			.afbeelding {
 				width: 150px;
 				height: 150px;
+			}
+		}
+		.verhaal-download {
+			h4 {
+				bottom: 30px;
+				left: 30px;
+				right: 30px;
 			}
 		}
 	}

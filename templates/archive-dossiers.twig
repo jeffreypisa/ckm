@@ -14,25 +14,26 @@
                 <div class="row">
                    <div class="col-md-10 offset-md-1">
                       <div class="text-center">
-                         <h2 class="mb-5"> {{ options.dossiers_archief_titel }} </h2>
+                         <h2 class="mb-0"> {{ options.dossiers_archief_titel }} </h2>
                       </div>
                    </div>
                 </div>
              {% endif %}
-             <div class="row" style="max-width: 1024px; margin: 0 auto">
-                <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-                   <div class="text-center">
-                      {{ options.dossiers_archief_tekst }} 
-                   </div>
-                </div>
-             </div>
           </div>
        </section> 
         <section class="mod-archive pb-0">
             <div class="container-fluid" style="max-width: 1500px">
-               <div class="text-center">
-                  <h2 class="font-script text-orange mb-5">{{ options.dossiers_archief_actueel_titel }}</h2>
-               </div>
+               <div class="text-center mb-5">
+                  <h2 class="font-script text-orange mb-3">{{ options.dossiers_archief_actueel_titel }}</h2>
+              
+                   <div class="row" style="max-width: 1024px; margin: 0 auto">
+                      <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                         <div class="text-center">
+                            {{ options.dossiers_archief_tekst }} 
+                         </div>
+                      </div>
+                   </div>
+                   </div>
                <div id="theposts" class="row justify-content-center pt-2 g-5">
                   {% for item in terms %}
                       <div class="col-md-6 col-lg-4 col-xl-3">

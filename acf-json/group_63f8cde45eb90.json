@@ -87,6 +87,32 @@
             "delay": 0
         },
         {
+            "key": "field_643ea73afa9e1",
+            "label": "Geel vlak tekst stijl",
+            "name": "geel_vlak_tekst_stijl",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "body": "body",
+                "bold": "bold"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_63f8ce0043b82",
             "label": "Quote onder geel vlak",
             "name": "quote_2",
@@ -129,6 +155,32 @@
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
+                {
+                    "key": "field_643e9ce95e05c",
+                    "label": "Afbeelding",
+                    "name": "afbeelding",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_64185acad7842"
+                },
                 {
                     "key": "field_64185acad7843",
                     "label": "Bestand",
@@ -192,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679317805
+    "modified": 1681828025
 }
