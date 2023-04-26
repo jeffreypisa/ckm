@@ -2,7 +2,7 @@
 	{% if item.icoon %}
 		<div class="section_icon bottom"> <img src="{{ Image(item.icoon).src }}" alt="{{ Image(item.icoon).src }}"> </div>
 	{% endif %}
-	<div class="container-fluid mb-2 mb-md-5" style="max-width:1500px">
+	<div class="container-fluid {% if item.tekst or item.link %}mb-2 mb-md-5{% endif %}" style="max-width:1500px">
 		<div class="row justify-content-center">
 			{% for item in item.iconen %}
 				<div class="col-md-4 text-center mb-4 mb-md-0">
@@ -18,14 +18,16 @@
 			{% endfor %}
 		</div>
 	</div>
-	<div class="container text-center" style="max-width:1024px">
-		<div class="row">
-			<div class="col-10 offset-1">
-				<div class="lead">{{ item.tekst }}</div>
-				{% if item.link %}
-					<a class="btn-link mt-3 mt-md-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
-				{% endif %}
+	{% if item.tekst or item.link %}
+		<div class="container text-center" style="max-width:1024px">
+			<div class="row">
+				<div class="col-10 offset-1">
+					<div class="lead">{{ item.tekst }}</div>
+					{% if item.link %}
+						<a class="btn-link mt-3 mt-md-5" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					{% endif %}
+				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 </section> 

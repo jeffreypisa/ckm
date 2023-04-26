@@ -3,7 +3,9 @@
 	&.bg-orange {
 		padding-top: 80px;
 		padding-bottom: 80px;
-		margin-bottom: 40px;
+		&:first-child {
+			margin-bottom: 40px;
+		}
 	}
 	h2 {
 		p {
@@ -35,18 +37,20 @@
 	}
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
 	.pb-banner + .pb-lead {
 		padding-top: 80px;
 	}
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 	.pb-lead {
-		margin-bottom: 70px;
 		&.bg-orange {
 			padding-top: 120px;
 			padding-bottom: 130px;
+			&:first-child {
+				margin-bottom: 70px;
+			}
 		}
 		.button-links {
 			padding: 0 0 0 70px;

@@ -65,7 +65,7 @@
             "delay": 0
         },
         {
-            "key": "field_63dbb8033f412",
+            "key": "field_6448ed0546441",
             "label": "Archief tekst",
             "name": "dossiers_archief_tekst",
             "aria-label": "",
@@ -288,7 +288,7 @@
             "delay": 0
         },
         {
-            "key": "field_63ef997b2c120",
+            "key": "field_6448ed9f7725a",
             "label": "Archief tekst",
             "name": "verhalen_archief_tekst",
             "aria-label": "",
@@ -446,7 +446,7 @@
             "delay": 0
         },
         {
-            "key": "field_63fcc96ad70ee",
+            "key": "field_6448edae7725b",
             "label": "Archief tekst",
             "name": "onderzoeken_archief_tekst",
             "aria-label": "",
@@ -643,5 +643,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678358854
+    "modified": 1682501385
 }

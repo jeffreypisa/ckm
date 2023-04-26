@@ -76,7 +76,7 @@
             "label": "Leadtekst",
             "name": "lead",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -85,12 +85,11 @@
                 "class": "",
                 "id": ""
             },
-            "relevanssi_exclude": 0,
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_63f8e5e329885",
@@ -186,5 +185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681823876
+    "modified": 1682334345
 }

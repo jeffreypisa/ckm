@@ -12,20 +12,13 @@
 		<div class="container-fluid mb-1 mb-md-2">
 			{% if term.titel %}
 			<div class="row">
-				<div class="col-md-10 col-lg-8 col-xl-6 offset-md-1 offset-lg-2 offset-xl-3">
+				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
 					<div class="text-center">
-						<h2 class="mb-5"> {{ term.titel }} </h2>
+						<h2 class="mb-0"> {{ term.titel }} </h2>
 					</div>
 				</div>
 			</div>
 			{% endif %}
-			<div class="row">
-				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-					<div class="text-center">
-						{{ term.description }}
-					</div>
-				</div>
-			</div>
 		</div>
 		<a href="{{ options.dossiers_overzicht.url }}" class="button-links btn-link-back-light"> <span class="d-none d-md-block">{{ options.dossiers_overzicht.title }} </span></a>
 
@@ -34,6 +27,13 @@
 	</section>
 	<section id="section2" class="mod-archive">
 		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+					<div class="text-center mb-5">
+						{{ term.description }}
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 col-lg-6 offset-md-3 offset-lg-3 col-xl-4 offset-xl-4">
 					<div class="text-center mb-5">

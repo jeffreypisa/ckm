@@ -20,7 +20,7 @@
 .bg-orange .btn-link-back-light[href] {
 	font-family: $font-family-script;
 	font-size: 30px;
-	line-height: 34px;
+	line-height: 50px;
 	display: inline-block;
 	background: url('../img/icon_arrow_left_white.svg');
 	background-repeat: no-repeat;
@@ -105,5 +105,11 @@
 	.btn-link-back-dark[href],
 	.btn-link[href] {
 		font-size: 28px;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.btn-link-back-light[href],
+	.bg-orange .btn-link-back-light[href] {
+		line-height: 34px;
 	}
 }

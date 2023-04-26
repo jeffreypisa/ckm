@@ -43,7 +43,10 @@
 	}
 	.downloads {
 		margin-top: 60px;
-		margin-bottom: 60px;
+		margin-bottom: 0;
+		+ .auteurs {
+			margin-top: 0;
+		}
 	}
 	picture {
 		width: 100% !important;
