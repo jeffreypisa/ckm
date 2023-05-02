@@ -18,10 +18,12 @@
 		<div class="row g-0 g-md-3 mb-2 justify-content-center">
 			{% for item in item.onderdeel %}
 				<div class="col-sm-6 col-lg-4 mb-30 mb-md-0">
-					<a href="{{ item.link }}" class="tease tease-team">
+					<div class="tease tease-team">
 						<div class="row">
 							<div class="col-10 offset-1 text-center">
-								<div class="bg-contain bg-rounded mb-4" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
+								<a class="team-logo d-block" href="{{ item.link.url }}" target="{{ item.link.target }}">
+									<div class="bg-contain bg-rounded mb-4" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
+								</a>
 								<div data-mh class="mb-4">
 									<h3 class="mt-0 mb-0 font-alt text-center">{{ item.titel }}</h3>
 								</div>
@@ -33,7 +35,7 @@
 								{% endif %}
 							</div>
 						</div>
-					</a>
+					</div>
 				</div>
 			{% endfor %}
 		</div>

@@ -27,24 +27,26 @@
 	</section>
 	<section id="section2" class="mod-archive">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row mb-4">
 				<div class="col-md-10 offset-md-1">
 					<div class="text-center mb-5">
 						{{ term.description }}
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 col-lg-6 offset-md-3 offset-lg-3 col-xl-4 offset-xl-4">
-					<div class="text-center mb-5">
-						<h3 class="mt-md-3 mb-md-5"> {{ options.tijdlijn_titel }} </h3>
-						{% if options.tijdlijn_link %}
-						<a class="btn-link mt-0" href="#footer">{{ options.tijdlijn_link }}</a>
-						{% endif %}
-						<br><br>
+			{% if options.tijdlijn_titel or options.tijdlijn_link %}
+				<div class="row">
+					<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 col-lg-6 offset-md-3 offset-lg-3 col-xl-4 offset-xl-4">
+						<div class="text-center mb-5">
+							<h3 class="mt-md-3 mb-md-5"> {{ options.tijdlijn_titel }} </h3>
+							{% if options.tijdlijn_link %}
+							<a class="btn-link mt-0" href="#footer">{{ options.tijdlijn_link }}</a>
+							{% endif %}
+							<br><br>
+						</div>
 					</div>
 				</div>
-			</div>
+			{% endif %}
 			<div id="theposts" class="g-5">
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
