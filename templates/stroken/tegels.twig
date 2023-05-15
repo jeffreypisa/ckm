@@ -21,7 +21,7 @@
 					<div class="tease tease-team">
 						<div class="row">
 							<div class="col-10 offset-1 text-center">
-								<a class="team-logo d-block" href="{{ item.link.url }}" target="{{ item.link.target }}">
+								<a class="team-logo d-block" {% if item.link %}href="{{ item.link.url }}" target="{{ item.link.target }}"{% endif %}>
 									<div class="bg-contain bg-rounded mb-4" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
 								</a>
 								<div data-mh class="mb-4">

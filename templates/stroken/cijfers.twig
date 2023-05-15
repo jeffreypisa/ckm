@@ -1,5 +1,7 @@
 <section id="section{{ sectionno }}" class="section pb-cijfers bg-transparent pb-0">
-	<div class="section_icon top"> <img src="{{ theme.link }}/assets/img/icon_section_stats.svg"> </div>
+	{% if item.icoon %}
+	<div class="section_icon top"> <img src="{{ Image(item.icoon).src }}" alt="{{ Image(item.icoon).src }}"> </div>
+	{% endif %}
 	<div class="container-fluid mt-4 mt-md-5">
 		<div class="row g-5" style="max-width: 1500px; margin: 0 auto">
 			<div class="col-lg-6 col-xl-8">

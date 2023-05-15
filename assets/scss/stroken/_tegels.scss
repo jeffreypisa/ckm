@@ -1,7 +1,9 @@
-.mod-tegels {
-	.tegel {
-		
-	}
+.pb-tegels {
+	.tease.tease-team {
+		a.team-logo:not([href]) {
+			pointer-events: none;
+		}	
+	} 
 }
 
 @include media-breakpoint-up(md) {
