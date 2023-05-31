@@ -108,6 +108,7 @@ h1,h2,h3,h4,h5,
 	margin-bottom: 20px;
 	font-family: $font-family-alt;
 	strong, b {
+		display: block;
 		color: $orange;
 		font-weight: 400;
 	}
@@ -147,8 +148,8 @@ body {
 		line-height: 37px;
 		&.font-script {
 			font-family: $font-family-script;
-			font-size: 99px;
-			line-height: 75px;
+			font-size: 80px;
+			line-height: 65px;
 		}
 	}
 	h3, .h3 {

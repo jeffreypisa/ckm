@@ -8,6 +8,12 @@
   display: none;
 }
 
+:not(.btn-check)+.btn:active, 
+body .fluentform form :not(.btn-check)+.ff-btn-submit:active, 
+.btn:first-child:active, 
+body .fluentform form .ff-btn-submit:first-child:active {
+	background-color: transparent !important;
+}
 
 body #cookie-notice {
 	@extend p;
@@ -40,6 +46,9 @@ body #cookie-notice {
 }
 
 .mc4wp-form {
+	.form-control {
+		color: #fff;
+	}
 	p {
 		position: relative;
 		display: inline-block;

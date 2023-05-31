@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34484",
   "files" : {
+    "\/.nova\/Publishing\/CKM.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.nova\/Publishing\/CKM-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/.nova\/Publishing\/Emonks.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -1820,6 +1828,21 @@
       "oA" : 0,
       "oAP" : "\/assets\/css\/main.css",
       "oF" : 2,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/plugins\/_cookie.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/plugins\/_cookie.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
