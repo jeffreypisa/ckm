@@ -3,6 +3,25 @@
 		a.team-logo:not([href]) {
 			pointer-events: none;
 		}	
+		.bg-rounded {
+			width: 270px;
+			height: 270px;
+			margin: 0 auto;
+			transition: .2s $ease;
+			padding: 40px;
+			&:after {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: url(../img/mask_round_dark.svg);
+			}
+			.bg-contain {
+				width: 190px;
+				height: 190px;
+				background-repeat: no-repeat;
+			}
+		}
 	} 
 }
 

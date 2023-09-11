@@ -1,4 +1,4 @@
-<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-onderzoeken text-start mb-5 d-block">
+<a href="{% if item.type == 'url' %}{{ item.url }}{% else %}{% set file = item.get_field('bestand') %}{% if file %}{{ file.url }}{% endif %}{% endif %}" target="_blank" class="tease tease-onderzoeken text-start mb-5 d-block">
 	<div class="afbeelding-wrapper ratio-4x3">
 		<div class="afbeelding bg-cover" style="background-image: url({{ item.thumbnail.src }})"></div>
 	</div>
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 	
-		{{ item.samenvatting }}
+		{{ item.tekst }}
 	</div>
 	<div href="" class="btn-link mt-4">{{ options.onderzoeken_teaser_lees_verder }}</div>
 </a>

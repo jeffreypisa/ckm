@@ -1,6 +1,6 @@
 {
     "key": "group_63f73a7fe8f4c",
-    "title": "Artikel",
+    "title": "Content",
     "fields": [
         {
             "key": "field_63f77599af17c",
@@ -185,5 +185,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682334345
+    "modified": 1694424617
 }

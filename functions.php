@@ -17,3 +17,4 @@ include 'lib/widgets.php';
 include 'lib/loadmoreposts.php';
 include 'lib/wpadmin.php';
 include 'lib/custom-twig-extensions.php';
+include 'lib/search.php';

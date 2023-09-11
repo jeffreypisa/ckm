@@ -1,19 +1,19 @@
-<a {% if not item.geen_link %}href="{% if item.link_extern %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.link_extern %}_blank{% else %}{{ item.link.target}}{% endif %}"{% endif %} class="tease tease-artikel mb-30 d-block">
+<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-artikel mb-30 d-block">
 	<div class="row g-5 mb-4">
 		<div class="col-md-6 d-flex flex-column">
 			<div class="row g-0">
 				<div class="col-auto">
 					<div class="bg-frame-label">
-						{% if item.geen_link %}
+						{% if item.mee_bezig %}
 							Mee bezig
 						{% else %}
 							{{ item.label }}
 						{% endif %}
 					</div>
 				</div>
-				{% if not item.geen_link %}
+				{% if item.type_link != 'link_geen' %}
 				<div class="col-auto">
-					{% set auteur = Post(item.writer) %}
+					{% set auteur = Post(item.writer|first) %}
 					{% if auteur %}
 						<div class="auteur" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
 					{% endif %}
@@ -21,7 +21,7 @@
 				{% endif %}
 			</div>
 			<h3 class="h5 mt-0 mb-2"> {{ item.title }} </h3>
-			<div class="h5 mb-3 mb-md-0 font-alt text-orange mt-auto">{{ item.post_date|date('d-m-Y') }}{% if item.link_extern %} - {{ options.dossiers_externe_publicatie }}{% endif %}</div>
+			<div class="h5 mb-3 mb-md-0 font-alt text-orange mt-auto">{{ item.post_date|date('d-m-Y') }}{% if item.type_link == 'link_extern' %} - {{ options.dossiers_externe_publicatie }}{% endif %}</div>
 		</div>
 		<div class="col-md-6">
 			<div class="afbeelding-wrapper ratio-16x9">

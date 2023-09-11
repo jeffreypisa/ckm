@@ -3,4 +3,10 @@
 		color: #fff;
 		padding: 44px 30px 30px;
 	}
+	.row .d-block {
+		transition: .2s $ease;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
 }

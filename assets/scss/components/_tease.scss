@@ -75,6 +75,12 @@
 	&.tease-dossiers {
 		text-align: center;
 	}
+	&.tease-onderzoeken:not([href]) {
+		.btn-link {
+			display: none;
+			pointer-events: none;
+		}
+	}
 	&.tease-team {
 		display: block;
 		.bg-cover, .bg-contain {

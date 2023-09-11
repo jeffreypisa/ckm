@@ -7,9 +7,9 @@
 
 .searchforminput {
 	position: relative;
-	input[type=text] {
+	input[type=text], input[type=search] {
 		font-family: $font-family-script;
-		font-size: 26px;
+		font-size: 28px;
 		padding: 4px 20px 0 20px;
 	}
 	.searcharrow {

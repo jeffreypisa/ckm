@@ -1,11 +1,11 @@
 {
     "key": "group_63e503d3a2375",
-    "title": "Artikel",
+    "title": "Eigenschappen",
     "fields": [
         {
-            "key": "field_6437ba41d19d2",
+            "key": "field_64ff19f85a051",
             "label": "Mee bezig",
-            "name": "geen_link",
+            "name": "mee_bezig",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -23,8 +23,35 @@
             "ui": 1
         },
         {
+            "key": "field_6437ba41d19d2",
+            "label": "Type link",
+            "name": "type_link",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "link_intern": "Interne link",
+                "link_extern": "Externe link",
+                "link_geen": "Geen link"
+            },
+            "default_value": "interne_link",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_63f771811f6a1",
-            "label": "Stuur door naar externe link",
+            "label": "└ Externe Link",
             "name": "link_extern",
             "aria-label": "",
             "type": "url",
@@ -34,8 +61,8 @@
                 [
                     {
                         "field": "field_6437ba41d19d2",
-                        "operator": "!=",
-                        "value": "1"
+                        "operator": "==",
+                        "value": "link_extern"
                     }
                 ]
             ],
@@ -51,6 +78,34 @@
             "key": "field_63e503d3746d8",
             "label": "Label",
             "name": "label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64ff19f85a051",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64ff1dee2627a",
+            "label": "Samenvatting",
+            "name": "samenvatting",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -100,7 +155,7 @@
                     {
                         "field": "field_6437ba41d19d2",
                         "operator": "!=",
-                        "value": "1"
+                        "value": "link_geen"
                     }
                 ]
             ],
@@ -112,11 +167,14 @@
             "post_type": [
                 "auteurs"
             ],
+            "post_status": "",
             "taxonomy": "",
             "return_format": "object",
             "multiple": 1,
             "allow_null": 1,
-            "ui": 1
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -137,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681377958
+    "modified": 1694441932
 }

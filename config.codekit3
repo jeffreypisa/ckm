@@ -7,7 +7,7 @@
       "uuidString" : "DAB3A1D1-B069-47CF-B5B7-C2F91B29D8B3"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34513",
   "files" : {
     "\/.nova\/Publishing\/CKM.json" : {
       "ft" : 524288,
@@ -229,24 +229,11 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/assets\/favicon\/android-chrome-192x192.png" : {
+    "\/assets\/favicon\/android-chrome-96x96.png" : {
       "ft" : 32768,
-      "iS" : 3779,
+      "iS" : 2345,
       "oA" : 0,
-      "oAP" : "\/assets\/favicon\/android-chrome-192x192.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/favicon\/android-chrome-512x512.png" : {
-      "ft" : 32768,
-      "iS" : 19735,
-      "oA" : 0,
-      "oAP" : "\/assets\/favicon\/android-chrome-512x512.png",
+      "oAP" : "\/assets\/favicon\/android-chrome-96x96.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -257,7 +244,7 @@
     },
     "\/assets\/favicon\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 2948,
+      "iS" : 1990,
       "oA" : 0,
       "oAP" : "\/assets\/favicon\/apple-touch-icon.png",
       "oF" : 0,
@@ -278,7 +265,7 @@
     },
     "\/assets\/favicon\/favicon-16x16.png" : {
       "ft" : 32768,
-      "iS" : 603,
+      "iS" : 833,
       "oA" : 0,
       "oAP" : "\/assets\/favicon\/favicon-16x16.png",
       "oF" : 0,
@@ -291,7 +278,7 @@
     },
     "\/assets\/favicon\/favicon-32x32.png" : {
       "ft" : 32768,
-      "iS" : 1322,
+      "iS" : 1225,
       "oA" : 0,
       "oAP" : "\/assets\/favicon\/favicon-32x32.png",
       "oF" : 0,
@@ -312,7 +299,7 @@
     },
     "\/assets\/favicon\/mstile-150x150.png" : {
       "ft" : 32768,
-      "iS" : 3384,
+      "iS" : 2947,
       "oA" : 0,
       "oAP" : "\/assets\/favicon\/mstile-150x150.png",
       "oF" : 0,
@@ -1245,6 +1232,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/line_title.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/mask_round_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/mask_round_dark.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -2629,6 +2626,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/lib\/optionspage.php",
+      "oF" : 0
+    },
+    "\/lib\/search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/lib\/search.php",
       "oF" : 0
     },
     "\/lib\/session.php" : {
@@ -5503,6 +5508,14 @@
       "oAP" : "\/taxonomy-dossier_categorie.php",
       "oF" : 0
     },
+    "\/taxonomy-dossier_onderzoek.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/taxonomy-dossier_onderzoek.php",
+      "oF" : 0
+    },
     "\/taxonomy-dossier_tags.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -5517,6 +5530,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/404.twig",
+      "oF" : 0
+    },
+    "\/templates\/ajax-posts.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/ajax-posts.twig",
       "oF" : 0
     },
     "\/templates\/archive-dossiers.twig" : {
@@ -5733,6 +5754,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/partial\/teasersettings.twig",
+      "oF" : 0
+    },
+    "\/templates\/search-dossier_onderzoek.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/search-dossier_onderzoek.twig",
       "oF" : 0
     },
     "\/templates\/search.twig" : {
@@ -5983,6 +6012,14 @@
       "oAP" : "\/templates\/taxonomy-dossier_categorie.twig",
       "oF" : 0
     },
+    "\/templates\/taxonomy-dossier_onderzoek.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/taxonomy-dossier_onderzoek.twig",
+      "oF" : 0
+    },
     "\/templates\/taxonomy-dossier_tags.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -6005,6 +6042,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/tease-dossiers.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-onderzoeken_oud.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-onderzoeken_oud.twig",
       "oF" : 0
     },
     "\/templates\/tease-onderzoeken.twig" : {
@@ -6969,9 +7014,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0

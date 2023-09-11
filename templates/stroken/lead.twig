@@ -15,12 +15,16 @@
 			</div>
 		</div>
 	{% endif %}
-	{% if item.tekst %}
+	{% if item.tekst or item.link %}
 		<div class="container-fluid" style="max-width:1500px">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="text-center">
 						{{ item.tekst }}
+						{% if item.link %}
+							<br>
+							<a class="btn btn-light" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+						{% endif %}
 					</div>
 				</div>
 			</div>

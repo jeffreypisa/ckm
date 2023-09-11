@@ -326,6 +326,22 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_64f5a4acb6b27",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
                             "key": "field_63da86da55744",
                             "label": "Icoon",
                             "name": "icoon",
@@ -770,6 +786,23 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
+                                    "parent_repeater": "field_63d7956a6d2f5"
+                                },
+                                {
+                                    "key": "field_64f5adb80c119",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
                                     "parent_repeater": "field_63d7956a6d2f5"
                                 }
                             ]
@@ -2317,5 +2350,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684143997
+    "modified": 1693822536
 }
