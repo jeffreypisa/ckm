@@ -46,6 +46,7 @@ $args = array(
         )
     ),
     'orderby'			=> array(
+        'menu_order' => 'ASC',
         'feature_clause'	=> 'DESC',
     )
 );

@@ -165,13 +165,6 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "dossiers"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "team"
             }
         ]
@@ -185,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694424617
+    "modified": 1695908962
 }

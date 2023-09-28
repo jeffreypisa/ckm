@@ -1,4 +1,4 @@
-<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-onderzoeken text-start mb-5 d-block">
+<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% elseif item.type_link == 'link_bestand' %}{% set file = item.get_field('link_bestand') %}{% if file %}{{ file.url }}{% endif %}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' or item.type_link == 'link_bestand' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-onderzoeken text-start mb-5 d-block">
 	<div class="afbeelding-wrapper ratio-4x3">
 		<div class="afbeelding bg-cover" style="background-image: url({{ item.thumbnail.src }})"></div>
 	</div>

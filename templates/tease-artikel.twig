@@ -1,4 +1,4 @@
-<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-artikel mb-30 d-block">
+<a {% if item.type_link != 'link_geen' %}href="{% if item.type_link == 'link_extern' %}{{ item.link_extern }}{% elseif item.type_link == 'link_bestand' %}{% set file = item.get_field('link_bestand') %}{% if file %}{{ file.url }}{% endif %}{% else %}{{ item.link }}{% endif %}" target="{% if item.type_link == 'link_extern' or item.type_link == 'link_bestand' %}_blank{% else %}{{ item.link.target }}{% endif %}"{% endif %} class="tease tease-artikel mb-30 d-block">
 	<div class="row g-5 mb-4">
 		<div class="col-md-6 d-flex flex-column">
 			<div class="row g-0">

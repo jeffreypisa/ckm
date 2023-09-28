@@ -3,28 +3,8 @@
     "title": "Eigenschappen",
     "fields": [
         {
-            "key": "field_64ff19f85a051",
-            "label": "Mee bezig",
-            "name": "mee_bezig",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
             "key": "field_6437ba41d19d2",
-            "label": "Type link",
+            "label": "Type artikel",
             "name": "type_link",
             "aria-label": "",
             "type": "select",
@@ -37,8 +17,9 @@
                 "id": ""
             },
             "choices": {
-                "link_intern": "Interne link",
-                "link_extern": "Externe link",
+                "link_intern": "detailpagina",
+                "link_extern": "externe publicatie",
+                "link_bestand": "direct download",
                 "link_geen": "Geen link"
             },
             "default_value": "interne_link",
@@ -51,7 +32,7 @@
         },
         {
             "key": "field_63f771811f6a1",
-            "label": "└ Externe Link",
+            "label": "└ Link",
             "name": "link_extern",
             "aria-label": "",
             "type": "url",
@@ -73,6 +54,286 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_65154b104a82b",
+            "label": "└ Bestand",
+            "name": "link_bestand",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_bestand"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_64ff19f85a051",
+            "label": "Mee bezig",
+            "name": "mee_bezig",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_65157ebd32f57",
+            "label": "Detailpagina | Titel",
+            "name": "titel",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Dikgedrukte tekst zal oranje worden getoond in de banner",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_intern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_65157eb432f55",
+            "label": "Detailpagina | Content in 1 kolom",
+            "name": "one_column",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_intern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_65157eb932f56",
+            "label": "Detailpagina | Uitlijning banner",
+            "name": "uitlijning",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_intern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "links": "links",
+                "rechts": "rechts"
+            },
+            "default_value": "links",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65157ebf32f58",
+            "label": "Detailpagina | Leadtekst",
+            "name": "lead",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_intern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_65157ec132f59",
+            "label": "Detailpagina | Downloads",
+            "name": "downloads",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "==",
+                        "value": "link_intern"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65157ec132f5a",
+                    "label": "Bestand",
+                    "name": "bestand",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_65157ec132f59"
+                },
+                {
+                    "key": "field_65157ec132f5b",
+                    "label": "Titel",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65157ec132f59"
+                }
+            ]
+        },
+        {
+            "key": "field_6500479ec97b5",
+            "label": "Onderzoeken | Subtitel",
+            "name": "subtitel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64ff1dee2627a",
+            "label": "Onderzoeken | Toelichting",
+            "name": "samenvatting",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_63e503d3746d8",
@@ -103,26 +364,6 @@
             "append": ""
         },
         {
-            "key": "field_64ff1dee2627a",
-            "label": "Samenvatting",
-            "name": "samenvatting",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6437ca8c1458f",
             "label": "Titel auteurs",
             "name": "titel_auteurs",
@@ -130,7 +371,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6437ba41d19d2",
+                        "operator": "!=",
+                        "value": "link_geen"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -195,5 +444,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694441932
+    "modified": 1695909004
 }
