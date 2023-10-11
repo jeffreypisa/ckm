@@ -88,6 +88,14 @@
 			color: $orange !important;
 		}
 	}
+	&.btn-dark {
+		background: url('../img/button_dark.svg');
+		background-size: contain;
+		color: #fff !important;
+		&:hover {
+			color: $orange !important;
+		}
+	}
 	&.btn-primary {
 		background: url('../img/button_orange.svg');
 		background-size: contain;

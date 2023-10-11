@@ -19,14 +19,16 @@ $context = Timber::get_context();
 $context['term'] = new TimberTerm();
 
 $args = array(
-'post_type' => 'dossiers',
-'tax_query' => array(
-    array(
-        'taxonomy' => 'dossier_tags',
-        'field'    => 'slug',
-        'terms'    => $context['term']->slug,
+    'post_type' => 'dossiers',
+    'orderby' => 'date', // Hier voeg je de orderby parameter toe
+    'order' => 'DESC', // Hier voeg je de order parameter toe
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'dossier_tags',
+            'field'    => 'slug',
+            'terms'    => $context['term']->slug,
+        ),
     ),
-),
 );
 
 $context['posts'] = new Timber\PostQuery( $args );

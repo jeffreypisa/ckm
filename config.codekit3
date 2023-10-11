@@ -7,7 +7,7 @@
       "uuidString" : "DAB3A1D1-B069-47CF-B5B7-C2F91B29D8B3"
     }
   ],
-  "creatorBuild" : "34513",
+  "creatorBuild" : "34518",
   "files" : {
     "\/.nova\/Publishing\/CKM.json" : {
       "ft" : 524288,
@@ -572,6 +572,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/img\/accordion_title.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/img\/button_dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/button_dark.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

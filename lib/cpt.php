@@ -50,30 +50,6 @@
 			)
 		);
 		
-		register_post_type( 'onderzoeken',
-		// CPT Options
-			array(
-				'labels' => array(
-					'name'                  => __( 'Onderzoeken' ),
-					'singular_name'         => __( 'Onderzoek' ),
-					'all_items'             => __( 'Alle het onderzoek' ),
-					'add_new_item'          => __( 'Nieuw onderzoek toevoegen' ),
-					'new_item'              => __( 'Nieuw onderzoek' ),
-					'add_new'               => __( 'Nieuw onderzoek' ),
-					'edit_item'             => __( 'Bewerk onderzoek' ),
-					'update_item'           => __( 'Update onderzoek' ),
-					'view_item'             => __( 'Bekijk onderzoek' ),
-					'search_items'          => __( 'Zoek onderzoek' ),
-				),
-				'menu_icon'           		=> 'dashicons-search',
-				'public' 					=> true,
-				'show_in_rest' 				=> true,
-				'has_archive'             	=> true,
-				'supports'                	=> array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-				'rewrite' 					=> array( 'slug' => 'onderzoeken')
-			)
-		);
-		
 		register_post_type( 'auteurs',
 		// CPT Options
 			array(

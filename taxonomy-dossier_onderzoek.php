@@ -31,7 +31,7 @@ if (isset($_GET['page']) && is_numeric($_GET['page'])) {
 
 $args = array(
     'post_type' => 'dossiers',
-    'posts' => '-1',
+    'posts_per_page' => '-1',  // Overweeg dit te wijzigen naar een specifiek aantal of gebruik paginering
     'tax_query' => array(
         array(
             'taxonomy' => 'dossier_onderzoek',
@@ -39,15 +39,15 @@ $args = array(
             'terms'    => $context['term']->slug,
         ),
     ),
-    'meta_query'		=> array(
-        'feature_clause'	=> array(
-            'key'				=> 'mee_bezig',
-            'compare'			=> 'EXISTS'
+    'meta_query' => array(
+        'mee_bezig_order' => array(
+            'key' => 'mee_bezig',
+            'compare' => 'EXISTS'
         )
     ),
-    'orderby'			=> array(
+    'orderby' => array(
+        'mee_bezig_order' => 'DESC',
         'menu_order' => 'ASC',
-        'feature_clause'	=> 'DESC',
     )
 );
 

@@ -19,7 +19,12 @@
  $search_type = get_query_var('search_type');
  
  if ($search_type == 'onderzoek') {
-
+     
+     $term_link = get_term_link('onderzoeken', 'dossier_onderzoek');
+     if (!is_wp_error($term_link)) {
+         $context['dossier_onderzoek_link'] = $term_link;
+     }
+ 
       // Use a custom WP_Query to fetch search results from all post types
         $search_results = new WP_Query( array(
             's'              => $search_query,
@@ -31,14 +36,15 @@
                     'terms'    => 'onderzoeken',
                 ),
             ),
-            'meta_query'		=> array(
-                'feature_clause'	=> array(
-                    'key'				=> 'mee_bezig',
-                    'compare'			=> 'EXISTS'
+            'meta_query' => array(
+                'mee_bezig_order' => array(
+                    'key' => 'mee_bezig',
+                    'compare' => 'EXISTS'
                 )
             ),
-            'orderby'			=> array(
-                'feature_clause'	=> 'DESC',
+            'orderby' => array(
+                'mee_bezig_order' => 'DESC',
+                'menu_order' => 'ASC',
             )
         ) );
         
