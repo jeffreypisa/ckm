@@ -36,7 +36,7 @@ $args = array(
         array(
             'taxonomy' => 'dossier_onderzoek',
             'field'    => 'slug',
-            'terms'    => $context['term']->slug,
+            'terms'    => $context['term']->slug
         ),
     ),
     'meta_query' => array(

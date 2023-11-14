@@ -53,16 +53,27 @@
 						{% set year = '' %}
 
 						{% for item in posts %}
+
 							{% if year == item.post_date|date('Y') %}
-						{% else %}
-							{% set year = item.post_date|date('Y') %}
-							<div class="text-center mb-30 mb-md-0">
-								<div class="bg-frame-year"> {{ year }} </div>
-								<img class="dots" src="{{ theme.link }}/assets/img/threeblackdots.svg" alt="dots">
-							</div>
-						{% endif %}
+							{% else %}
+								{% set year = item.post_date|date('Y') %}
+								<div class="text-center mb-30 mb-md-0">
+									<div class="bg-frame-year"> {{ year }} </div>
+									<img class="dots" src="{{ theme.link }}/assets/img/threeblackdots.svg" alt="dots">
+								</div>
+							{% endif %}
+							
+							{% if loop.first %}
+								{% for item in posts %}
+									{% if item.mee_bezig %}
+										{% include ['tease-artikel.twig'] %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
 						
-						{% include ['tease-artikel.twig'] %}
+							{% if item.mee_bezig %}{% else %}
+								{% include ['tease-artikel.twig'] %}
+							{% endif %}
 						{% endfor %}
 					</div>
 				</div>

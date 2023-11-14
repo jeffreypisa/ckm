@@ -45,6 +45,12 @@ body #cookie-notice {
 	}
 }
 
+.lsb-form {
+	.form-control:focus { 
+		color: #fff;
+	}	
+}
+
 .mc4wp-form {
 	.form-control {
 		color: #fff;

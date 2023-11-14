@@ -21,7 +21,7 @@
 				{% endif %}
 			</div>
 			<h3 class="h5 mt-0 mb-2"> {{ item.title }} </h3>
-			<div class="h5 mb-3 mb-md-0 font-alt text-orange mt-auto">{{ item.post_date|date('d-m-Y') }}{% if item.type_link == 'link_extern' %} - {{ options.dossiers_externe_publicatie }}{% endif %}</div>
+			<div class="h5 mb-3 mb-md-0 font-alt text-orange mt-auto">{% if item.mee_bezig %}{% else %}{{ item.post_date|date('d-m-Y') }}{% endif %}{% if item.type_link == 'link_extern' %} - {{ options.dossiers_externe_publicatie }}{% endif %}</div>
 		</div>
 		<div class="col-md-6">
 			<div class="afbeelding-wrapper ratio-16x9">
