@@ -21,6 +21,7 @@
  if ($search_type == 'onderzoek') {
      
      $term_link = get_term_link('onderzoeken', 'dossier_onderzoek');
+     
      if (!is_wp_error($term_link)) {
          $context['dossier_onderzoek_link'] = $term_link;
      }
@@ -33,7 +34,7 @@
                 array(
                     'taxonomy' => 'dossier_onderzoek',
                     'field'    => 'slug',
-                    'terms'    => 'onderzoeken',
+                    'terms'    => 'onderzoeken-en-projecten',
                 ),
             ),
             'meta_query' => array(
