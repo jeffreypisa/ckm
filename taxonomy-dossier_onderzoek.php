@@ -46,7 +46,7 @@ $args = array(
         )
     ),
     'orderby' => array(
-        'mee_bezig_order' => 'DESC',
+        'mee_bezig_order' => 'ASC',
         'date' => 'DESC'
     )
 );

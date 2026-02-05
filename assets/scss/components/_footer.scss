@@ -11,6 +11,17 @@ body {
 			background: $dark;
 			z-index: 2;
 		}
+		.subfooter {
+			padding-bottom: 20px;
+			ul {
+				display: inline;
+				li {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+		}
 	}
 }
 @include media-breakpoint-up(md) {

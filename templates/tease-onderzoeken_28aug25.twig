@@ -7,7 +7,17 @@
 			<strong>{{ item.title }} </strong> <br>
 			{{ item.subtitel }} 
 		</h3>
+		<div class="mb-4 font-alt text-sm">
+			<div class="row">
+				<div class="col d-flex align-items-center">
+					<div>
+						{{ options.onderzoeken_publication_date }}: <span class="text-orange">{{ item.post_date|date('d-m-Y') }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	
+		{{ item.samenvatting }}
 	</div>
 	<div href="" class="btn-link mt-4">{{ options.onderzoeken_teaser_lees_verder }}</div>
 </a>

@@ -8,18 +8,21 @@
 <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 	<section id="{{ sectionno }}" class="section rafelrand bottom inverse white pb-lead bg-orange text-dark bg-cover" style="background-image: url({{ Image(options.dossier_categorie_achtergrond).src }})">
 		{% if options.onderzoeken_icoon %}
-		<div class="section_icon bottom"> <img src="{{ Image(options.onderzoeken_icoon).src }}" alt="{{ Image(options.onderzoeken_icoon).src }}"> </div>
+		<div class="section_icon bottom"> 
+			<img src="{{ Image(options.onderzoeken_icoon).src }}" alt="{{ Image(options.onderzoeken_icoon).src }}"> 
+		</div>
 		{% endif %}
 		<div class="container-fluid" style="max-width: 1500px">
 			{% if options.onderzoeken_archief_titel %}
 			<div class="row">
 				<div class="col-md-10 offset-md-1">
 					<div class="text-center">
-						<h2 class="mt-0 mb-2"> {{ options.onderzoeken_archief_titel }} </h2>
+						<h2 class="mt-0 mb-2">{{ options.onderzoeken_archief_titel }}</h2>
 					</div>
 				</div>
 			</div>
 			{% endif %}
+
 			{% if options.onderzoeken_archief_tekst %}
 			<div class="row" style="max-width: 1500px; margin: 0 auto">
 				<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
@@ -29,13 +32,14 @@
 				</div>
 			</div>
 			{% endif %}
+
 			<div class="row">
 				<div class="col-md-10 offset-md-1 col-xl-8 offset-xl-2">
 					<br>
 					<div class="text-center">
 						<form class="d-inline-block" role="search" method="get" action="{{ site.url }}">
 							<div class="searchforminput">
-								<input id="s" class="form-control form-white" type="search" placeholder="{{ options.search_header_placeholder }}" aria-label="Search" name="s" value="{{ searchquery }}"">
+								<input id="s" class="form-control form-white" type="search" placeholder="{{ options.search_header_placeholder }}" aria-label="Search" name="s" value="{{ searchquery }}">
 								<input type="hidden" name="search_type" value="onderzoek">
 								<button class="searcharrow" type="submit"></button>
 							</div>
@@ -43,31 +47,38 @@
 						{% if searchquery %}
 						<div class="clearfix"></div>
 						<br><br>
-						<a href="{{ dossier_onderzoek_link }}" class="btn-link-back-light" style="color: #fff !important"> Reset </a>
+						<a href="{{ dossier_onderzoek_link }}" class="btn-link-back-light" style="color: #fff !important">Reset</a>
 						{% endif %}
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<section class="mod-archive pb-5">
 		<div class="container-fluid" style="max-width: 1500px">
 			<div class="row justify-content-center g-5">
+
+				{# Startstatus: we "verwachten" eerst meebezig totdat we een afgeronde tegenkomen #}
 				{% set vorigepost = 'meebezig' %}
-				
+
 				{% if posts %}
 					{% for item in posts %}
+
+						{# Zodra we de eerste afgeronde post zien, markeren we dat #}
 						{% if vorigepost == 'meebezig' and not item.mee_bezig %}
 							{% set vorigepost = 'none' %}
 						{% endif %}
-						
+
+						{# CASE 1: We beginnen met "Mee bezig" #}
 						{% if loop.first and item.mee_bezig %}
 							</div>
 							<div class="text-center pt-2 ">
 								<h2 class="font-script text-orange mb-5">Mee bezig</h2>
 							</div>
 							<div class="row justify-content-center pt-2 mb-5 g-5">
-								
+
+						{# CASE 2: We beginnen met "Afgerond" #}
 						{% elseif loop.first and not item.mee_bezig %}
 							</div>
 							<div class="text-center pt-2 ">
@@ -75,7 +86,8 @@
 							</div>
 							<div id="afgerond" class="row justify-content-center pt-2 g-5">
 							{% set vorigepost = 'das' %}
-							
+
+						{# CASE 3: Eerste keer dat we "Afgerond" moeten openen (na meebezig-start) #}
 						{% elseif vorigepost == 'none' %}
 							</div>
 							<div class="text-center pt-2 ">
@@ -83,23 +95,45 @@
 							</div>
 							<div id="afgerond" class="row justify-content-center pt-2 g-5">
 							{% set vorigepost = 'das' %}
-							
+
+						{# CASE 4: We schakelen nu van Afgerond -> Mee bezig #}
+						{% elseif vorigepost == 'das' and item.mee_bezig %}
+							</div>
+							{% if posts|filter(p => not p.mee_bezig)|length > 6 %}
+								<div class="text-center mb-5 pb-5">
+									<button class="btn btn-primary" id="toonmeerafgerond">Laad Meer</button>
+								</div>
+							{% endif %}
+							<div class="text-center pt-2 ">
+								<h2 class="font-script text-orange mb-5">Mee bezig</h2>
+							</div>
+							<div class="row justify-content-center pt-2 mb-5 g-5">
+							{% set vorigepost = 'meebezig' %}
+
 						{% endif %}
+
 						<div class="col-md-6 col-lg-4">
 							{% include ['tease-onderzoeken.twig'] %}
 						</div>
+
 					{% endfor %}
+
+					{# Fallback: er is wél Afgerond getoond, maar géén Mee bezig; sluit #afgerond en toon knop hier #}
+					{% if vorigepost == 'das' %}
+						</div>
+						{% if posts|filter(p => not p.mee_bezig)|length > 6 %}
+							<div class="text-center mb-5 pb-5">
+								<button class="btn btn-primary" id="toonmeerafgerond">Laad Meer</button>
+							</div>
+						{% endif %}
+					{% endif %}
+
 				{% else %}
 					<div class="text-center">
-						<div class='h4 mt-0 mb-0'>{{ options.search_noresults }}</div>
+						<div class="h4 mt-0 mb-0">{{ options.search_noresults }}</div>
 					</div>
 				{% endif %}
 			</div>
-
-		   <div class="text-center">
-		   	<button class="btn btn-primary" id="toonmeerafgerond">Laad Meer</button>
-		   </div>
-
 		</div>
 	</section>
 </article>

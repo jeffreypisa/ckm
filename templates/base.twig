@@ -10,6 +10,14 @@
 			{% include 'header.twig' %}
 		{% endblock %}
 		
+		{% if options.sticky_knop_url %}
+			{% if not post.verberg_sticky_knop %}
+			<a href="{{ options.sticky_knop_url.url }}" target="{{ options.sticky_knop_url.target }}" class="stickybutton">
+				
+			</a>
+			{% endif %}
+		{% endif %}
+		
 		<main>
 			{% if post.title %}
 				<h1 class="d-none">{{ post.title }}</h1>

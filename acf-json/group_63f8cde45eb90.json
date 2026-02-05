@@ -24,6 +24,26 @@
             "delay": 0
         },
         {
+            "key": "field_6751af29c46f6",
+            "label": "Link tekst",
+            "name": "link_tekst",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_63f8cfd1bfadc",
             "label": "Lead",
             "name": "lead",
@@ -244,5 +264,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681828025
+    "modified": 1733406536
 }

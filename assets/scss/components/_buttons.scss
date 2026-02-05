@@ -1,3 +1,19 @@
+.stickybutton {
+	position: fixed;
+	z-index: 9;
+	right: 20px;
+	bottom: 20px;
+	width: 175px;
+	height: 175px;
+	background: url(../img/hulpknop.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: .2s $ease;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.1) rotate(-10deg);
+	}
+}
 .btn-link[href] {
 	font-family: $font-family-script;
 	font-size: 30px;

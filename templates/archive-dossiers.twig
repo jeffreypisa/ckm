@@ -23,17 +23,19 @@
 	</section>
 	<section class="mod-archive pb-0">
 		<div class="container-fluid" style="max-width: 1500px">
-			<div class="text-center mb-5">
-				<h2 class="font-script text-orange mb-3">{{ options.dossiers_archief_actueel_titel }}</h2>
-
-				<div class="row" style="max-width: 1024px; margin: 0 auto">
-					<div class="col-lg-10 offset-lg-1">
-						<div class="text-center">
-							{{ options.dossiers_archief_tekst }}
+			{% if options.dossiers_archief_actueel_titel or options.dossiers_archief_tekst %}
+				<div class="text-center mb-5">
+					<h2 class="font-script text-orange mb-3">{{ options.dossiers_archief_actueel_titel }}</h2>
+	
+					<div class="row" style="max-width: 1024px; margin: 0 auto">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="text-center">
+								{{ options.dossiers_archief_tekst }}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			{% endif %}
 			<div id="theposts" class="row justify-content-center pt-2 g-5">
 				{% for item in terms %}
 				<div class="col-md-6 col-lg-4 col-xl-3">
