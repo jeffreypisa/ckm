@@ -38,7 +38,40 @@
 					</span>
 				{% endif %}
 				
-				{{ post.content }}
+				{% set raw = post.post_content %}
+				{% set parts = raw|split('<!--more-->') %}
+				
+				{% if parts|length > 1 %}
+					<div class="js-more-wrap">
+						<div class="js-more-intro">
+							{{ parts[0]|raw }}
+						</div>
+				
+						<div class="collapse" id="moreContent-{{ post.ID }}">
+							{{ parts[1]|raw }}
+						</div>
+				
+						<button
+							class="btn btn-primary mt-3"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#moreContent-{{ post.ID }}"
+							aria-expanded="false"
+							aria-controls="moreContent-{{ post.ID }}"
+						>
+							Lees meer
+						</button>
+					</div>
+				{% else %}
+					{{ post.content }}
+				{% endif %}
+				
+				<script> 
+					document.addEventListener('shown.bs.collapse', function (e) {
+					  const btn = document.querySelector('[data-bs-target="#' + e.target.id + '"]');
+					  if (btn) btn.classList.add('d-none');
+					});
+				</script>
 				
 				{% if post.downloads %}
 					<div class="downloads">
@@ -69,12 +102,7 @@
 							<h3 class="mb-4"> {{ post.titel_auteurs }} </h3>
 						{% endif %}
 						{% for auteur in post.get_field('writer') %}
-						{% if auteur.link_teamlid %}
-							{% set teamlid = Post(auteur.link_teamlid) %}
-							<a href="{{ teamlid.link }}" class="d-block auteur mb-3 mt-0">
-						{% else %}
 							<div class="auteur mb-3 mt-0">
-						{% endif %}
 								<div class="row">
 									<div class="col-auto">
 										<div class="afbeelding" style="background-image: url('{{ Image(auteur.thumbnail).src }}')"></div>
@@ -85,11 +113,8 @@
 										{{ post.post_date|date('d-m-Y') }}
 									</div>
 								</div>
-						{% if auteur.link_teamlid %}
-							</a>
-						{% else %}
 							</div>
-						{% endif %}
+			
 						{% endfor %}
 					</div>
 				{% endif %}

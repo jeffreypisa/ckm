@@ -38,7 +38,40 @@
 					</span>
 				{% endif %}
 				
-				{{ post.content }}
+				{% set raw = post.post_content %}
+				{% set parts = raw|split('<!--more-->') %}
+				
+				{% if parts|length > 1 %}
+					<div class="js-more-wrap">
+						<div class="js-more-intro">
+							{{ parts[0]|raw }}
+						</div>
+				
+						<div class="collapse" id="moreContent-{{ post.ID }}">
+							{{ parts[1]|raw }}
+						</div>
+				
+						<button
+							class="btn btn-secondary mt-3"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#moreContent-{{ post.ID }}"
+							aria-expanded="false"
+							aria-controls="moreContent-{{ post.ID }}"
+						>
+							Lees meer
+						</button>
+					</div>
+				{% else %}
+					{{ post.content }}
+				{% endif %}
+				
+				<script> 
+					document.addEventListener('shown.bs.collapse', function (e) {
+					  const btn = document.querySelector('[data-bs-target="#' + e.target.id + '"]');
+					  if (btn) btn.classList.add('d-none');
+					});
+				</script>
 				
 				{% if post.downloads %}
 					<div class="downloads">
